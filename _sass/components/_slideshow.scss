@@ -1,11 +1,7 @@
 .slideshow {
     position: relative;
     overflow: hidden;
-    min-height: 30rem;
-
-    @media (min-width: 1200px) {
-        min-height: 35rem;
-    }
+    min-height: 35rem;
 
     .slideshow-item {
         width: 100%;
@@ -18,8 +14,17 @@
         transition: .5s;
         z-index: 1;
 
+        @media (max-width: 767px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         &:not(.active) {
             left: -100%;
+
+            @media (max-width: 767px) {
+                left: -300%;
+            }
         }
 
         &:after {
@@ -35,6 +40,13 @@
 
         .slideshow-content {
             padding-left: 5rem; 
+
+            @media (max-width: 767px) {
+                padding: 0;
+                max-width: 65%;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
             h2 {
                 font-size: 2.5rem;
