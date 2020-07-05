@@ -14,7 +14,7 @@
         transition: .5s;
         z-index: 1;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1199px) {
             padding-left: 0;
             padding-right: 0;
         }
@@ -41,7 +41,7 @@
         .slideshow-content {
             padding-left: 5rem; 
 
-            @media (max-width: 767px) {
+            @media (max-width: 1199px) {
                 padding: 0;
                 max-width: 65%;
                 margin-left: auto;
