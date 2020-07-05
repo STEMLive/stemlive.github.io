@@ -14,7 +14,7 @@ order: 3
 </p>
 
 <p>
-    The disciplines of our on-screen STEM talents include, but are not limited to the following: {% for science in site.sciences %}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <span class="text-{{ science.tag }}"><a href="{{ science.url }}">{{ science.tag | replace: '-', ' ' }}</a></span>{% endfor %}.
+The disciplines of our on-screen STEM talents include, but are not limited to the following: {% for science in site.sciences %}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <a class="text-{{ science.tag }}" href="{{ science.url }}">{{ science.tag | replace: '-', ' ' }}</a>{% endfor %}.
 </p>
-
+    
 {% include components/streamers/all.html %}
