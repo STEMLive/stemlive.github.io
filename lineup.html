@@ -1,0 +1,20 @@
+---
+layout: page
+title: Lineup
+permalink: /lineup/
+show_in_nav: true
+order: 3
+---
+<h1>
+    Our lineup
+</h1>
+
+<p>
+    We aim to showcase the best in STEM talent, including technicians and instructors, on content-driven platforms including Twitch and YouTube.
+</p>
+
+<p>
+    The disciplines of our on-screen STEM talents include, but are not limited to the following: {% for science in site.sciences %}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <span class="text-{{ science.tag }}"><a href="{{ science.url }}">{{ science.tag | replace: '-', ' ' }}</a></span>{% endfor %}.
+</p>
+
+{% include components/streamers/all.html %}

@@ -1,0 +1,28 @@
+{%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
+{%- if page.description and page.description != nil and page.description != '' -%}
+{%- assign description = page.description -%}
+{%- else -%}
+{%- capture description -%}{{- site.description -}}.{%- endcapture description -%}
+{%- endif -%}
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="title" content="{{ title }}" />
+        <meta name="description" content="{{ description }}" />
+        {%- if page.keywords and page.keywords != nil and page.keywords.size > 0  -%}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{%- endif -%}
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    </head>
+    <body class="home">
+        {%- include components/top/header/navigation.html -%}
+        {%- include components/slideshows/home.html -%}
+        <main class="content-box">
+            <div class="content-inner">
+                {{ content }}
+            </div>
+        </main>
+        {%- include components/bottom/footer/navigation.html -%}
+    </body>
+</html>

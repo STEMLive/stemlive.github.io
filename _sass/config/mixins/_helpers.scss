@@ -1,0 +1,7 @@
+/*
+    Font sizes
+*/
+
+@mixin font-size ($font-size) {
+    font-size: #{$font-size};
+}

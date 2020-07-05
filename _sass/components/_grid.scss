@@ -1,0 +1,43 @@
+.content-box {
+    display: grid;
+    grid-template-areas: ". content .";
+    grid-template-columns: 2fr 8fr 2fr;
+
+    @media (max-width: 1199px) {
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .content-inner {
+        grid-area: content;
+        padding-top: 2.5rem;
+    }
+}
+
+.about,
+.category-educator,
+.category-science,
+.contact,
+.faqs,
+.home,
+.lineup {
+    .content-box {
+        padding-top: 42px;
+        padding-bottom: 2rem;
+
+        .content-inner {
+            h2 {
+                margin-top: 0;
+            }
+
+            p {
+                font-size: 1.5rem;
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+
+                &:first-child {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/*
+    Lineup
+*/
+
+body.lineup {
+    .featured-educators {
+        margin-top: 5rem;
+    }
+}
+
+/*
+    Content box - will override height on a per-page basis
+*/
+
+.content-box {
+    height: 100%;
+    
+    p {
+        a {
+            &:not([class*="text-"]) {
+                color: $medium-slate-blue;
+            }
+        }
+    }
+}
+
+body.about,
+body.lineup,
+body.category-science {
+    .content-box {
+        height: auto;
+    }
+}

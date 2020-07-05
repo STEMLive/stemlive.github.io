@@ -1,0 +1,23 @@
+{%- if site.sciences.size > 0 -%}
+<div class="slideshow">
+    {%- for science in site.sciences -%}
+    <div class="slideshow-item{% if forloop.index == 1 %} active{% endif %}" id="slide-{{ forloop.index }}" style="background-image: url({{ '/assets/images/banners/' | append: science.tag | append: '.jpg' | relative_url }});" role="img" aria-label="{{ science.title }}">
+        <div class="slideshow-content">
+            <h2>
+                {{- science.title -}}
+            </h2>
+
+            {%- if science.short_description and short.short_description != '' and science.short_description.size > 0 -%}
+            {{ science.short_description | markdownify }}
+            {%- endif -%}
+
+            <a class="cta bg-medium-slate-blue" href="{{- science.url -}}">
+                Please see our {{ science.title }} streamers here
+            </a>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+{%- endif -%}
+
+<script src="{{ '/assets/js/components/slideshow.js' | relative_url }}"></script>

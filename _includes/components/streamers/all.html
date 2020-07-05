@@ -1,0 +1,47 @@
+{%- assign streamers = site.educators -%}
+
+{%- if streamers.size > 0 -%}
+<div class="featured-educators">
+    {%- for streamer in streamers -%}
+
+    {%- assign primaryScience = streamer.sciences | first -%}
+    {%- assign defaultImg = primaryScience | append: '/default.jpg' -%}
+
+    {%- case primaryScience -%}
+        {%- when 'biology' -%}
+        {%- assign defaultImgDescription = '' -%}
+        {%- when 'chemistry' -%}
+        {%- assign defaultImgDescription = 'Test tube' -%}
+        {%- when 'computer-science' -%}
+        {%- assign defaultImgDescription = '' -%}
+        {%- when 'electronics' -%}
+        {%- assign defaultImgDescription = '' -%}
+        {%- when 'geology' -%}
+        {%- assign defaultImgDescription = 'Stone wall' -%}
+        {%- when 'physics' -%}
+        {%- assign defaultImgDescription = '' -%}
+    {%- endcase -%}
+
+    {%- assign thumb = '/assets/images/educators/thumbnails/' | append: streamer.images.thumbnail.filename -%}
+    {%- assign thumb_exists = site.static_files | where: 'path', thumb -%}
+
+    {%- if thumb_exists.size < 1 -%}
+        {%- assign thumb = '/assets/images/educators/thumbnails/' | append: defaultImg -%}
+    {%- endif -%}
+    <div class="featured-educator {{ streamer.sciences | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
+        <a href="{{ streamer.url }}"></a>
+
+        <div class="educator-minibio">
+            <h3 class="h4">
+                {%- if streamer.name and streamer.name != '' and streamer.name.size > 0 -%}
+                {{- streamer.name }}
+                <span class="display-name">({{- streamer.title - }})</span>
+                {%- else -%}
+                {{- streamer.title -}}
+                {%- endif -%}
+            </h3>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+{%- endif -%}

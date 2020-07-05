@@ -1,0 +1,13 @@
+{%- assign banner_image = '/assets/images/banners/educators/' | append: page.images.banner.filename -%}
+{%- assign banner_image_exists = site.static_files | where: 'path', banner_image -%}
+{%- if banner_image_exists.size < 1 -%}
+{%- assign science = page.sciences | first -%}
+{%- assign banner_image = '/assets/images/banners/' | append: science | append: '.jpg' -%}
+{%- endif -%}
+<div class="banner"{% if banner_image != nil and banner_image != '' %} style="background-image: url({{ banner_image | relative_url }});" role="img" aria-label="{{ page.name | default: page.title }}"{% endif %}>
+    <div class="banner-inner">
+        <h1>
+            {{ page.name | default: page.title }}
+        </h1>
+    </div>
+</div>

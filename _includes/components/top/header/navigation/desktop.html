@@ -1,0 +1,29 @@
+<header>
+    <nav class="navigation-top">
+        <a class="top-logo" href="{{- site.url -}}">
+            <span>{{- site.title -}}</span>
+        </a>
+
+        <button class="menu-toggle" id="top-menu-toggle" data-menu=".mobile-menu">
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+        </button>
+
+        <ul class="top-nav">
+            {%- for page in pages -%}
+            <li>
+                <a href="{{- page.url | relative_url -}}">
+                    {{- page.title -}}
+                </a>
+            </li>
+            {%- endfor -%}
+
+            <li>
+                <a href="{{- site.github_repo | append: '/new/master/models/_educators' -}}" target="_blank">
+                    Add a new streamer
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>

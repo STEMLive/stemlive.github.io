@@ -1,0 +1,25 @@
+---
+# this is needed so that Jekyll can convert this file to CSS
+---
+
+// Config
+@import 'config/variables';
+@import 'config/fonts';
+@import 'config/mixins';
+@import 'config/overrides';
+
+// Components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/grid';
+@import 'components/buttons';
+@import 'components/slideshow';
+@import 'components/banner';
+
+// Layouts
+@import 'layouts/general';
+@import 'layouts/pages';
+
+// Utilities
+@import 'utilities/text';
+@import 'utilities/backgrounds';

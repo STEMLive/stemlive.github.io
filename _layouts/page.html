@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include components/head/index.html -%}
+  <body class="{{ page.title | downcase }}">
+    {%- include components/top/header/navigation.html -%}
+    <main class="content-box">
+      <div class="content-inner">
+        {{ content }}
+      </div>
+    </main>
+    {%- include components/bottom/footer/navigation.html -%}
+  </body>
+</html>

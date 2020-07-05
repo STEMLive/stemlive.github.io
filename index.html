@@ -1,0 +1,25 @@
+---
+layout: home
+title: Home
+---
+{%- assign popular_sciences = site.educators | group_by: 'sciences' -%}
+{{ sciences }}
+<h2>
+    Welcome to {{ site.title }}
+</h2>
+
+<p>
+    We are the #1 content discovery platform for STEM educators on Twitch and YouTube.
+</p>
+
+<p>
+    We hope that you are able to discover new and interesting science content on your platform of choice, whether that be Twitch, YouTube, or another provider altogether.
+</p>
+
+<p>
+    With many needing to upskill as a result of the pandemic, why not take the time to learn something new?
+</p>
+
+<p>
+We offer you the chance to discover a wide range of STEM educators from countless disciplines, including {% for popular_science in popular_sciences limit:3 %}{%- assign science_name = popular_science.name | replace: '["', '' | replace: '"]', '' -%}{%- assign science = site.sciences | where: 'tag', science_name | first -%}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <a href="{{ science.url }}" class="text-{{ science.tag }}">{{ science.tag | replace: '-', ' ' }}</a>{% endfor %}.
+</p>

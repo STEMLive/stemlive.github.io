@@ -1,0 +1,28 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, .h1 {
+    @include font-size(3rem);
+}
+
+h2, .h2 {
+    @include font-size(2.5rem);
+}
+
+h3, .h3 {
+    @include font-size(2rem);
+}
+
+h4, .h4 {
+    @include font-size(1.5rem);
+}
+
+h5, .h5 {
+    @include font-size(1.4rem);
+}
+
+h6, .h6 {
+    @include font-size(1.3rem);
+}

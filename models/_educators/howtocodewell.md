@@ -1,0 +1,14 @@
+---
+name: "Peter Fisher"
+images:
+  banner:
+    filename: ""
+  thumbnail:
+    filename: "peterfisher.jpg"
+sciences:
+  - computer-science
+streaming_platforms:
+  twitch:
+    url: https://www.twitch.tv/howtocodewell
+layout: educator
+---
