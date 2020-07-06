@@ -70,6 +70,12 @@ body.collective {
             }
         }
     }
+
+    h2, .h2 {
+        @media (max-width: 567px) {
+            font-size: 2rem;
+        }
+    }
 }
 
 body.about,
