@@ -13,9 +13,18 @@
     }
 }
 
+body.collective {
+    .content-box {
+        .content-inner {
+            padding-top: 5rem;
+        }
+    }
+}
+
 .about,
 .category-educator,
 .category-science,
+.collective,
 .contact,
 .faqs,
 .home,

@@ -8,6 +8,8 @@ images:
 sciences:
   - computer-science
   - physics
+collectives:
+  - theknowledgefellowship
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/simuleios

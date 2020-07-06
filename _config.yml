@@ -37,11 +37,13 @@ plugins:
 
 collections:
   educators:
-      output: true
+    output: true
   sciences:
-      output: true
+    output: true
+  collectives:
+    output: true
   faqs:
-      output: true
+    output: true
 
 collections_dir: models
 

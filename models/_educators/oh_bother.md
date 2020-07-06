@@ -7,6 +7,8 @@ images:
 sciences:
   - electronics
   - physics
+collectives:
+  - theknowledgefellowship
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/oh_bother

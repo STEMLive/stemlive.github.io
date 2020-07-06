@@ -6,6 +6,8 @@ images:
     filename: ""
 sciences:
   - chemistry
+collectives:
+  - theknowledgefellowship
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/midnightduck
