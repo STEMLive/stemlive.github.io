@@ -1,0 +1,25 @@
+{%- assign collectives = site.collectives -%}
+
+{%- if collectives.size > 0 -%}
+<div class="featured-collectives">
+    {%- for collective in collectives -%}
+
+    {%- assign thumb = '/assets/images/collectives/thumbnails/' | append: collective.images.thumbnail.filename -%}
+    {%- assign thumb_exists = site.static_files | where: 'path', thumb -%}
+
+    {%- if thumb_exists.size < 1 -%}
+        {%- assign thumb = '/assets/images/collectives/thumbnails/' | append: 'default.jpg' -%}
+    {%- endif -%}
+
+    <div class="featured-collective" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ collective.title }}{% endif %}">
+        <a href="{{ collective.url }}"></a>
+
+        <div class="collective-minibio">
+            <h3 class="h4">
+                {{ collective.title }}
+            </h3>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+{%- endif -%}
