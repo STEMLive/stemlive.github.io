@@ -7,6 +7,7 @@ parents:
   - biology
   - chemistry
   - physics
+  - maths
 layout: science
 ---
 ## What is geology?
