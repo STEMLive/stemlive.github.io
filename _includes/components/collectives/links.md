@@ -9,4 +9,5 @@
     <span>{{ link_type | capitalize }}</span>: <a href="{{ link_uri }}" target="_blank">{{ link_uri }}</a>
   </li>
 {% endfor %}
+</ul>
 {% endif %}
