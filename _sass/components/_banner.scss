@@ -1,6 +1,7 @@
 .banner {
+    position: relative;
+
     &:not([style^="background-image"]) {
-        min-height: 30rem;
         background-color: $light-grey;
     }
 
@@ -9,22 +10,34 @@
     background-position: center;
     color: $white;
 
+    @media (min-width: 1200px) {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
+
     @media (min-width: 768px) {
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
 
-    @media (min-width: 1200px) {
-        padding-left: 20rem;
-        padding-right: 20rem;
+    @media (max-width: 767px) {
+        margin-top: 5rem;
     }
 
     .banner-inner {
         background-color: rgba($black, .6);
         padding-top: 5rem;
         padding-bottom: 5rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
+
+        @media (max-width: 1199px) {
+            max-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+        }
 
         h1 {
             font-size: 3.5rem;
