@@ -1,0 +1,102 @@
+form {
+    &.grid-filters {
+        color: $white;
+        
+        > div {
+            margin-left: auto;
+            margin-right: auto;   
+        }
+
+        h3 {
+            @media (min-width: 568px) {
+                padding-left: .8rem;
+            }
+
+            @media (min-width: 568px) and (max-width: 991px) {
+                font-size: 1rem;
+            }
+
+            @media (max-width: 567px) {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 567px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        fieldset {
+            border: 0;
+            background-color: $medium-slate-blue;
+
+            .checkbox-wrapper {
+                position: relative;
+                cursor: pointer;
+
+                &:first-child {
+                    margin-top: 15px;
+                }
+
+                margin-bottom: 20px;
+
+                input[type="checkbox"] {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    cursor: pointer;
+                    margin: 0;
+                    opacity: 0;
+                    z-index: 1;
+
+                    &:checked {
+                        ~ label:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                label {
+                    display: block;
+                    vertical-align: top;
+                    text-align: left;
+                    padding-left: 2rem;
+
+                    @media (max-width: 567px) {
+                        text-align: center;
+                    }
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 2px;
+                        left: 0;
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 10px;
+                        background-color: #ddd;
+                        border-radius: 3px;
+                    }
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 6px;
+                        left: 4px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 2px;
+                        background-color: #68b8c4;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,8 @@
 {%- assign streamers = site.educators | where: 'display_on_site', true -%}
 
 {%- if streamers.size > 0 -%}
+{%- include components/streamers/filters.html -%}
+
 <div class="featured-educators">
     {%- for streamer in streamers -%}
 

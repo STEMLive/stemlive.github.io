@@ -1,0 +1,53 @@
+<script>
+    class FeaturedEducatorGridFilters {
+        constructor (filters) {
+            if (typeof filters === 'undefined') {
+                return;
+            }
+            
+            this.filters = document.querySelectorAll(filters);
+            this.featuredEducatorGrid = document.querySelector('.featured-educators');
+            this.featuredEducatorGrid.classList.toggle('toggle-grid');
+            this.isotopeGrid = new Isotope(this.featuredEducatorGrid, {
+                itemSelector: '.featured-educator',
+                layoutMode: 'fitRows'
+            });
+
+            this.filters.forEach(filter => {
+                filter.addEventListener('change', this.filterFeaturedEducatorGrid.bind(this));
+            });
+        }
+
+        filterFeaturedEducatorGrid (e) { 
+            e.preventDefault();
+
+            if (typeof this.isotopeGrid === 'undefined') {
+                return;
+            }
+
+            let
+                form = e.currentTarget,
+                checkedInputs = form.querySelectorAll('input[type="checkbox"]:checked'),
+                input = e.target,
+                isChecked = input.checked,
+                filterValue = isChecked ? input.dataset.filter : '*'
+            ;
+
+            if (checkedInputs.length > 1 || (!isChecked && checkedInputs.length > 0)) {
+                filterValue = '';
+
+                checkedInputs.forEach((checkedInput, index) => {
+                    filterValue += checkedInput.dataset.filter;
+                });
+            }
+
+            this.isotopeGrid.arrange({
+                filter: filterValue
+            });
+        }
+    }
+    
+    window.addEventListener('load', function () {
+        new FeaturedEducatorGridFilters('form.grid-filters');
+    });
+</script>

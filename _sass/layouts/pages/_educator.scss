@@ -24,6 +24,51 @@ body.category-educator {
     grid-template-rows: minmax(20rem, auto);
     grid-auto-rows: minmax(20rem, auto);
 
+    &.toggle-grid {
+        .featured-educator {
+            padding-left: 20%;
+            padding-right: 20%;
+            min-height: 20rem;
+
+            &:nth-child(odd) {
+                &[style*="display: none"] + .featured-educator:not(:nth-last-child(2)),
+                &[style*="display: none"] + .featured-educator + .featured-educator:not(:nth-last-child(2)),
+                &[style*="display: none"] + .featured-educator + .featured-educator:not(:nth-last-child(2)) + .featured-educator:nth-child(even):not(:nth-last-child(2)) {
+                    @media (min-width: 1200px) {
+                        margin-left: 10%;
+                    }
+                }
+
+                @media (min-width: 1200px) {
+                    margin-left: 10%;
+                }
+            }
+
+            &:nth-last-child(2) {
+                &[style*="display: none"] + .featured-educator {
+                    @media (min-width: 1200px) {
+                        margin-left: unset;
+                    }
+                }
+            }
+
+            a {
+                position: absolute;
+                left: 0;
+            }
+
+            @media (max-width: 1199px) {
+                padding-left: 25%;
+                padding-right: 25%;
+            }
+
+            @media (max-width: 767px) {
+                padding-left: 50%;
+                padding-right: 50%;
+            }
+        }
+    }
+
     @media (max-width: 991px) {
         grid-template-columns: 12fr;
     }

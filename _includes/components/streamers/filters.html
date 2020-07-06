@@ -1,0 +1,91 @@
+{%- assign sciences = '' | split: '' -%}
+{%- for science in site.sciences -%}
+    {%- assign streamers_by_science = site.educators | where: 'sciences', science.tag | where: 'display_on_site', true -%}
+
+    {%- if streamers_by_science.size > 0 -%}
+    {%- assign sciences = sciences | push: science -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- assign streaming_platforms = '' | split: '' -%}
+{%- assign streaming_services = site.educators | where: 'display_on_site', true | group_by: 'streaming_platforms' -%}
+
+{%- for streaming_service in streaming_services -%}
+    {%- assign streaming_platform = streaming_service.name | split: '=>' | first | replace: '{"', '' | replace: '"', '' -%}
+    {%- unless streaming_platforms contains streaming_platform -%}
+        {%- assign streaming_platforms = streaming_platforms | push: streaming_platform -%}
+    {%- else -%}
+        {%- continue -%}
+    {%- endunless -%}
+{%- endfor -%}
+
+{%- assign collectives = '' | split: '' -%}
+{%- for collective in site.collectives -%}
+    {%- assign streamers_by_collective = site.educators | where: 'collectives', collective.tag | where: 'display_on_site', true -%}
+
+    {%- if streamers_by_collective.size > 0 -%}
+    {%- assign collectives = collectives | push: collective -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- if sciences.size > 1 or streaming_platforms.size > 1 or collectives.size > 1 -%}
+<form class="grid grid-3 grid-filters bg-medium-slate-blue">
+    {%- if sciences.size > 1 -%}
+    <div>
+        <h3 class="h4">
+            Filter by science
+        </h3>
+
+        <fieldset>
+            {%- for science in sciences -%}
+            <div class="checkbox-wrapper">
+                <input type="checkbox" value=".{{ science.tag }}" data-filter=".{{ science.tag }}" />
+                <label>{{ science.title }}</label>
+            </div>
+            {%- endfor -%}
+        </fieldset>
+    </div>
+    {%- endif -%}
+
+
+    {%- if streaming_platforms.size > 1 -%}
+    <div>
+        <h3 class="h4">
+            Filter by streaming platform
+        </h3>
+
+        <fieldset>
+
+            {%- for streaming_platform in streaming_platforms -%}
+            <div class="checkbox-wrapper">
+                <input type="checkbox" value=".{{ streaming_platform }}" data-filter=".{{ streaming_platform }}" />
+                <label>{{ streaming_platform | capitalize }}</label>
+            </div>
+            {%- endfor -%}
+        </fieldset>
+    </div>
+    {%- endif -%}
+
+
+    {%- if collectives.size > 1 -%}
+    <div>
+        <h3 class="h4">
+            Filter by streaming collective
+        </h3>
+
+        <fieldset>
+            {%- for collective in collectives -%}
+            <div class="checkbox-wrapper">
+                <input type="checkbox" value=".{{ collective.tag }}" data-filter=".{{ collective.tag }}" />
+                <label>{{ collective.title }}</label>
+            </div>
+            {%- endfor -%}
+        </fieldset>
+    </div>
+    {%- endif -%}
+</form>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+{%- include components/scripts/grid-filters.html -%}
+{%- endif -%}
