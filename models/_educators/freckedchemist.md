@@ -4,11 +4,11 @@ images:
   banner:
     filename: ""
   thumbnail:
-    filename: "freckledchemist.jpg"
+    filename: "freckedchemist.jpg"
 sciences:
   - chemistry
 streaming_platforms:
   twitch:
-    url: https://www.twitch.tv/freckledchemist
+    url: https://www.twitch.tv/freckedchemist
 layout: educator
 ---
