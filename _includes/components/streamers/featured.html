@@ -17,19 +17,28 @@
 {%- assign streamers = site.educators | where_exp: 'educator', platform_query -%}
 {%- endif -%}
 
+{%- if include.collective -%}
+{%- assign collective = site.collectives | where: 'tag', include.collective | first -%}
+{%- assign streamers = site.educators | where: 'collectives', include.collective -%}
+{%- endif -%}
+
 {%- if streamers.size > 0 -%}
 {%- if include.science and include.platform -%}
 <h2>
     Who streams {{ include.science | replace: '-', ' ' }} on {{ include.platform | capitalize }}?
 </h2>
+{%- elsif collective -%}
+<h2>
+    Who streams as a member of {{ collective.title | default: collective.tag }}?
+</h2>
 {%- endif -%}
 
 <div class="featured-educators">
     {%- for streamer in streamers -%}
-        {%- unless page.tag -%}
-            {%- assign science = streamer.sciences | first -%}
-        {%- else -%}
+        {%- unless page.collection != nil -%}
             {%- assign science = page.tag -%}
+        {%- else -%}
+            {%- assign science = streamer.sciences | first -%}
         {%- endunless -%}
 
         {%- assign defaultImg = science | append: '/default.jpg' -%}
@@ -55,7 +64,7 @@
         {%- if thumb_exists.size < 1 -%}
             {%- assign thumb = '/assets/images/educators/thumbnails/' | append: defaultImg -%}
         {%- endif -%}
-    <div class="featured-educator {{ streamer.sciences | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
+    <div class="featured-educator {{ streamer.sciences | join: ' ' }} {{ streamer.collectives | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
         <a href="{{ streamer.url }}"></a>
 
         <div class="educator-minibio">

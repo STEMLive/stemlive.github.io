@@ -1,5 +1,6 @@
 ---
 title: The Knowledge Fellowship
+tag: theknowledgefellowship
 images:
   thumbnail:
     filename: "theknowledgefellowship.jpg"
@@ -17,3 +18,4 @@ layout: collective
 At present, this collective has a total of <span class="streamer-total">{{ collective_streamers.size }}</span> streamers.
 
 {% include components/collectives/links.md %}
+{% include components/streamers/featured.html collective=page.tag %}

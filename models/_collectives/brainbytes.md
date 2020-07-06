@@ -1,5 +1,6 @@
 ---
-title: BrainBytes 
+title: BrainBytes
+tag: brainbytes
 layout: collective
 links:
   twitch: https://www.twitch.tv/team/brainbytes
@@ -32,3 +33,4 @@ BrainBytes features a diverse cast of STEM educators unique to their team, such 
 BrainBytes' streamers incorporate a multitude of disciplines, ranging from automotive repair to astronomy.
 
 {% include components/collectives/links.md %}
+{% include components/streamers/featured.html collective=page.tag %}

@@ -91,7 +91,7 @@ body.collective {
 }
 
 body.about,
-body.collectives,
+body[class*="collective"],
 body.lineup,
 body.category-science {
     .content-box {
