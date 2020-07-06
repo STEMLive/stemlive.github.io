@@ -12,7 +12,7 @@ links:
   youtube: https://www.youtube.com/thelivecoders
 layout: collective
 ---
-{%- assign collective_streamers = site.educators | where: 'collectives', 'livecoders' -%}
+{%- assign collective_streamers = site.educators | where: 'collectives', 'livecoders' | where: 'display_on_site', true -%}
 # About Live Coders
 
 Comprised of a number of programmers, some of whom work for big name brands and companies, the **{{ page.page_title }}** community aims to broadcast high-quality programming content to its viewership.

@@ -10,5 +10,6 @@ sciences:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/howtocodewell
+display_on_site: true
 layout: educator
 ---

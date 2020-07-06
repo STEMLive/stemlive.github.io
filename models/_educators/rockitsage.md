@@ -12,5 +12,6 @@ collectives:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/rockitsage
+display_on_site: false
 layout: educator
 ---

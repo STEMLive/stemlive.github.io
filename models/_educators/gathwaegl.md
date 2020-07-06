@@ -10,5 +10,6 @@ sciences:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/gathwaegl
+display_on_site: false
 layout: educator
 ---

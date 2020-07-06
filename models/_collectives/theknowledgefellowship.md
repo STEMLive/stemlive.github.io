@@ -10,7 +10,7 @@ links:
   twitter: https://twitter.com/TheKnowledgeFe1
 layout: collective
 ---
-{%- assign collective_streamers = site.educators | where: 'collectives', 'theknowledgefellowship' -%}
+{%- assign collective_streamers = site.educators | where: 'collectives', 'theknowledgefellowship' | where: 'display_on_site', true -%}
 # About The Knowledge Fellowship
 
 **The Knowledge Fellowship** brands itself as a _community of like-minded people_, a _central hub_ for educational content and knowledge sharing.

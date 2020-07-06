@@ -13,5 +13,6 @@ collectives:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/horizonsci
+display_on_site: false
 layout: educator
 ---

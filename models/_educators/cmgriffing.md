@@ -12,6 +12,7 @@ collectives:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/cmgriffing
+display_on_site: true
 layout: educator
 ---
 ## About Chris

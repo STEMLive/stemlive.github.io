@@ -10,6 +10,7 @@ sciences:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/donthedeveloper
+display_on_site: true
 layout: educator
 ---
 ## About Don Hansen

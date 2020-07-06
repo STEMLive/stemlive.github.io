@@ -10,5 +10,6 @@ sciences:
 streaming_platforms:
   youtube:
     url: https://www.youtube.com/user/shiffman/
+display_on_site: false
 layout: educator
 ---

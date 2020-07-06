@@ -11,5 +11,6 @@ streaming_platforms:
     url: https://twitch.tv/sniperjf
   youtube:
     url: https://www.youtube.com/channel/UCLvkRVAjHTRj4Yje-_96OsQ
+display_on_site: false
 layout: educator
 ---

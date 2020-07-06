@@ -10,28 +10,28 @@
 {%- endif -%}
 
 {%- if include.science and include.platform -%}
-{%- assign streamers = site.educators | where_exp: 'educator', educator_sciences_query | where_exp: 'educator', platform_query -%}
+{%- assign streamers = site.educators | where_exp: 'educator', educator_sciences_query | where_exp: 'educator', platform_query | where: 'display_on_site', true -%}
 {%- elsif include.science -%}
-{%- assign streamers = site.educators | where_exp: 'educator', educator_sciences_query -%}
+{%- assign streamers = site.educators | where_exp: 'educator', educator_sciences_query | where: 'display_on_site', true -%}
 {%- elsif include.platform -%}
-{%- assign streamers = site.educators | where_exp: 'educator', platform_query -%}
+{%- assign streamers = site.educators | where_exp: 'educator', platform_query | where: 'display_on_site', true -%}
 {%- endif -%}
 
 {%- if include.collective -%}
 {%- assign collective = site.collectives | where: 'tag', include.collective | first -%}
-{%- assign streamers = site.educators | where: 'collectives', include.collective -%}
+{%- assign streamers = site.educators | where: 'collectives', include.collective | where: 'display_on_site', true -%}
 {%- endif -%}
 
 {%- if streamers.size > 0 -%}
-{%- if include.science and include.platform -%}
+    {%- if include.science and include.platform -%}
 <h2>
     Who streams {{ include.science | replace: '-', ' ' }} on {{ include.platform | capitalize }}?
 </h2>
-{%- elsif collective -%}
+    {%- elsif collective -%}
 <h2>
     Who streams as a member of {{ collective.title | default: collective.tag }}?
 </h2>
-{%- endif -%}
+    {%- endif -%}
 
 <div class="featured-educators">
     {%- for streamer in streamers -%}

@@ -5,8 +5,8 @@ layout: collective
 links:
   twitch: https://www.twitch.tv/team/brainbytes
 ---
-{%- assign shared_streamers = site.educators | where: 'collectives', 'brainbytes' | where: 'collectives', 'theknowledgefellowship' -%}
-{%- assign affiliated_streamers = site.educators | where: 'collectives', 'brainbytes' -%}
+{%- assign shared_streamers = site.educators | where: 'collectives', 'brainbytes' | where: 'collectives', 'theknowledgefellowship' | where: 'display_on_site', true -%}
+{%- assign affiliated_streamers = site.educators | where: 'collectives', 'brainbytes' | where: 'display_on_site', true -%}
 # About BrainBytes
 
 {% if shared_streamers.size >= 3 %}
@@ -18,7 +18,7 @@ BrainBytes features many of the same streamers as <a href="{{ '/collectives/thek
   </li>
 {% endfor %}
 </ul>
-{% else %}
+{% elsif affiliated_streamers.size > 0 %}
 BrainBytes features a diverse cast of STEM educators unique to their team, such as:
 
 <ul class="list-streamers">
@@ -28,9 +28,9 @@ BrainBytes features a diverse cast of STEM educators unique to their team, such 
   </li>
 {%- endfor -%}
 </ul>
+{%- else -%}
+BrainBytes features a growing number of streamers spanning various disciplines, from automotive repair to astronomy.
 {% endif %}
-
-BrainBytes' streamers incorporate a multitude of disciplines, ranging from automotive repair to astronomy.
 
 {% include components/collectives/links.md %}
 {% include components/streamers/featured.html collective=page.tag %}

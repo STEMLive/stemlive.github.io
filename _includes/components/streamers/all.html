@@ -1,4 +1,4 @@
-{%- assign streamers = site.educators -%}
+{%- assign streamers = site.educators | where: 'display_on_site', true -%}
 
 {%- if streamers.size > 0 -%}
 <div class="featured-educators">

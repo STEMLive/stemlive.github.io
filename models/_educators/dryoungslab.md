@@ -10,6 +10,7 @@ sciences:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/dryoungslab
+display_on_site: false
 layout: educator
 ---
 ## About Jamie Young
