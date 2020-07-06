@@ -1,5 +1,8 @@
 ---
 title: Live Coders
+images:
+  thumbnail:
+    filename: "livecoders.jpg"
 links:
   website: https://livecoders.dev/
   github: https://github.com/livecoders/

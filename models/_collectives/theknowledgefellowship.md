@@ -1,5 +1,8 @@
 ---
 title: The Knowledge Fellowship
+images:
+  thumbnail:
+    filename: "theknowledgefellowship.jpg"
 links:
   website: https://theknowledgefellowship.org/
   twitch: https://www.twitch.tv/theknowledgefellowship
