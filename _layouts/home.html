@@ -13,7 +13,8 @@
         <meta name="title" content="{{ title }}" />
         <meta name="description" content="{{ description }}" />
         {%- if page.keywords and page.keywords != nil and page.keywords.size > 0  -%}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{%- endif -%}
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+        {%- assign today = 'now' | date: '%Y%M%d' -%}
+        <link rel="stylesheet" href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" type="text/css" />
     </head>
     <body class="home">
         {%- include components/top/header/navigation.html -%}
