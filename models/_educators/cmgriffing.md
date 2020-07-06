@@ -7,6 +7,8 @@ images:
     filename: "cmgriffing.jpg"
 sciences:
   - computer-science
+collectives:
+  - livecoders
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/cmgriffing

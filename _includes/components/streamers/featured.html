@@ -62,7 +62,7 @@
             <h3 class="h4">
                 {%- if streamer.name and streamer.name != '' and streamer.name.size > 0 -%}
                 {{- streamer.name }}
-                <span class="display-name">({{- streamer.title - }})</span>
+                <span class="display-name">({{- streamer.title | downcase - }})</span>
                 {%- else -%}
                 {{- streamer.title -}}
                 {%- endif -%}
