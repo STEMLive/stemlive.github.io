@@ -36,7 +36,7 @@
     {%- assign streaming_platforms = streaming_platforms | push: streaming_platform -%}
     {%- endfor -%}
     {%- endif -%}
-    <div class="featured-educator {{ streamer.sciences | join: ' ' }} {{ streaming_platforms | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
+    <div class="featured-educator {{ streamer.sciences | join: ' ' }} {{ streaming_platforms | join: ' ' }} {{ streamer.collectives | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
         <a href="{{ streamer.url }}"></a>
 
         <div class="educator-minibio">
