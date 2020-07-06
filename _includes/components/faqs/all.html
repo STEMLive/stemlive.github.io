@@ -1,0 +1,19 @@
+{%- if site.faqs.size > 0 -%}
+<div class="faqs-accordion">
+    {%- for faq in site.faqs -%}
+    <div class="faq-item">
+        <div class="faq-question">
+            <h2 class="h3">
+                {{ faq.title }}
+            </h2>
+        </div>
+
+        {%- if faq.content -%}
+        <div class="faq-answer">
+            {{ faq.content }}
+        </div>
+        {%- endif -%}
+    </div>
+    {%- endfor -%}
+</div>
+{%- endif -%}

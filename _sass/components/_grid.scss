@@ -13,7 +13,8 @@
     }
 }
 
-body.collective {
+body.collective,
+body.faqs {
     .content-box {
         .content-inner {
             padding-top: 5rem;
@@ -38,7 +39,7 @@ body.collective {
                 margin-top: 0;
             }
 
-            p {
+            > p {
                 font-size: 1.5rem;
                 margin-top: 0;
                 margin-bottom: 1.5rem;

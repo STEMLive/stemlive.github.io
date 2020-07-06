@@ -1,0 +1,28 @@
+.faqs-accordion { 
+    margin-top: 3rem;
+
+    .faq-item {
+        .faq-question {
+            background-color: $medium-slate-blue;
+            padding: 1rem;
+            color: $white;
+
+            h2 {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .faq-answer {
+            background-color: beige;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

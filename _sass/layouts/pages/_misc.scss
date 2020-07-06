@@ -100,7 +100,6 @@ body.category-science {
     }
 }
 
-body.faqs,
 body.contact {
     .content-box {
         @media (max-width: 567px) {
@@ -112,6 +111,35 @@ body.contact {
             &:first-child {
                 @media (max-width: 567px) {
                     text-align: center;
+                }
+            }
+        }
+    }
+}
+
+body.faqs {
+    .content-box {
+        @media (min-width: 768px) {
+            height: auto;
+        }
+
+        @media (max-width: 567px) {
+            padding-bottom: 0;
+            grid-template-columns: 0fr 12fr 0fr;
+        }
+
+        .content-inner {
+            h1, .h1, > p {
+                @media (max-width: 567px) {
+                    max-width: 85%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                a {
+                    @media (max-width: 567px) {
+                        font-size: 1.2rem;
+                    }
                 }
             }
         }

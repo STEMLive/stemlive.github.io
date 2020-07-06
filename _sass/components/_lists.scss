@@ -1,0 +1,12 @@
+.list-default {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+        font-size: 1.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
