@@ -66,11 +66,55 @@
 }
 
 /*
-    Collective page
+    Collective pages
 */
 
 body.collective {
     .featured-educators {
         margin-bottom: 2rem;
+    }
+
+    .content-box {
+        .content-inner {
+            p {
+                font-weight: 300;
+            }
+
+            ul.links {
+                list-style-type: none;
+                padding-left: 0;
+
+                &:not(:last-child) {
+                    margin-bottom: 2.5rem;
+                }
+
+                li {
+                    font-size: 1.5rem;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+
+                    span {
+                        font-weight: 900;
+                    }
+                }
+            }
+
+            ul.list-streamers {
+                list-style-type: none;
+                padding-left: 0;
+                margin-top: 2.5rem;
+                margin-bottom: 2.5rem;
+
+                li {
+                    font-size: 1.6rem;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
     }
 }
