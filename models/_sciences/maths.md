@@ -10,5 +10,4 @@ layout: science
 Mathematics is the study of numbers, calculations, shapes and equations, written using special notations and symbols.
 
 {% include components/streamers/featured.html science="maths" platform="twitch" %}
-
 {% include components/streamers/featured.html science="maths" platform="youtube" %}

@@ -10,5 +10,4 @@ layout: science
 Chemistry is the study of matter - its structure, properties, and changes that matter undergoes.
 
 {% include components/streamers/featured.html science="chemistry" platform="twitch" %}
-
 {% include components/streamers/featured.html science="chemistry" platform="youtube" %}
