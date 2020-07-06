@@ -24,11 +24,19 @@
 
     {%- assign thumb = '/assets/images/educators/thumbnails/' | append: streamer.images.thumbnail.filename -%}
     {%- assign thumb_exists = site.static_files | where: 'path', thumb -%}
+    {%- assign streaming_platforms = '' | split: '' -%}
 
     {%- if thumb_exists.size < 1 -%}
         {%- assign thumb = '/assets/images/educators/thumbnails/' | append: defaultImg -%}
     {%- endif -%}
-    <div class="featured-educator {{ streamer.sciences | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
+
+    {%- if streamer.streaming_platforms.size > 0 -%}
+    {%- for streaming_services in streamer.streaming_platforms -%}
+    {%- assign streaming_platform = streaming_services[0] -%}
+    {%- assign streaming_platforms = streaming_platforms | push: streaming_platform -%}
+    {%- endfor -%}
+    {%- endif -%}
+    <div class="featured-educator {{ streamer.sciences | join: ' ' }} {{ streaming_platforms | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
         <a href="{{ streamer.url }}"></a>
 
         <div class="educator-minibio">
