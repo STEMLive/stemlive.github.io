@@ -3,18 +3,14 @@
 */
 
 body.category-educator {
-    position: relative;
-    min-height: unset;
-
     .content-box {
         @media (min-width: 768px) {
             height: auto;
         }
-    }
-    
-    footer {
-        position: absolute;
-        bottom: 0;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 0.8fr 8fr 0.8fr;
+        }
     }
 }
 
