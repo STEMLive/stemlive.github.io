@@ -1,4 +1,6 @@
 {%- assign current_year = 'now' | date: '%Y' -%}
+{%- include components/outdated.html -%}
+<script src="{{ '/assets/js/components/OutdatedBrowser.js' | relative_url }}"></script>
 <footer>
     <p>
         {{ site.title }} &copy; {{ current_year }}
