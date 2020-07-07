@@ -10,7 +10,7 @@ sciences:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/freckedchemist
-display_on_site: true
-include_links: true
+display_on_site: false
+include_links: false
 layout: educator
 ---
