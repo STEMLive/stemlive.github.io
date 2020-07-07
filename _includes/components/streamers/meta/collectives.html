@@ -1,0 +1,14 @@
+<h3>
+    Collectives to which {{ page.name | default: page.title }} belongs:
+</h3>
+
+<ul class="list-default">
+    {%- for streamer_collective in page.collectives -%}
+    {%- assign collective = site.collectives | where: 'tag', streamer_collective | first -%}
+    <li>
+        <a href="{{ collective.url | relative_url }}">
+            {{ collective.title }}
+        </a>
+    </li>
+    {%- endfor -%}
+</ul>

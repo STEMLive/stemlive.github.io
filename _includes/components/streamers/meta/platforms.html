@@ -1,0 +1,14 @@
+<h3>
+    Platforms on which {{ page.name | default: page.title }} streams:
+</h3>
+
+<ul class="list-default">
+    {%- for streaming_platform in page.streaming_platforms -%}
+    {% assign streaming_service = streaming_platform[0]%}
+    <li>
+        <a href="{{ streaming_platform[1].url | relative_url }}" target="_blank">
+            {{ streaming_service | capitalize }}
+        </a>
+    </li>
+    {%- endfor -%}
+</ul>

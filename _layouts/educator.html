@@ -24,6 +24,10 @@
         <main class="content-box">
             <div class="content-inner">
                 {{ content }}
+
+                {%- if content_length > 77 -%}
+                    {%- include components/streamers/meta.html -%}
+                {%- endif -%}
             </div>
         </main>
         {%- include components/bottom/footer/navigation.html -%}
