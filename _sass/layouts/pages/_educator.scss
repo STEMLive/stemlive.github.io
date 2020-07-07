@@ -15,6 +15,20 @@ body.category-educator {
 }
 
 /*
+    Low text pages
+*/
+
+body.category-educator {
+    &.low-text-ratio {
+        .content-box {
+            @media (max-width: 1199px) {
+                height: 100%;
+            }
+        } 
+    }
+}
+
+/*
     Featured educators
 */
 
