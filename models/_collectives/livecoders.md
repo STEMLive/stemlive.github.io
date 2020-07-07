@@ -15,9 +15,9 @@ layout: collective
 {%- assign collective_streamers = site.educators | where: 'collectives', 'livecoders' | where: 'display_on_site', true -%}
 # About Live Coders
 
-Comprised of a number of programmers, some of whom work for big name brands and companies, the **{{ page.page_title }}** community aims to broadcast high-quality programming content to its viewership.
+Comprised of a number of programmers, some of whom work for big name brands and companies, the **{{ page.title }}** community aims to broadcast high-quality programming content to its viewership.
 
-At present, this collective has a total of <span class="streamer-total">{{ collective_streamers.size }}</span> streamers.
+At present, this collective has a total of <span class="streamer-total">{{ collective_streamers.size }}</span> streamers registered on {{ site.title }}.
 
 {% include components/collectives/links.md %}
 {% include components/streamers/featured.html collective=page.tag %}

@@ -13,6 +13,7 @@ streaming_platforms:
   twitch:
     url: https://www.twitch.tv/cmgriffing
 display_on_site: true
+include_links: true
 layout: educator
 ---
 ## About Chris

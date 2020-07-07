@@ -13,6 +13,7 @@ streaming_platforms:
   twitch:
     url: https://www.twitch.tv/profmelko
 display_on_site: true
+include_links: true
 layout: educator
 ---
 ## Who is Joshua Melko?

@@ -31,6 +31,18 @@ body.lineup {
         }
     }
 
+    ul.links {
+        li {
+            a {
+                @media (max-width: 567px) {
+                    display: block;
+                    font-size: 1.2rem;   
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+
     h1, .h1 {
         @media (max-width: 567px) {
             font-size: 2.1rem;

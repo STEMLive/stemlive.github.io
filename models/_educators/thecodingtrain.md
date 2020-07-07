@@ -11,5 +11,6 @@ streaming_platforms:
   youtube:
     url: https://www.youtube.com/user/shiffman/
 display_on_site: false
+include_links: false
 layout: educator
 ---

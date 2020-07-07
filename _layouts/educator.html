@@ -4,6 +4,8 @@
 {%- else -%}
 {%- capture description -%}{{- site.description -}}.{%- endcapture description -%}
 {%- endif -%}
+
+{%- assign content_length = content.size -%}
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
@@ -16,12 +18,16 @@
         {%- assign today = 'now' | date: '%Y%M%d' -%}
         <link rel="stylesheet" href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" type="text/css" />
     </head>
-    <body class="category-educator">
+    <body class="category-educator{% if content_length < 77 %} low-text-ratio{% endif %}">
         {%- include components/top/header/navigation.html -%}
         {%- include components/banners/featured-educator.html -%}
         <main class="content-box">
             <div class="content-inner">
                 {{ content }}
+
+                {%- if page.include_links == true -%}
+                    {%- include components/streamers/meta.html -%}
+                {%- endif -%}
             </div>
         </main>
         {%- include components/bottom/footer/navigation.html -%}
