@@ -94,8 +94,9 @@ class FeaturedEducator {
                 educatorBioTitle.innerHTML = streamer.title;
             }
 
-            educatorBio.appendChild(educatorLink);
+            educatorGrid.appendChild(educatorLink);
             educatorBio.appendChild(educatorBioTitle);
+            educatorGrid.appendChild(educatorLink);
             educatorGrid.appendChild(educatorBio);
             this.featuredEducators.push(educatorGrid);
         }
