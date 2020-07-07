@@ -3,7 +3,12 @@
 */
 
 body.lineup {
+
     .content-box {
+        @media (max-width: 991px) {
+            min-height: 100vh;     
+        }
+
         @media (max-width: 767px) {
             grid-template-columns: 0.5fr 8fr 0.5fr;
         }
