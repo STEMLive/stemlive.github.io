@@ -25,7 +25,7 @@ class LoadMoreButton {
                 let 
                     featuredEducators = document.querySelectorAll('.featured-educator');
                 
-                FeaturedEducator.getEducatorData(featuredEducators.length)
+                FeaturedEducator.getEducatorData(featuredEducators.length);
             break;
         }
     }

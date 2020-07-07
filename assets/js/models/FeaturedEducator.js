@@ -14,10 +14,21 @@ class FeaturedEducator {
         .then(data => {
             let featuredEducators = data[0].streamers
 
+            if (offset === Object.keys(featuredEducators).length) {
+                let loadMoreButton = document.querySelector('.featured-educators').nextElementSibling;
+                
+                if (loadMoreButton.classList.contains('load-more-button')) {
+                    loadMoreButton.setAttribute('disabled', 'disabled');
+                }
+
+                return
+            }
+
             if (offset > 0) {
                 featuredEducators = featuredEducators.splice(offset)
-                this.lazyLoad(featuredEducators)
             }
+            
+            this.lazyLoad(featuredEducators)
         })
     }
 
@@ -65,6 +76,8 @@ class FeaturedEducator {
 
             if (typeof streamer.images.thumbnail.filename != 'undefined' && streamer.images.thumbnail.filename.length > 0) {
                 educatorGrid.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.images.thumbnail.filename + ');');
+            } else if (typeof streamer.sciences != 'undefined') {
+                educatorGrid.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.sciences[0] + '/default.jpg);'); 
             }
 
             educatorLink.setAttribute('href', streamer.url);
