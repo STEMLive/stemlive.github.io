@@ -1,7 +1,7 @@
 class FeaturedEducator {
     constructor () {
         this.endpoint = '/data/streamers.json'
-        this.streamerHtml = ''
+        this.featuredEducators = []
     }
 
     getEducatorData (offset = 0) {
@@ -84,11 +84,12 @@ class FeaturedEducator {
             educatorBio.appendChild(educatorLink);
             educatorBio.appendChild(educatorBioTitle);
             educatorGrid.appendChild(educatorBio);
-            this.streamerHtml += educatorGrid.outerHTML;
+            this.featuredEducators.push(educatorGrid);
         }
 
-        if (this.streamerHtml.length > 0) {
-            document.querySelector('.featured-educators').insertAdjacentHTML('beforeend', this.streamerHtml);
+        if (this.featuredEducators.length > 0 && typeof window.featuredEducatorsGrid != 'undefined') {
+            let featuredEducators = this.featuredEducators;
+            window.featuredEducatorsGrid.insert(featuredEducators);
         }
     }
 }

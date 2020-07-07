@@ -13,6 +13,8 @@
                 layoutMode: 'fitRows'
             });
 
+            window.featuredEducatorsGrid = this.isotopeGrid;
+
             this.filters.forEach(filter => {
                 filter.addEventListener('change', this.filterFeaturedEducatorGrid.bind(this));
             });
