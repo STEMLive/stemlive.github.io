@@ -58,11 +58,6 @@ body.category-educator {
                 min-height: 15rem;
             }
 
-            a {
-                position: absolute;
-                left: 0;
-            }
-
             @media (max-width: 1199px) {
                 padding-left: 25%;
                 padding-right: 25%;
@@ -72,6 +67,20 @@ body.category-educator {
                 padding-left: 50%;
                 padding-right: 50%;
             }
+
+            a {
+                position: absolute;
+                left: 0;
+            }
+
+            .educator-minibio {
+                h3 {
+                    @media (min-width: 1200px) and (max-width: 1440px) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
         }
     }
 
