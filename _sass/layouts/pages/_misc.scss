@@ -28,9 +28,17 @@ body.lineup {
             &:not([class*="text-"]) {
                 color: $medium-slate-blue;
             }
+        }
+    }
 
-            @media (max-width: 567px) {
-                word-break: break-word;  
+    ul.links {
+        li {
+            a {
+                @media (max-width: 567px) {
+                    display: block;
+                    font-size: 1.2rem;   
+                    margin-top: .5rem;
+                }
             }
         }
     }
