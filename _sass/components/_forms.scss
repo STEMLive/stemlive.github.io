@@ -3,8 +3,10 @@ form {
         color: $white;
         
         > div {
-            margin-left: auto;
-            margin-right: auto;   
+            @media (min-width: 768px) {
+                margin-left: auto;
+                margin-right: auto;   
+            }
         }
 
         h3 {
