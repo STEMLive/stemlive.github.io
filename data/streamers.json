@@ -1,0 +1,9 @@
+---
+layout: null
+---
+{%- capture streamers -%}
+{{ site.educators | where: 'display_on_site', true | jsonify }}
+{%- endcapture -%}
+[{
+    "streamers": {{ streamers }}
+}]

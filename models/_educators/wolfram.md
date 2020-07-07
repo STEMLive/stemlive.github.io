@@ -13,7 +13,7 @@ streaming_platforms:
     url: https://www.twitch.tv/stephen_wolfram
   youtube:
     url: https://www.youtube.com/user/WolframResearch
-display_on_site: false
-include_links: false
+display_on_site: true
+include_links: true
 layout: educator
 ---

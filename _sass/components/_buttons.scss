@@ -15,3 +15,18 @@
     color: $white;
     text-align: center;
 }
+
+body.lineup {
+    .load-more-button {
+        display: block;
+        font-size: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 768px) {
+            max-width: 35%;
+        }
+    }
+}

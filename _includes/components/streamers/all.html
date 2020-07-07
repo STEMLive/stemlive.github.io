@@ -4,7 +4,7 @@
 {%- include components/streamers/filters.html -%}
 
 <div class="featured-educators">
-    {%- for streamer in streamers -%}
+    {%- for streamer in streamers limit:site.grid.initial_limit -%}
 
     {%- assign primaryScience = streamer.sciences | first -%}
     {%- assign defaultImg = primaryScience | append: '/default.jpg' -%}
@@ -53,5 +53,14 @@
         </div>
     </div>
     {%- endfor -%}
+
 </div>
+
+{%- if streamers.size > site.grid.initial_limit -%}
+<a href="#" class="cta bg-medium-slate-blue load-more-button" data-target-elem=".featured-educators">
+    Load more
+</a>
+
+<script type="module" src="{{ '/assets/js/components/LoadMoreButton.js' | relative_url }}"></script>
+{%- endif -%}
 {%- endif -%}
