@@ -43,31 +43,19 @@ body.category-educator {
     grid-auto-rows: minmax(20rem, auto);
 
     &.toggle-grid {
+        @media (min-width: 1200px) {
+            margin-left: 6rem;
+        }
+
         .featured-educator {
             padding-left: 20%;
             padding-right: 20%;
             min-height: 20rem;
 
-            &:nth-child(odd) {
-                &[style*="display: none"] + .featured-educator:not(:nth-last-child(2)),
-                &[style*="display: none"] + .featured-educator + .featured-educator:not(:nth-last-child(2)),
-                &[style*="display: none"] + .featured-educator + .featured-educator:not(:nth-last-child(2)) + .featured-educator:nth-child(even):not(:nth-last-child(2)) {
-                    @media (min-width: 1200px) {
-                        margin-left: 10%;
-                    }
-                }
-
-                @media (min-width: 1200px) {
-                    margin-left: 10%;
-                }
-            }
-
-            &:nth-last-child(2) {
-                &[style*="display: none"] + .featured-educator {
-                    @media (min-width: 1200px) {
-                        margin-left: unset;
-                    }
-                }
+            @media (min-width: 1200px) {
+                padding-left: 15%;
+                padding-right: 15%;
+                min-height: 15rem;
             }
 
             a {
