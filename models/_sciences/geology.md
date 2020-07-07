@@ -2,7 +2,7 @@
 tag: geology
 title: Geology
 short_description: >-
-    Geology is a great subject.
+  Interested in learning about the formation of the earth and how it has changed over time?
 parents:
   - biology
   - chemistry

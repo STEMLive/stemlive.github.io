@@ -2,7 +2,7 @@
 tag: physics
 title: Physics
 short_description: >-
-    Physics is a great subject.
+    Do you know your three laws of motion from your Faraday&rsquo;s law of induction?
 layout: science
 ---
 ## What is physics?

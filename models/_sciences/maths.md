@@ -2,7 +2,7 @@
 tag: maths
 title: Maths
 short_description: >-
-  Maths is a great subject.
+  Equip yourself with the knowhow to assess and tackle challenging problems.
 layout: science
 ---
 ## What is mathematics?

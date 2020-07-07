@@ -20,9 +20,13 @@ class Slideshow {
                     nextSlide = activeSlide.nextElementSibling
                 ;
 
+                if (nextSlide === null) {
+                    nextSlide = slideshow.querySelector('.slideshow-item');
+                }
+
                 activeSlide.classList.toggle('active');
                 nextSlide.classList.toggle('active');
-            }, 8000, slideshow);
+            }, 5000, slideshow);
         });
     }
 }
