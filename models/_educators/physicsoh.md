@@ -11,5 +11,6 @@ streaming_platforms:
   twitch:
     url: https://www.twitch.tv/physicsoh
 display_on_site: true
+include_links: false
 layout: educator
 ---
