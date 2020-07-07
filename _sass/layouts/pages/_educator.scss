@@ -3,11 +3,15 @@
 */
 
 body.category-educator {
-    .content-box {
-        @media (min-width: 768px) {
-            height: auto;
+    &:not(.low-text-ratio) {
+        .content-box {
+            @media (min-width: 768px) {
+                height: auto;
+            }
         }
+    }
 
+    .content-box {
         @media (max-width: 767px) {
             grid-template-columns: 0.8fr 8fr 0.8fr;
         }
