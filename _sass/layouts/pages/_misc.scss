@@ -28,6 +28,10 @@ body.lineup {
             &:not([class*="text-"]) {
                 color: $medium-slate-blue;
             }
+
+            @media (max-width: 567px) {
+                word-break: break-word;  
+            }
         }
     }
 
