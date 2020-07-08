@@ -2,7 +2,7 @@
 tag: computer-science
 title: Computer Science
 short_description: >-
-    Computer Science is a great subject.
+  Learn about the underlying data structures and algorithms that power millions of applications.
 layout: science
 ---
 ## What is computer science?

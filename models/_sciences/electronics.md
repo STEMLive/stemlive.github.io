@@ -2,7 +2,7 @@
 tag: electronics
 title: Electronics
 short_description: >-
-    Electronics is a great subject.
+  Learn how to build and debug your circuits.
 parents:
   - physics
 layout: science

@@ -2,7 +2,7 @@
 tag: chemistry
 title: Chemistry
 short_description: >-
-    Chemistry is a great subject.
+  Want to learn about the substances that make up our world?
 layout: science
 ---
 ## What is chemistry?

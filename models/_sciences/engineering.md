@@ -2,7 +2,7 @@
 tag: engineering
 title: Engineering
 short_description: >-
-  Engineering is a great subject.
+  Interested in learning how to design some impressive structures?
 layout: science
 ---
 ## What is engineering?

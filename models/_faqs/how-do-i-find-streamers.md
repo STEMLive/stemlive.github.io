@@ -1,5 +1,7 @@
 ---
+layout: faq
 title: How do I find streamers?
+permalink: /faq/how-do-i-find-streamers
 ---
 <p>
   You can find streamers on the following pages:

@@ -20,9 +20,16 @@ class Slideshow {
                     nextSlide = activeSlide.nextElementSibling
                 ;
 
+                if (nextSlide === null) {
+                    nextSlide = slideshow.querySelector('.slideshow-item');
+                    nextSlide.classList.toggle('is-sliding', nextSlide.classList.contains('active'));
+                }
+
+                nextSlide.classList.add('is-sliding');
                 activeSlide.classList.toggle('active');
-                nextSlide.classList.toggle('active');
-            }, 8000, slideshow);
+                nextSlide.classList.toggle('active', nextSlide.classList.contains('is-sliding'));
+                activeSlide.classList.toggle('is-sliding', activeSlide.classList.contains('active'));
+            }, 5000, slideshow);
         });
     }
 }

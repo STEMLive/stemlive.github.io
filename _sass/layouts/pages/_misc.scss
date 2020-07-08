@@ -3,7 +3,6 @@
 */
 
 body.lineup {
-
     .content-box {
         @media (max-width: 991px) {
             min-height: 100vh;     
@@ -16,6 +15,44 @@ body.lineup {
 
     .featured-educators {
         margin-top: 5rem;
+    }
+}
+
+/*
+    Contact
+*/
+
+body.contact {
+    .contact-grid {
+        margin-top: 2rem;
+
+        @media (max-width: 991px) {
+            grid-template-columns: 12fr;
+        }
+
+        .contact-item {
+            p {
+                @media (min-width: 768px) {
+                    max-width: 95%;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 1.5rem;
+                }
+
+                > a {
+                    word-break: break-word;
+                }
+            }
+
+            &:not(:last-of-type) {
+                p {
+                    @media (min-width: 768px) {
+                        max-width: 85%;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -63,11 +100,14 @@ body.lineup {
 
 body.about,
 body[class*="collective"],
+body.contact,
+body[class*="faq"],
 body.lineup,
 body.category-science {
     .content-box {
         @media (min-width: 768px) {
             height: auto;
+            min-height: 92.1vh;
         }
     }
 }
@@ -75,7 +115,8 @@ body.category-science {
 body.contact {
     .content-box {
         @media (max-width: 567px) {
-            height: 100%;
+            height: auto;
+            min-height: 92.1vh; 
             grid-template-columns: 0.5fr 8fr 0.5fr;
         }
 
@@ -89,12 +130,8 @@ body.contact {
     }
 }
 
-body.faqs {
+body.faq, body.faqs {
     .content-box {
-        @media (min-width: 768px) {
-            height: auto;
-        }
-
         @media (max-width: 567px) {
             padding-bottom: 0;
             grid-template-columns: 0fr 12fr 0fr;

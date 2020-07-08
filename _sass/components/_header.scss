@@ -107,6 +107,10 @@ header {
         grid-row: 2;
         margin-top: 25%;
 
+        @media (max-width: 1199px) and (orientation: landscape) {
+            margin-top: 0;
+        }
+
         li {
             font-size: 1.5rem;
             max-width: 65%;
