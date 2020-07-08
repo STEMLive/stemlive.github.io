@@ -19,14 +19,10 @@ class LoadMoreButton {
             button = e.target,
             targetElem = document.querySelector(button.dataset.targetElem)
         ;
-
-        switch (true) {
-            case targetElem.classList.contains('featured-educators'):
-                let 
-                    featuredEducators = document.querySelectorAll('.featured-educator');
-                
-                FeaturedEducator.getEducatorData(featuredEducators.length);
-            break;
+ 
+        if (targetElem.classList.contains('featured-educators')) {
+            var featuredEducators = document.querySelectorAll('.featured-educator');
+            FeaturedEducator.getEducatorData(featuredEducators.length);
         }
     }
 }

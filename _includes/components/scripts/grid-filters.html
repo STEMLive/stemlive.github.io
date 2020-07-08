@@ -1,14 +1,14 @@
 <script>
-    class FeaturedEducatorGridFilters {
+    class FeaturedEducatorsGridFilters {
         constructor (filters) {
             if (typeof filters === 'undefined') {
                 return;
             }
             
             this.filters = document.querySelectorAll(filters);
-            this.featuredEducatorGrid = document.querySelector('.featured-educators');
-            this.featuredEducatorGrid.classList.toggle('toggle-grid');
-            this.isotopeGrid = new Isotope(this.featuredEducatorGrid, {
+            this.featuredEducatorsGrid = document.querySelector('.featured-educators');
+            this.featuredEducatorsGrid.classList.toggle('toggle-grid');
+            this.isotopeGrid = new Isotope(this.featuredEducatorsGrid, {
                 itemSelector: '.featured-educator',
                 layoutMode: 'fitRows'
             });
@@ -16,11 +16,11 @@
             window.featuredEducatorsGrid = this.isotopeGrid;
 
             this.filters.forEach(filter => {
-                filter.addEventListener('change', this.filterFeaturedEducatorGrid.bind(this));
+                filter.addEventListener('change', this.filterFeaturedEducatorsGrid.bind(this));
             });
         }
 
-        filterFeaturedEducatorGrid (e) { 
+        filterFeaturedEducatorsGrid (e) {
             e.preventDefault();
 
             if (typeof this.isotopeGrid === 'undefined') {
@@ -32,8 +32,15 @@
                 checkedInputs = form.querySelectorAll('input[type="checkbox"]:checked'),
                 input = e.target,
                 isChecked = input.checked,
-                filterValue = isChecked ? input.dataset.filter : '*'
+                filterValue = isChecked ? input.dataset.filter : '*',
+                loadMoreButton = document.querySelector('.load-more-button[data-target-elem=".featured-educators"]')
             ;
+
+            form.classList.toggle('is-filtered', checkedInputs.length > 0);
+
+            if (loadMoreButton != null && loadMoreButton.dataset.continueLoading === true) {
+                loadMoreButton.toggleAttribute('disabled', form.classList.contains('is-filtered'));
+            }
 
             if (checkedInputs.length > 1 || (!isChecked && checkedInputs.length > 0)) {
                 filterValue = '';
@@ -50,6 +57,6 @@
     }
     
     window.addEventListener('load', function () {
-        new FeaturedEducatorGridFilters('form.grid-filters');
+        new FeaturedEducatorsGridFilters('form.grid-filters');
     });
 </script>

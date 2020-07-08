@@ -18,6 +18,7 @@ class FeaturedEducator {
                 let loadMoreButton = document.querySelector('.featured-educators').nextElementSibling;
                 
                 if (loadMoreButton.classList.contains('load-more-button')) {
+                    loadMoreButton.setAttribute('data-continue-loading', false);
                     loadMoreButton.setAttribute('disabled', 'disabled');
                 }
 
