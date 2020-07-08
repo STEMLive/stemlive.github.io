@@ -6,7 +6,7 @@ links:
   twitch: https://www.twitch.tv/team/brainbytes
 ---
 {%- assign shared_streamers = site.educators | where: 'collectives', 'brainbytes' | where: 'collectives', 'theknowledgefellowship' | where: 'display_on_site', true -%}
-{%- assign affiliated_streamers = site.educators | where: 'collectives', 'brainbytes' | where: 'display_on_site', true -%}
+{%- assign affiliated_streamers = site.educators | where: 'collectives', 'brainbytes' | where_exp: 'educator', 'educator.collectives.size == 1' | where: 'display_on_site', true -%}
 # About BrainBytes
 
 {% if shared_streamers.size >= 3 %}
