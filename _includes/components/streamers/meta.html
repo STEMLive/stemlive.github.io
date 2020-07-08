@@ -1,7 +1,12 @@
-{%- if page.collectives.size > 0 -%}
-{% include components/streamers/meta/collectives.html %}
+{%- if page.sciences.size > 0 -%}
+{% include components/streamers/meta/disciplines.html %}
 {%- endif -%}
 
 {%- if page.streaming_platforms.size > 0 -%}
 {% include components/streamers/meta/platforms.html %}
 {%- endif -%}
+
+{%- if page.collectives.size > 0 -%}
+{% include components/streamers/meta/collectives.html %}
+{%- endif -%}
+
