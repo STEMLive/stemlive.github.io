@@ -11,8 +11,8 @@
         color: $white;
         position: absolute;
         left: 0;
-        transition: .5s;
-        z-index: 1;
+        transition: 2.5s;
+        z-index: 2;
 
         @media (max-width: 1199px) {
             padding-left: 0;
@@ -24,6 +24,16 @@
 
             @media (max-width: 767px) {
                 left: -300%;
+            }
+        }
+
+        &.is-sliding {
+            @media (min-width: 768px) {
+                animation: is-sliding 1.5s backwards;
+            }
+
+            @media (max-width: 767px) {
+                animation: is-sliding-sm-down 1.5s backwards;
             }
         }
 
@@ -56,8 +66,19 @@
             p {
                 font-size: 2rem;
 
+                @media (max-width: 567px) {
+                    font-size: 1.4rem;
+                }
+
                 &:last-of-type {
                     margin-bottom: 2rem;
+                }
+            }
+
+            .cta {
+                @media (max-width: 567px) {
+                    text-align: left;
+                    font-size: .8rem;
                 }
             }
 

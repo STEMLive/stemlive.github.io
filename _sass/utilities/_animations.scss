@@ -1,0 +1,19 @@
+@keyframes is-sliding {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes is-sliding-sm-down {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
