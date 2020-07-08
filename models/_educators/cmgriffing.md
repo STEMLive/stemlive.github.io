@@ -12,6 +12,9 @@ collectives:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/cmgriffing
+social_platforms:
+  website: http://chrisgriffing.com/
+  twitter: https://twitter.com/cmgriffing
 display_on_site: true
 include_links: true
 layout: educator

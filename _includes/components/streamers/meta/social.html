@@ -1,0 +1,31 @@
+<h3>
+    {{ page.name | default: page.title }}&rsquo;s links:
+</h3>
+
+<ul class="list-default social-links">
+    {%- for social_platform in page.social_platforms -%}
+    {%- assign social_channel = social_platform[0] -%}
+    {%- assign social_link = social_platform[1] -%}
+    {%- case social_channel -%}
+        {%- when 'website' -%}
+        {%- assign icon_class = 'globe' -%}
+        {%- when 'twitter' -%}
+        {%- assign icon_class = 'twitter' -%}
+        {%- when 'facebook' -%}
+        {%- assign icon_class = 'facebook' -%}
+        {%- when 'linkedin' -%}
+        {%- assign icon_class = 'linkedin-squared' -%}
+        {%- when 'instagram' -%}
+        {%- assign icon_class = 'instagram' -%}
+    {%- endcase -%}
+    <li class="item-{{ social_channel }}">
+        {%- if icon_class != nil and icon_class != '' and icon_class.size > 0 -%}
+        <a href="{{ social_link }}" class="link-{{ social_channel }}" target="_blank">
+            <i class="icon-{{ icon_class }}"></i>
+        </a>
+        {%- else -%}
+        <a href="{{ social_link }}">{{ social_channel }}</a>
+        {%- endif -%}
+    </li>
+    {%- endfor -%}
+</ul>

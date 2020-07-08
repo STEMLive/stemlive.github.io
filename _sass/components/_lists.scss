@@ -10,3 +10,48 @@
         }
     }
 }
+
+.social-links {
+    li {
+        display: inline-block;
+        margin-bottom: unset;
+        font-size: 2rem;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+            margin-bottom: unset;
+        }
+
+        &:not(.item-facebook) {
+            vertical-align: super;
+        }
+
+        a {
+            &.link-twitter {
+                color: $dodger-blue;
+            }
+
+            &.link-linkedin {
+                color: $denim-blue;
+            }
+
+            &.link-instagram {
+                background: -moz-linear-gradient(-135deg,#1400c8,#b900b4,#f50000);  
+                background: -webkit-linear-gradient(-135deg,#1400c8,#b900b4,#f50000);  
+                background: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);  
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &.link-facebook {
+                background-color: $mariner-blue;
+                color: $white;
+                border-radius: 4px;
+                font-size: 1.3rem;
+                vertical-align: super;
+            }
+        }
+    }
+}

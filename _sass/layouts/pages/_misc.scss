@@ -77,7 +77,7 @@ body.contact {
 
     p, li {
         a {
-            &:not([class*="text-"]) {
+            &:not([class*="text-"]):not([class*="link-"]) {
                 color: $medium-slate-blue;
             }
         }
