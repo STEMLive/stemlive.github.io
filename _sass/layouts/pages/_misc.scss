@@ -3,7 +3,6 @@
 */
 
 body.lineup {
-
     .content-box {
         @media (max-width: 991px) {
             min-height: 100vh;     
@@ -63,11 +62,13 @@ body.lineup {
 
 body.about,
 body[class*="collective"],
+body[class*="faq"],
 body.lineup,
 body.category-science {
     .content-box {
         @media (min-width: 768px) {
             height: auto;
+            min-height: 100vh;
         }
     }
 }
@@ -91,10 +92,6 @@ body.contact {
 
 body.faq, body.faqs {
     .content-box {
-        @media (min-width: 768px) {
-            height: auto;
-        }
-
         @media (max-width: 567px) {
             padding-bottom: 0;
             grid-template-columns: 0fr 12fr 0fr;
