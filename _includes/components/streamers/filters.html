@@ -39,7 +39,7 @@
         <fieldset>
             {%- for science in sciences -%}
             <div class="checkbox-wrapper">
-                <input type="checkbox" value=".{{ science.tag }}" data-filter=".{{ science.tag }}" />
+                <input type="checkbox" value=".{{ science.tag }}" data-filter=".{{ science.tag }}" autocomplete="off" />
                 <label>{{ science.title }}</label>
             </div>
             {%- endfor -%}
