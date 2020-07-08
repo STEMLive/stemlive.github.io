@@ -31,6 +31,3 @@ BrainBytes features a diverse cast of STEM educators unique to their team, such 
 {%- else -%}
 BrainBytes features a growing number of streamers spanning various disciplines, from automotive repair to astronomy.
 {% endif %}
-
-{% include components/collectives/links.md %}
-{% include components/streamers/featured.html collective=page.tag %}

@@ -16,6 +16,3 @@ layout: collective
 **The Knowledge Fellowship** brands itself as a _community of like-minded people_, a _central hub_ for educational content and knowledge sharing.
 
 At present, this collective has a total of <span class="streamer-total">{{ collective_streamers.size }}</span> streamers registered on {{ site.title }}.
-
-{% include components/collectives/links.md %}
-{% include components/streamers/featured.html collective=page.tag %}

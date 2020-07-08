@@ -6,6 +6,11 @@
     <main class="content-box">
       <div class="content-inner">
         {{ content }}
+        {% capture collective_links %}
+        {% include components/collectives/links.md %}
+        {% endcapture %}
+        {{ collective_links | markdownify }}
+        {% include components/streamers/featured.html collective=page.tag %}
       </div>
     </main>
     {%- include components/bottom/footer/navigation.html -%}
