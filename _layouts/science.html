@@ -22,6 +22,8 @@
         <main class="content-box">
             <div class="content-inner">
                 {{ content }}
+                {% include components/streamers/featured.html science=page.tag platform="twitch" %}
+                {% include components/streamers/featured.html science=page.tag platform="youtube" %}
             </div>
         </main>
         {%- include components/bottom/footer/navigation.html -%}
