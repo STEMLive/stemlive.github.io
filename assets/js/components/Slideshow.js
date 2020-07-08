@@ -29,7 +29,7 @@ class Slideshow {
                 activeSlide.classList.toggle('active');
                 nextSlide.classList.toggle('active', nextSlide.classList.contains('is-sliding'));
                 activeSlide.classList.toggle('is-sliding', activeSlide.classList.contains('active'));
-            }, 3000, slideshow);
+            }, 5000, slideshow);
         });
     }
 }
