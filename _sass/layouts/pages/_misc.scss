@@ -103,7 +103,7 @@ body[class*="collective"],
 body.contact,
 body[class*="faq"],
 body.lineup,
-body.category-science {
+body[class*="science"] {
     .content-box {
         @media (min-width: 768px) {
             height: auto;

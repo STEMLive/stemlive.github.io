@@ -1,0 +1,19 @@
+{%- assign sciences = site.sciences -%}
+
+{%- if sciences.size > 0 -%}
+<div class="featured-sciences">
+    {%- for science in sciences -%}
+
+    {%- assign thumb = '/assets/images/educators/thumbnails/' | append: science.tag | append: '/default.jpg' -%}
+    <div class="featured-science" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ science.title }}{% endif %}">
+        <a href="{{ science.url }}"></a>
+
+        <div class="science-minibio">
+            <h3 class="h4">
+                {{ science.title }}
+            </h3>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+{%- endif -%}

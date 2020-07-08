@@ -27,8 +27,8 @@
 
 body.collective,
 body.contact,
-body.faq,
-body.faqs {
+body[class*="faq"],
+body[class*="science"] {
     .content-box {
         .content-inner {
             padding-top: 5rem;
