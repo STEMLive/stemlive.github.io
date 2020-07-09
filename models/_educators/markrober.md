@@ -8,8 +8,7 @@ images:
 sciences:
   - physics
 streaming_platforms:
-  youtube:
-    url: https://www.youtube.com/MarkRober
+  youtube: https://www.youtube.com/MarkRober
 display_on_site: false
 include_links: false
 layout: educator

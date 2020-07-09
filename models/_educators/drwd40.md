@@ -10,8 +10,7 @@ collectives:
   - theknowledgefellowship
   - brainbytes
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/drwd40
+  twitch: https://www.twitch.tv/drwd40
 display_on_site: true
 include_links: true
 layout: educator

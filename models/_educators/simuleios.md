@@ -11,8 +11,7 @@ sciences:
 collectives:
   - theknowledgefellowship
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/simuleios
+  twitch: https://www.twitch.tv/simuleios
 social_platforms:
   website: http://leios.github.io/
   github: https://github.com/leios

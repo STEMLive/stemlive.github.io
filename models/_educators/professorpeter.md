@@ -8,8 +8,7 @@ images:
 sciences:
   - maths
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/professorpeter
+  twitch: https://www.twitch.tv/professorpeter
 display_on_site: false
 include_links: false
 layout: educator

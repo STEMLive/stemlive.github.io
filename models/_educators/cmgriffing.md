@@ -10,8 +10,7 @@ sciences:
 collectives:
   - livecoders
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/cmgriffing
+  twitch: https://www.twitch.tv/cmgriffing
 social_platforms:
   website: http://chrisgriffing.com/
   twitter: https://twitter.com/cmgriffing

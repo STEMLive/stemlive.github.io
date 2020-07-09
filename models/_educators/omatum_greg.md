@@ -8,8 +8,7 @@ images:
 sciences:
   - computer-science
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/omatum_greg
+  twitch: https://www.twitch.tv/omatum_greg
 social_platforms:
   website: https://www.omatum.com/
   youtube: https://omatum.tv

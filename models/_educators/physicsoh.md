@@ -8,8 +8,10 @@ images:
 sciences:
   - physics
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/physicsoh
+  twitch: https://www.twitch.tv/physicsoh
+social_platforms:
+  twitter: https://twitter.com/AsplingEric
+  youtube: https://www.youtube.com/channel/UCoJP3W_S2Vt6jhrSIv0ScMg
 display_on_site: true
 include_links: true
 layout: educator

@@ -8,8 +8,7 @@ images:
 sciences:
   - computer-science
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/donthedeveloper
+  twitch: https://www.twitch.tv/donthedeveloper
 display_on_site: true
 include_links: true
 layout: educator

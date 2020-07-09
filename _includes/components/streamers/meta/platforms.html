@@ -4,9 +4,10 @@
 
 <ul class="list-default">
     {%- for streaming_platform in page.streaming_platforms -%}
-    {% assign streaming_service = streaming_platform[0]%}
+    {%- assign streaming_service = streaming_platform[0] -%}
+    {%- assign streaming_url = streaming_platform[1] -%}
     <li>
-        <a href="{{ streaming_platform[1].url | relative_url }}" target="_blank">
+        <a href="{{ streaming_url }}" target="_blank">
             {{ streaming_service | capitalize }}
         </a>
     </li>

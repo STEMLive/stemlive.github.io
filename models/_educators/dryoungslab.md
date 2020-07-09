@@ -8,8 +8,7 @@ images:
 sciences:
   - chemistry
 streaming_platforms:
-  twitch:
-    url: https://www.twitch.tv/dryoungslab
+  twitch: https://www.twitch.tv/dryoungslab
 display_on_site: true
 include_links: true
 layout: educator
