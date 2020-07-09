@@ -17,15 +17,24 @@ class Slideshow {
             setInterval((slideshow) => {
                 let
                     activeSlide = slideshow.querySelector('.slideshow-item.active'),
-                    nextSlide = activeSlide.nextElementSibling
+                    previousSlide = activeSlide.previousElementSibling,
+                    nextSlide = activeSlide.nextElementSibling,
+                    lastSlide = slideshow.querySelector('.slideshow-item:last-child')
                 ;
+
+                if (previousSlide === null && lastSlide.classList.contains('is-sliding')) {
+                    lastSlide.classList.remove('is-sliding');
+                }
 
                 if (nextSlide === null) {
                     nextSlide = slideshow.querySelector('.slideshow-item');
-                    nextSlide.classList.toggle('is-sliding', nextSlide.classList.contains('active'));
                 }
 
-                activeSlide.classList.toggle('is-sliding', activeSlide.classList.contains('active'));
+                if (previousSlide != null) {
+                    previousSlide.classList.remove('is-sliding');
+                }
+
+                activeSlide.classList.add('is-sliding');
                 activeSlide.classList.toggle('active');
                 nextSlide.classList.toggle('active');
             }, 8000, slideshow);
