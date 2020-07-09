@@ -129,6 +129,12 @@
       "css": "soundcloud",
       "code": 61886,
       "src": "fontawesome"
+    },
+    {
+      "uid": "2726ee8140faa11aba6a4183a8a8b903",
+      "css": "quora",
+      "code": 62148,
+      "src": "fontawesome"
     }
   ]
 }

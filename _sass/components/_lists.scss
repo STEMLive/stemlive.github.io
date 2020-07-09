@@ -27,20 +27,16 @@
         }
 
         a {
-            &.link-twitter {
-                color: $dodger-blue;
-            }
-
-            &.link-youtube {
-                color: $youtube-red;
-            }
-
-            &.link-linkedin {
-                color: $denim-blue;
-            }
-
             &.link-discord {
                 color: $jordy-blue;
+            }
+
+            &.link-facebook {
+                background-color: $mariner-blue;
+                color: $white;
+                border-radius: 4px;
+                font-size: 1.3rem;
+                vertical-align: super;
             }
 
             &.link-instagram {
@@ -53,12 +49,20 @@
                 -webkit-text-fill-color: transparent;
             }
 
-            &.link-facebook {
-                background-color: $mariner-blue;
-                color: $white;
-                border-radius: 4px;
-                font-size: 1.3rem;
-                vertical-align: super;
+            &.link-linkedin {
+                color: $denim-blue;
+            }
+
+            &.link-quora {
+                color: $quora-red;
+            }
+
+            &.link-twitter {
+                color: $dodger-blue;
+            }
+
+            &.link-youtube {
+                color: $youtube-red;
             }
         }
     }

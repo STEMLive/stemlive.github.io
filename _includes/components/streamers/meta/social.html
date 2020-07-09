@@ -6,53 +6,26 @@
     {%- for social_platform in page.social_platforms -%}
     {%- assign social_channel = social_platform[0] -%}
     {%- assign social_link = social_platform[1] -%}
+    {%- assign icon_class = social_channel -%}
+
     {%- case social_channel -%}
-        {%- when 'website' -%}
+        {%- when 'website' or 'researchgate' -%}
         {%- assign icon_class = 'globe' -%}
-        {%- when 'twitter' -%}
-        {%- assign icon_class = 'twitter' -%}
-        {%- when 'facebook' -%}
-        {%- assign icon_class = 'facebook' -%}
         {%- when 'linkedin' -%}
-        {%- assign icon_class = 'linkedin-squared' -%}
-        {%- when 'instagram' -%}
-        {%- assign icon_class = 'instagram' -%}
+        {%- assign icon_class = icon_class | append: '-squared' -%}
         {%- when 'github' -%}
-        {%- assign icon_class = 'github-circled' -%}
-        {%- when 'spotify' -%}
-        {%- assign icon_class = 'spotify' -%}
-        {%- when 'vimeo' -%}
-        {%- assign icon_class = 'vimeo' -%}
+        {%- assign icon_class = icon_class | append: '-circled' -%}
         {%- when 'youtube' -%}
-        {%- assign icon_class = 'youtube-play' -%}
-        {%- when 'medium' -%}
-        {%- assign icon_class = 'medium' -%}
+        {%- assign icon_class = icon_class | append: '-play' -%}
         {%- when 'snapchat' -%}
-        {%- assign icon_class = 'snapchat-square' -%}
-        {%- when 'tumblr' -%}
-        {%- assign icon_class = 'tumblr-squared' -%}
-        {%- when 'pinterest' -%}
-        {%- assign icon_class = 'pinterest-squared' -%}
-        {%- when 'reddit' -%}
-        {%- assign icon_class = 'reddit' -%}
-        {%- when 'discord' -%}
-        {%- assign icon_class = 'discord' -%}
-        {%- when 'tinyletter' -%}
-        {%- assign icon_class = 'tinyletter' -%}
-        {%- when 'soundcloud' -%}
-        {%- assign icon_class = 'soundcloud' -%}
-        {%- when 'dribbble' -%}
-        {%- assign icon_class = 'dribbble' -%}
-        {%- else -%}
-        {%- assign icon_class = 'globe' -%}
+        {%- assign icon_class = icon_class | append: '-square' -%}
+        {%- when 'tumblr' or 'pinterest' -%}
+        {%- assign icon_class = icon_class '-squared' -%}
     {%- endcase -%}
     <li class="item-{{ social_channel }}">
         {%- if icon_class != nil and icon_class != '' and icon_class.size > 0 -%}
         <a href="{{ social_link }}" class="link-{{ social_channel }}" target="_blank">
             <i class="icon-{{ icon_class }}"></i>
-        </a>
-        {%- else -%}
-        <a href="{{ social_link }}">{{ social_channel }}</a>
         {%- endif -%}
     </li>
     {%- endfor -%}
