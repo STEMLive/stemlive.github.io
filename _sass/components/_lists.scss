@@ -47,6 +47,10 @@
                 vertical-align: super;
             }
 
+            &.link-gitlab {
+                color: $cinnabar-orange;
+            }
+
             &.link-instagram {
                 background: -moz-linear-gradient(-135deg,#1400c8,#b900b4,#f50000);  
                 background: -webkit-linear-gradient(-135deg,#1400c8,#b900b4,#f50000);  
@@ -59,6 +63,14 @@
 
             &.link-linkedin {
                 color: $denim-blue;
+            }
+
+            &.link-medium {
+                color: $jade-green;
+            }
+
+            &.link-paypal {
+                color: $bahama-blue;
             }
 
             &.link-quora {

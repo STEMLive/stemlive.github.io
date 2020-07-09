@@ -127,6 +127,18 @@
       "src": "fontawesome"
     },
     {
+      "uid": "7cca4643f1e938c673e91c0c78058ddf",
+      "css": "gitlab",
+      "code": 62102,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1d2b426ab6db81a58547ba13d8701ad8",
+      "css": "paypal",
+      "code": 61933,
+      "src": "fontawesome"
+    },
+    {
       "uid": "681a87257a9976aeafade849400287c9",
       "css": "tinyletter",
       "code": 59393,

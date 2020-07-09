@@ -13,8 +13,10 @@
 .icon-spotify:before { content: '\f1bc'; } /* '' */
 .icon-deviantart:before { content: '\f1bd'; } /* '' */
 .icon-soundcloud:before { content: '\f1be'; } /* '' */
+.icon-paypal:before { content: '\f1ed'; } /* '' */
 .icon-medium:before { content: '\f23a'; } /* '' */
 .icon-vimeo:before { content: '\f27d'; } /* '' */
+.icon-gitlab:before { content: '\f296'; } /* '' */
 .icon-snapchat-square:before { content: '\f2ad'; } /* '' */
 .icon-quora:before { content: '\f2c4'; } /* '' */
 .icon-meetup:before { content: '\f2e0'; } /* '' */
