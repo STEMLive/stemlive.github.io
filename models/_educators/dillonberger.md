@@ -9,7 +9,7 @@ sciences:
   - physics
 collectives:
 streaming_platforms:
-  youtube: https://www.youtube.com/channel/UC0rfUZjMXzwevYxiZ3cRU6Q
+  youtube: https://www.youtube.com/c/InertialObserver
 social_platforms:
   website: https://sites.uci.edu/inertialobserver
   twitter: https://twitter.com/InertialObservr
