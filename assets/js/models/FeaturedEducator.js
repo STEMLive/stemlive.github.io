@@ -46,15 +46,15 @@ class FeaturedEducator {
                 educatorBio = document.createElement('div')
             ;
 
-            if (typeof streamer.collectives != 'undefined') {
+            if (typeof streamer.collectives != 'undefined' && streamer.collectives != null) {
                 var collectives = streamer.collectives.toString().replace(',', ' ');
             }
             
-            if (typeof streamer.sciences != 'undefined') {
+            if (typeof streamer.sciences != 'undefined' && streamer.sciences != null) {
                 var sciences = streamer.sciences.toString().replace(',', ' ');
             }
 
-            if (typeof streamer.streaming_platforms != 'undefined') {
+            if (typeof streamer.streaming_platforms != 'undefined' && streamer.streaming_platforms != null) {
                 var streamingPlatforms = Object.keys(streamer.streaming_platforms).toString().replace(',', ' ');
             }
 
