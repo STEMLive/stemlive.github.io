@@ -1,5 +1,21 @@
+.display-none {
+    display: none;
+}
+
 .display-block {
     display: block;
+}
+
+@media (max-width: 1920px) {
+    .display-block-ws-down {
+        display: block;
+    }
+}
+
+@media (max-width: 1199px) {
+    .display-none-lg-down {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
