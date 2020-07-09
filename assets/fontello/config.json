@@ -119,21 +119,21 @@
       ]
     },
     {
-      "uid": "199c44bca402ec5a6351f75ba5228375",
-      "css": "dribbble",
-      "code": 61821,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "dff942d95eb1b3f1be140e622d0a7c74",
-      "css": "soundcloud",
-      "code": 61886,
-      "src": "fontawesome"
-    },
-    {
       "uid": "2726ee8140faa11aba6a4183a8a8b903",
       "css": "quora",
       "code": 62148,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "322a3317bf081dd6a78d5d6a620e1dd5",
+      "css": "meetup",
+      "code": 62176,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "199c44bca402ec5a6351f75ba5228375",
+      "css": "dribbble",
+      "code": 61821,
       "src": "fontawesome"
     }
   ]

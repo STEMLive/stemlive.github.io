@@ -52,6 +52,31 @@ collections_dir: models
 grid:
   initial_limit: 12
 
+social_platforms:
+  - behance
+  - discord
+  - dribbble
+  - facebook
+  - google-scholar
+  - github
+  - instagram
+  - linkedin
+  - medium
+  - meetup
+  - patreon
+  - pinterest
+  - quora
+  - reddit
+  - researchgate
+  - snapchat
+  - soundcloud
+  - spotify
+  - tiktok
+  - tumblr
+  - twitter
+  - vimeo
+  - youtube
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
