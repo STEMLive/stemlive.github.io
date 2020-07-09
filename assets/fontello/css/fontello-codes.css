@@ -1,6 +1,16 @@
 
 .icon-globe:before { content: '\e800'; } /* '' */
+.icon-discord:before { content: '\e801'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-pinterest-squared:before { content: '\f0d3'; } /* '' */
+.icon-youtube-play:before { content: '\f16a'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-tumblr-squared:before { content: '\f174'; } /* '' */
+.icon-reddit:before { content: '\f1a1'; } /* '' */
+.icon-spotify:before { content: '\f1bc'; } /* '' */
+.icon-medium:before { content: '\f23a'; } /* '' */
+.icon-vimeo:before { content: '\f27d'; } /* '' */
+.icon-snapchat-square:before { content: '\f2ad'; } /* '' */
 .icon-linkedin-squared:before { content: '\f30c'; } /* '' */

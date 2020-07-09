@@ -17,6 +17,28 @@
         {%- assign icon_class = 'linkedin-squared' -%}
         {%- when 'instagram' -%}
         {%- assign icon_class = 'instagram' -%}
+        {%- when 'github' -%}
+        {%- assign icon_class = 'github-circled' -%}
+        {%- when 'spotify' -%}
+        {%- assign icon_class = 'spotify' -%}
+        {%- when 'vimeo' -%}
+        {%- assign icon_class = 'vimeo' -%}
+        {%- when 'youtube' -%}
+        {%- assign icon_class = 'youtube-play' -%}
+        {%- when 'medium' -%}
+        {%- assign icon_class = 'medium' -%}
+        {%- when 'snapchat' -%}
+        {%- assign icon_class = 'snapchat-square' -%}
+        {%- when 'tumblr' -%}
+        {%- assign icon_class = 'tumblr-squared' -%}
+        {%- when 'pinterest' -%}
+        {%- assign icon_class = 'pinterest-squared' -%}
+        {%- when 'reddit' -%}
+        {%- assign icon_class = 'reddit' -%}
+        {%- when 'discord' -%}
+        {%- assign icon_class = 'discord' -%}
+        {%- else -%}
+        {%- assign icon_class = 'globe' -%}
     {%- endcase -%}
     <li class="item-{{ social_channel }}">
         {%- if icon_class != nil and icon_class != '' and icon_class.size > 0 -%}
