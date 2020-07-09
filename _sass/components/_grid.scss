@@ -31,7 +31,9 @@ body[class*="faq"],
 body[class*="science"] {
     .content-box {
         .content-inner {
-            padding-top: 5rem;
+            @media (min-width: 1200px) {
+                padding-top: 5rem;
+            }
         }
     }
 }

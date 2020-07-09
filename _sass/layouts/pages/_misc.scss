@@ -4,10 +4,6 @@
 
 body.lineup {
     .content-box {
-        @media (max-width: 991px) {
-            min-height: 100vh;     
-        }
-
         @media (max-width: 767px) {
             grid-template-columns: 0.5fr 8fr 0.5fr;
         }
@@ -71,9 +67,8 @@ body.contact {
 */
 
 .content-box {
-    @media (min-width: 768px) {
-        height: 100%;
-    }
+    height: auto;
+    min-height: 92.1vh;
 
     p, li {
         a {
@@ -108,25 +103,9 @@ body.contact {
     }
 }
 
-body.about,
-body[class*="collective"],
-body.contact,
-body[class*="faq"],
-body.lineup,
-body[class*="science"] {
-    .content-box {
-        @media (min-width: 768px) {
-            height: auto;
-            min-height: 92.1vh;
-        }
-    }
-}
-
 body.contact {
     .content-box {
         @media (max-width: 567px) {
-            height: auto;
-            min-height: 92.1vh; 
             grid-template-columns: 0.5fr 8fr 0.5fr;
         }
 
