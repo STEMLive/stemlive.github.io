@@ -27,10 +27,9 @@
             {%- endunless -%}
     {%- endcase -%}
     <li class="item-{{ social_channel }}">
-        {%- if icon_class != nil and icon_class != '' and icon_class.size > 0 -%}
         <a href="{{ social_link }}" class="link-{{ social_channel }}" target="_blank">
             <i class="icon-{{ icon_class }}"></i>
-        {%- endif -%}
+        </a>
     </li>
     {%- endfor -%}
 </ul>
