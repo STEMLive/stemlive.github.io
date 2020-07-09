@@ -1,0 +1,9 @@
+.display-block {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .display-none-md-up {
+        display: none;
+    }
+}

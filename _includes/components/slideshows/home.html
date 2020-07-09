@@ -12,7 +12,7 @@
             {%- endif -%}
 
             <a class="cta bg-medium-slate-blue" href="{{- science.url -}}">
-                Please see our {{ science.title }} streamers here
+                Please see our {{ science.title }}{% unless science.title.size > 0 and science.title.size < 7 %}<br class="display-block display-none-md-up" />{% endunless %} streamers here
             </a>
         </div>
     </div>
