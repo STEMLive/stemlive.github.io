@@ -91,6 +91,10 @@ body.collective {
                 li {
                     font-size: 1.5rem;
 
+                    @media (max-width: 767px) {
+                        font-size: 1.2rem;
+                    }
+
                     &:not(:last-child) {
                         margin-bottom: 1rem;
                     }
