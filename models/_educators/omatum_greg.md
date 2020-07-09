@@ -10,6 +10,10 @@ sciences:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/omatum_greg
+social_platforms:
+  website: https://www.omatum.com/
+  youtube: https://omatum.tv
+  linkedin: https://www.linkedin.com/company/omatum/
 display_on_site: true
 include_links: true
 layout: educator
