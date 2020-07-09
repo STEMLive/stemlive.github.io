@@ -13,6 +13,9 @@ collectives:
 streaming_platforms:
   twitch:
     url: https://www.twitch.tv/simuleios
+social_platforms:
+  twitter:
+    url: https://twitter.com/LeiosOS
 display_on_site: true
 include_links: true
 layout: educator
