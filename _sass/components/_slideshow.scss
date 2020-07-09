@@ -11,7 +11,7 @@
         color: $white;
         position: absolute;
         left: 0;
-        transition: 2.5s;
+        transition: 3.5s;
         z-index: 2;
 
         @media (max-width: 1199px) {
@@ -29,11 +29,11 @@
 
         &.is-sliding {
             @media (min-width: 768px) {
-                animation: is-sliding 1.5s backwards;
+                animation: is-sliding 3.5s backwards 3.5s;
             }
 
             @media (max-width: 767px) {
-                animation: is-sliding-sm-down 1.5s backwards;
+                animation: is-sliding-sm-down 3.5s backwards 3.5s;
             }
         }
 
