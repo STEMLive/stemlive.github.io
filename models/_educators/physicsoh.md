@@ -10,6 +10,7 @@ sciences:
 streaming_platforms:
   twitch: https://www.twitch.tv/physicsoh
 social_platforms:
+  discord: https://discord.gg/zVv6KyQ
   twitter: https://twitter.com/AsplingEric
   youtube: https://www.youtube.com/channel/UCoJP3W_S2Vt6jhrSIv0ScMg
 display_on_site: true
