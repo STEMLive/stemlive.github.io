@@ -11,7 +11,6 @@ collectives:
 streaming_platforms:
   twitch: https://www.twitch.tv/theprimeagen
 social_platforms:
-  website: http://chrisgriffing.com/
   discord: https://discord.gg/3ujcVMe
   github: https://github.com/ThePrimeagen
   instagram: https://www.instagram.com/theprimeagen
