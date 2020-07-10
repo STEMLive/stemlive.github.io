@@ -29,6 +29,17 @@
     }
 }
 
+body.category-science,
+body.category-educator {
+    .content-box {
+        .content-inner {
+            @media (max-width: 767px) {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
 body.collective,
 body.contact,
 body[class*="faq"],
