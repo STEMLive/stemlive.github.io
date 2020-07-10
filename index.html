@@ -23,3 +23,9 @@ title: Home
 <p>
     We offer you the chance to discover a wide range of STEM educators from countless disciplines, including {% for popular_science in popular_sciences limit:3 %}{%- assign science_name = popular_science.name | replace: '["', '' | replace: '"]', '' -%}{%- assign science = site.sciences | where: 'tag', science_name | first -%}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <a href="{{ science.url }}" class="text-{{ science.tag }}">{{ science.tag | replace: '-', ' ' }}</a>{% endfor %}.
 </p>
+
+<h2 class="margin-top-3-point-5-rem text-center">
+    Our featured streamer
+</h2>
+
+{%- include components/streamers/featured.html random=true -%}

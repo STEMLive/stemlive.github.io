@@ -22,6 +22,18 @@
 {%- assign streamers = site.educators | where: 'collectives', include.collective | where: 'display_on_site', true -%}
 {%- endif -%}
 
+{%- if include.random and streamers == nil -%}
+    {%- assign streamers = '' | split: '' -%}
+    {%- assign active_streamers = site.educators | where: 'display_on_site', true -%}
+
+    {%- assign min = -1 -%}
+    {%- assign max = active_streamers.size -%}
+    {%- assign diff = max | minus: min -%}
+    {%- assign random_number = 'now' | date: '%N' | modulo: diff | plus: min -%}
+
+    {%- assign streamers = streamers | push: active_streamers[random_number] -%}
+{%- endif -%}
+
 {%- if streamers.size > 0 -%}
     {%- if include.science and include.platform -%}
 <h2>

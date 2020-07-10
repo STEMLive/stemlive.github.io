@@ -68,7 +68,9 @@ body[class*="science"] {
 
         .content-inner {
             h2 {
-                margin-top: 0;
+                &:not([class*="margin-top-"]) {
+                    margin-top: 0;
+                }
             }
 
             > p {
