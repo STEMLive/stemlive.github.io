@@ -14,6 +14,7 @@ streaming_platforms:
   twitch: https://www.twitch.tv/simuleios
 social_platforms:
   website: http://leios.github.io/
+  google-scholar: https://scholar.google.com/citations?user=400ailAAAAAJ
   github: https://github.com/leios
   quora: https://www.quora.com/profile/James-Schloss
   researchgate: https://www.researchgate.net/scientific-contributions/2150730752_James_Schloss

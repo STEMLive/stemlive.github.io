@@ -38,6 +38,11 @@
             vertical-align: super;
         }
 
+        &.item-google-scholar {
+            font-size: 1rem;
+            vertical-align: top;
+        }
+
         a {
             &.link-discord {
                 color: $jordy-blue;
@@ -49,6 +54,15 @@
                 border-radius: 4px;
                 font-size: 1.3rem;
                 vertical-align: super;
+            }
+
+            &.link-google-scholar {
+                i {
+                    &:before {
+                        margin-left: 0;
+                        margin-right: 25px;
+                    }
+                }
             }
 
             &.link-gitlab {
