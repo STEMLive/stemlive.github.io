@@ -22,6 +22,10 @@
     .content-inner {
         grid-area: content;
         padding-top: 2.5rem;
+
+        @media (max-width: 767px) {
+            padding-top: 5rem;
+        }
     }
 }
 
