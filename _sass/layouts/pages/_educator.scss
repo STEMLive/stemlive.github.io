@@ -129,8 +129,8 @@ body.category-educator {
 
 body.home {
     .featured-educator {
-        @media (min-width: 1200px) {  
-            grid-column: 2 / 3;
+        @media (min-width: 992px) {
+            grid-column-start: 2;
         }
     }
 }
