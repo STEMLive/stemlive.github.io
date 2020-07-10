@@ -17,17 +17,21 @@
         margin-bottom: unset;
         font-size: 2rem;
 
-        &:first-child {
-            i {
-                &:before {
-                    margin-left: 0;
-                }
-            }
-        }
-
         &:not(:last-child) {
             margin-right: 20px;
             margin-bottom: unset;
+        }
+
+        &:nth-child(n+6) {
+            @media (max-width: 567px) {
+                margin-top: 10px;
+            }
+        }
+
+        &:nth-child(n+10) {
+            @media (max-width: 767px) {
+                margin-top: 10px;
+            }
         }
 
         &:not(.item-facebook) {
@@ -83,6 +87,12 @@
 
             &.link-youtube {
                 color: $youtube-red;
+            }
+
+            i {
+                &:before {
+                    margin-left: 0;
+                }
             }
         }
     }
