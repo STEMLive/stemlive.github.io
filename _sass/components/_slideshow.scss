@@ -67,13 +67,17 @@
             h2 {
                 font-size: 2.5rem;
                 margin-top: 0;
+
+                @media (max-width: 567px) {
+                    font-size: 2rem;
+                }
             }
 
             p {
                 font-size: 2rem;
 
                 @media (max-width: 567px) {
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
                 }
 
                 &:last-of-type {
