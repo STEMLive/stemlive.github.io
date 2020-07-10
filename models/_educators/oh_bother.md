@@ -12,6 +12,7 @@ collectives:
 streaming_platforms:
   twitch: https://www.twitch.tv/oh_bother
 display_on_site: false
+sitemap: false
 include_links: false
 layout: educator
 ---

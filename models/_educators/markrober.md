@@ -10,6 +10,7 @@ sciences:
 streaming_platforms:
   youtube: https://www.youtube.com/MarkRober
 display_on_site: false
+sitemap: false
 include_links: false
 layout: educator
 ---

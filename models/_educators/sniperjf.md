@@ -10,6 +10,7 @@ streaming_platforms:
   twitch: https://twitch.tv/sniperjf
   youtube: https://www.youtube.com/channel/UCLvkRVAjHTRj4Yje-_96OsQ
 display_on_site: false
+sitemap: false
 include_links: false
 layout: educator
 ---

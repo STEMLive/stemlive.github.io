@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2020-06-23 15:00:01 +0100
