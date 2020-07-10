@@ -48,9 +48,9 @@
 <div class="featured-educators">
     {%- for streamer in streamers -%}
         {%- unless page.collection != nil -%}
-            {%- assign science = page.tag -%}
+            {%- assign science = page.tag | default: streamer.sciences[0] -%}
         {%- else -%}
-            {%- assign science = streamer.sciences | first -%}
+            {%- assign science = streamer.sciences[0] -%}
         {%- endunless -%}
 
         {%- assign defaultImg = science | append: '/default.jpg' -%}
