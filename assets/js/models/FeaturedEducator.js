@@ -75,9 +75,9 @@ class FeaturedEducator {
                 educatorGrid.className += (' ' + collectives);
             }
 
-            if (typeof streamer.images.thumbnail.filename != 'undefined' && streamer.images.thumbnail.filename.length > 0) {
+            if (typeof streamer.images.thumbnail.filename != 'undefined' && streamer.images.thumbnail.filename != null && streamer.images.thumbnail.filename.length > 0) {
                 educatorGrid.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.images.thumbnail.filename + ');');
-            } else if (typeof streamer.sciences != 'undefined') {
+            } else if (typeof streamer.sciences != 'undefined' && streamer.sciences != null) {
                 educatorGrid.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.sciences[0] + '/default.jpg);'); 
             }
 
