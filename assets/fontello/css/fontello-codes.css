@@ -1,5 +1,6 @@
 
 .icon-globe:before { content: '\e800'; } /* '' */
+.icon-discord:before { content: '\e801'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
