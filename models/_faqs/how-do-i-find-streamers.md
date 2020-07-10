@@ -20,3 +20,7 @@ permalink: /faq/how-do-i-find-streamers
   </li>
   {%- endfor -%}
 </ul>
+
+<p>
+  In addition, you can find streamers through some of the collectives featured on the <a href="{{ '/collectives' | relative_url }}">Collectives</a> page.
+</p>
