@@ -9,6 +9,12 @@ sciences:
   - computer-science
 streaming_platforms:
   twitch: https://www.twitch.tv/donthedeveloper
+social_platforms:
+  github: https://github.com/donthedeveloper
+  linkedin: https://www.linkedin.com/in/donthedeveloper
+  podcast: http://podcast.donthedeveloper.tv/
+  twitter: https://twitter.com/developerdontv/
+  youtube: https://www.youtube.com/c/donthedeveloper
 display_on_site: true
 include_links: true
 layout: educator
