@@ -28,4 +28,5 @@
 </div>
 {%- endif -%}
 
-<script src="{{ '/assets/js/components/Slideshow.js' | relative_url }}"></script>
+{%- assign today = 'now' | date: '%Y-%M-%d' -%}
+<script src="{{ '/assets/js/components/Slideshow.js?ver=' | append: today | relative_url }}"></script>
