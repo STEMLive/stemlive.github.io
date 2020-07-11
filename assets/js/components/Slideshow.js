@@ -59,7 +59,7 @@ class Slideshow {
 
         let
             arrow = e.currentTarget,
-            slideshow = typeof e.path[2] != 'undefined' ? e.path[2] : false,
+            slideshow = arrow.parentElement,
             slidePosition = arrow.dataset.slidePosition
         ;
 
