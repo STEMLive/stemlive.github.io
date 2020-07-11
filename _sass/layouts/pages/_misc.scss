@@ -101,6 +101,12 @@ body.contact {
         @media (max-width: 567px) {
             font-size: 2rem;
         }
+
+        &.featured-educator-title {
+            @media (max-width: 567px) {
+                font-size: 1.5rem;
+            }
+        }
     }
 }
 
