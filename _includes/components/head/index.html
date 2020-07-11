@@ -10,7 +10,4 @@
     <link href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" rel="stylesheet" type="text/css" />
     {%- seo -%}
     {%- feed_meta -%}
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-        {%- include google-analytics.html -%}
-    {%- endif -%}
 </head>

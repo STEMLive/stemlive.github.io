@@ -1,0 +1,41 @@
+.consent-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $lavender-blue;
+
+    p {
+        color: $black;
+        font-weight: 900;
+
+        @media (max-width: 567px) {
+            max-width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a:not(.cta) {
+            color: $medium-slate-blue;
+            text-decoration: underline;
+        }
+
+        .cta {
+            @media (min-width: 768px) {
+                margin-top: 15px;
+                margin-left: 15px;
+            }
+
+            @media (max-width: 767px) {
+                margin-top: .8rem;
+            }
+
+            @media (max-width: 567px) {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

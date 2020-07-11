@@ -63,6 +63,18 @@ body.contact {
 }
 
 /*
+    Add padding bottom to content when consent bar showing
+*/
+
+body {
+    &:not(.terms-accepted) {
+        .content-inner {
+            padding-bottom: 3.5rem;
+        }
+    }
+}
+
+/*
     Content box - will override height on a per-page basis
 */
 

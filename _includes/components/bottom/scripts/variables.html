@@ -1,0 +1,5 @@
+<script>
+    var
+        googleAnalyticsId = {% if site.analytics.google.tracking_id != nil and site.analytics.google_tracking_id != '' and site.analytics.google.tracking_id.size > 0 %}'{{ site.analytics.google.tracking_id }}'{% else %}false{% endif %}
+    ;
+</script>

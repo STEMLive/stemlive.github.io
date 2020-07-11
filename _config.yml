@@ -32,6 +32,11 @@ github_organization: "https://github.com/stemlive"
 # Permalink settings
 permalink: /:title/
 
+# Social settings
+analytics:
+  google:
+    tracking_id: UA-172420307-1
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
