@@ -36,7 +36,8 @@ body.sciences {
 }
 
 body.category-science,
-body.category-educator {
+body.category-educator,
+body.home {
     .content-box {
         .content-inner {
             @media (max-width: 767px) {
@@ -49,7 +50,6 @@ body.category-educator {
 body.collective,
 body.contact,
 body[class*="faq"],
-body.home,
 body[class*="science"] {
     .content-box {
         .content-inner {
