@@ -29,7 +29,7 @@
 {%- endfor -%}
 
 {%- if sciences.size > 0 or streaming_platforms.size > 0 or collectives.size > 0 -%}
-<form class="grid grid-3 grid-filters bg-medium-slate-blue">
+<form class="grid grid-3 grid-filters bg-medium-slate-blue equalise-heights" data-targets="> div > h3">
     {%- if sciences.size > 0 -%}
     <div>
         <h3 class="h4">
@@ -84,5 +84,6 @@
 </form>
 
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script async defer src="{{ '/assets/js/components/EqualiseHeights.js' | relative_url }}"></script>
 {%- include components/scripts/grid-filters.html -%}
 {%- endif -%}
