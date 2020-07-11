@@ -47,7 +47,7 @@ body.contact {
                 }
 
                 > a {
-                    word-break: break-word;
+                    word-break: break-all;
                 }
             }
 
@@ -85,7 +85,7 @@ body.contact {
                     display: block;
                     font-size: 1rem;
                     margin-top: .5rem;
-                    word-break: break-word;
+                    word-break: break-all;
                 }
             }
         }
