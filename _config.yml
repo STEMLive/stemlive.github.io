@@ -54,6 +54,7 @@ grid:
   initial_limit: 12
 
 social_platforms:
+  - apple-podcasts
   - behance
   - deviantart
   - devto

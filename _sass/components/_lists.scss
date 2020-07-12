@@ -44,6 +44,14 @@
         }
 
         a {
+            &.link-apple-podcasts {
+                background: linear-gradient(to bottom, $dark-orchid, $heliotrope-purple);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
             &.link-discord {
                 color: $jordy-blue;
             }
@@ -93,6 +101,10 @@
 
             &.link-quora {
                 color: $quora-red;
+            }
+
+            &.link-stackoverflow {
+                color: $safety-orange;
             }
 
             &.link-twitter {
