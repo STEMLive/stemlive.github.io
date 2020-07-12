@@ -1,9 +1,14 @@
-{%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
-{%- if page.description and page.description != nil and page.description != '' -%}
-{%- assign description = page.description -%}
+{%- unless page.name == nil or page.name == '' or page.name.size < 1 -%}
+    {%- assign title = page.name | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
 {%- else -%}
-{%- capture description -%}{{- site.description -}}.{%- endcapture description -%}
-{%- endif -%}
+    {%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
+{%- endunless -%}
+
+{%- unless page.description == nil or page.description == '' or page.description.size < 1 -%}
+    {%- assign description = page.description -%}
+{%- else -%}
+    {%- capture description -%}{{- site.description -}}{%- endcapture description -%}
+{%- endunless -%}
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
