@@ -193,6 +193,12 @@
       "search": [
         "google-scholar"
       ]
+    },
+    {
+      "uid": "e7d17d4d07756f4ab5eb690eea1275ca",
+      "css": "stackoverflow",
+      "code": 59397,
+      "src": "zocial"
     }
   ]
 }
