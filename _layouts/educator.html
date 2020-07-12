@@ -1,7 +1,7 @@
 {%- unless page.name == nil or page.name == '' or page.name.size < 1 -%}
-    {%- assign title = page.name | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
+    {%- assign title = page.name | append: ' | ' | append: site.title -%}
 {%- else -%}
-    {%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
+    {%- assign title = page.title | append: ' | ' | append: site.title -%}
 {%- endunless -%}
 
 {%- unless page.description == nil or page.description == '' or page.description.size < 1 -%}
