@@ -15,13 +15,13 @@ social_platforms:
   devto: https://dev.to/eddiejaoude
   facebook: https://www.facebook.com/eddiejaoude.opensource/
   github: https://github.com/eddiejaoude
+  github-pages: https://eddiejaoude.github.io/
   instagram: https://www.instagram.com/eddiejaoude/
   linkedin: https://uk.linkedin.com/in/eddiejaoude
   medium: https://medium.com/@eddiejaoude
   stackoverflow: https://stackoverflow.com/users/1313318/eddie-jaoude
   tiktok: https://www.tiktok.com/@eddiejaoude
   twitter: https://twitter.com/eddiejaoude
-  website: https://eddiejaoude.github.io/
 display_on_site: true
 include_links: true
 layout: educator
