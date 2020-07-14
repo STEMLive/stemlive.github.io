@@ -43,6 +43,14 @@
             vertical-align: top;
         }
 
+        &.item-npm {
+            font-size: 1.3rem;
+
+            &:not(:last-child) {
+                margin-right: 60px;
+            }
+        }
+
         a {
             &.link-apple-podcasts {
                 background: linear-gradient(to bottom, $dark-orchid, $heliotrope-purple);
@@ -93,6 +101,10 @@
 
             &.link-medium {
                 color: $jade-green;
+            }
+
+            &.link-npm {
+                color: $mahogany-red;
             }
 
             &.link-paypal {
