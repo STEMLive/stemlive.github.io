@@ -1,5 +1,6 @@
 {%- unless page.name == nil or page.name == '' or page.name.size < 1 -%}
-    {%- assign title = page.name | append: ' | ' | append: site.title -%}
+    {%- assign channel_name = ' (' | append: page.title | append: ')' -%}
+    {%- assign title = page.name | append: channel_name | append: ' | ' | append: site.title -%}
 {%- else -%}
     {%- assign title = page.title | append: ' | ' | append: site.title -%}
 {%- endunless -%}

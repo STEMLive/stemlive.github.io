@@ -105,14 +105,22 @@ body.category-educator {
             background-color: rgba($black, .5);
 
             @media (min-width: 992px) {
-                min-height: 7rem;
+                min-height: 8rem;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                min-height: 6rem;
             }
 
             h3 {
                 text-align: center;
 
+                @media (min-width: 1200px) {
+                    font-size: 1.3rem;
+                }
+
                 @media (max-width: 991px) {
-                    font-size: 2rem;
+                    font-size: 1.2rem;
                 }
 
                 @media (max-width: 567px) {

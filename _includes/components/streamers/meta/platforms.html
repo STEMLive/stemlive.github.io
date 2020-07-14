@@ -1,5 +1,5 @@
 <h3>
-    {{ page.name | default: page.title }} streams on the following platforms:
+    {{ page.name | default: page.title }} stream{% unless page.name != nil and page.name contains 'and' %}s{% endunless %} on the following platforms:
 </h3>
 
 <ul class="list-default">
