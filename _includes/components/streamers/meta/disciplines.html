@@ -6,7 +6,7 @@
     {%- for discipline in page.sciences -%}
     {%- assign science = site.sciences | where: 'tag', discipline | first -%}
     <li>
-        <a href="{{ science.url | relative_url }}" class="text-{{ science.tag }}">
+        <a href="{{ science.url | relative_url }}" class="text-{{ science.tag }} hover-underline">
             {{ science.title }}
         </a>
     </li>
