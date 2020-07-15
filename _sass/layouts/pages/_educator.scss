@@ -74,15 +74,6 @@ body.category-educator {
                 position: absolute;
                 left: 0;
             }
-
-            .educator-minibio {
-                h3 {
-                    @media (min-width: 1200px) and (max-width: 1440px) {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-
         }
     }
 
@@ -131,7 +122,13 @@ body.category-educator {
             h3 {
                 text-align: center;
 
-                @media (min-width: 1200px) {
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    max-width: 85%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @media (min-width: 992px) {
                     font-size: 1.3rem;
                 }
 
