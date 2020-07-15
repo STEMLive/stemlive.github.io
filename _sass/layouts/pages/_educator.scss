@@ -148,6 +148,12 @@ body.category-educator {
                 display: block;
             }
         }
+
+        &:first-child:last-child {
+            .educator-minibio {
+                min-height: auto !important;
+            }
+        }
     }
 }
 
