@@ -10,6 +10,8 @@ sciences:
 streaming_platforms:
   twitch: https://www.twitch.tv/omatum_greg
 social_platforms:
+  discord: https://omatum.chat
+  patreon: https://www.patreon.com/omatumstudios
   website: https://www.omatum.com/
   youtube: https://omatum.tv
   linkedin: https://www.linkedin.com/company/omatum/
