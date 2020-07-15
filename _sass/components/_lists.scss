@@ -60,6 +60,10 @@
                 -webkit-text-fill-color: transparent;
             }
 
+            &.link-deviantart {
+                color: $malachite-green;
+            }
+
             &.link-discord {
                 color: $jordy-blue;
             }
@@ -103,6 +107,10 @@
                 color: $jade-green;
             }
 
+            &.link-meetup {
+                color: $crimson-red;
+            }
+
             &.link-npm {
                 color: $mahogany-red;
             }
@@ -113,6 +121,10 @@
 
             &.link-paypal {
                 color: $bahama-blue;
+            }
+
+            &.link-pinterest {
+                color: $crimson-red;
             }
 
             &.link-quora {
