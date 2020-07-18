@@ -8,7 +8,13 @@
 {%- unless page.description == nil or page.description == '' or page.description.size < 1 -%}
     {%- assign description = page.description -%}
 {%- else -%}
-    {%- capture description -%}{{- site.description -}}{%- endcapture description -%}
+    {%- capture description -%}
+        {%- if page.name != nil and page.name contains 'and' -%}
+            {{ page.title }} are STEM livestreamers specialising in {% for science in page.sciences %}{% unless forloop.last or forloop.first %}, {% elsif forloop.index > 1 %} and {% endunless %}{{ science | replace: '-', ' ' }}{% endfor %}.
+        {%- else -%}
+            {{ page.name | default: page.title }} is a STEM livestreamer specialising in {% for science in page.sciences %}{% unless forloop.last or forloop.first %}, {% elsif forloop.index > 1 %} and {% endunless %}{{ science | replace: '-', ' ' }}{% endfor %}.
+        {%- endif -%}
+    {%- endcapture description -%}
 {%- endunless -%}
 <!DOCTYPE HTML>
 <html lang="en">
