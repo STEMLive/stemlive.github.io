@@ -54,6 +54,12 @@ body.category-educator {
             padding-right: 20%;
             min-height: 20rem;
 
+            &:not(:last-child) {
+                @media (max-width: 767px) {
+                    margin-bottom: 2.3rem;
+                }
+            }
+
             @media (min-width: 1200px) {
                 padding-left: 15%;
                 padding-right: 15%;
@@ -166,6 +172,14 @@ body.home {
     .featured-educators {
         &:first-of-type, &:not(:last-of-type) {
             margin-bottom: 2rem;
+        }
+
+        .featured-educator {
+            &:not(:last-of-type) {
+                @media (max-width: 991px) {
+                    margin-bottom: 3rem;
+                }
+            }
         }
     }
 }
