@@ -93,8 +93,15 @@ social_platforms:
 defaults:
   -
     scope:
+      path: ""
+    values:
+      description: >-
+        STEMLive is the &#35;1 content discovery platform for STEM educators on Twitch and YouTube.
+  -
+    scope:
       path: "google*.html"
     values:
+      description: ""
       sitemap: false
 
 exclude:

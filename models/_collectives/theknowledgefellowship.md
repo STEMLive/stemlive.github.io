@@ -1,6 +1,8 @@
 ---
 title: The Knowledge Fellowship
 tag: theknowledgefellowship
+description: >-
+  Which Twitch streamers belong to The Knowledge Fellowship collective?
 images:
   thumbnail:
     filename: "theknowledgefellowship.jpg"

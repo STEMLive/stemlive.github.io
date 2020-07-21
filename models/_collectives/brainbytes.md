@@ -1,6 +1,8 @@
 ---
 title: BrainBytes
 tag: brainbytes
+description: >-
+  Which Twitch streamers belong to the BrainBytes collective?
 layout: collective
 links:
   twitch: https://www.twitch.tv/team/brainbytes
