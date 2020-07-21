@@ -12,7 +12,7 @@
 {%- endif -%}
 
 <div class="banner"{% if banner_image != nil and banner_image != '' %} style="background-image: url({{ banner_image | relative_url }});" role="img" aria-label="{{ page.name | default: page.title }}"{% endif %}>
-    <div class="banner-inner{% unless content_length <= 22 %} padding-horiz-2-point-5-rem-xs-down{% endunless %}">
+    <div class="banner-inner{% unless content_length <= 22 %} padding-horiz-2-point-5-rem-sm-down{% endunless %}">
         <h1>
             {{ page.name | default: page.title }}
             {%- unless page.name == nil -%}
