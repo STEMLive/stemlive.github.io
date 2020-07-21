@@ -1,3 +1,7 @@
+{%- if page.schedule.size > 0 -%}
+{% include components/streamers/meta/schedule.html %}
+{%- endif -%}
+
 {%- if page.sciences.size > 0 -%}
 {% include components/streamers/meta/disciplines.html %}
 {%- endif -%}

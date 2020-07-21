@@ -1,0 +1,21 @@
+{%- assign schedule = page.schedule | compact -%}
+{%- if schedule.size > 0 -%}
+    <h3>
+        On these days, {{ page.name | default: page.title }} will usually stream the following:
+    </h3>
+
+    <ul class="list-default">
+    {%- for days in schedule -%}
+    {%- for day in days -%}
+        {%- assign day_of_week = day[0] -%}
+        {%- assign scheduled_activity = day[1] -%} 
+        {%- unless scheduled_activity == nil or scheduled_activity == '' -%}
+            <li>
+                <strong>{{ day_of_week | capitalize }}:</strong>
+                {{ scheduled_activity }}
+            <li>
+        {%- endunless -%}
+    {%- endfor -%}
+    {%- endfor -%}
+    </ul>
+{%- endif -%}

@@ -9,6 +9,14 @@ sciences:
   - physics
   - maths
   - computer-science
+schedule:
+  monday: 
+  tuesday: Wolfram Physics Project
+  wednesday: 
+  thursday: Science & Technology Q&A
+  friday: Science & Technology Q&A
+  saturday: Wolfram Physics Project
+  sunday: 
 streaming_platforms:
   twitch: https://www.twitch.tv/stephen_wolfram
   youtube: https://www.youtube.com/user/WolframResearch
