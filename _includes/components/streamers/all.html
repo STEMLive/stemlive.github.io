@@ -65,6 +65,7 @@
     Load more
 </a>
 
-<script type="module" src="{{ '/assets/js/components/LoadMoreButton.js' | relative_url }}"></script>
+{%- assign today = 'now' | date: '%Y%M%d' -%}
+<script type="module" src="{{ '/assets/js/components/LoadMoreButton.js?ver=' | append: today | relative_url }}"></script>
 {%- endif -%}
 {%- endif -%}
