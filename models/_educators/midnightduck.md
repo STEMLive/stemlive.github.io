@@ -1,4 +1,5 @@
 ---
+name: Dr Michael Spiegel
 images:
   banner:
     filename: ""
@@ -18,3 +19,4 @@ display_on_site: true
 include_links: true
 layout: educator
 ---
+## About Dr Michael Spiegel
