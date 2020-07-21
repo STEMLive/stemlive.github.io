@@ -3,7 +3,7 @@ images:
   banner:
     filename: ""
   thumbnail:
-    filename: ""
+    filename: "midnightduck.jpg"
 sciences:
   - chemistry
 collectives:
