@@ -90,6 +90,13 @@ social_platforms:
   - vimeo
   - youtube
 
+defaults:
+  -
+    scope:
+      path: "google*.html"
+    values:
+      sitemap: false
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/

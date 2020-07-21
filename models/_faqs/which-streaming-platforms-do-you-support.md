@@ -1,10 +1,17 @@
 ---
 layout: faq
 title: Which streaming platforms do you support?
+description: >-
+  Learn about the live streaming platforms our STEM educators use.
 permalink: /faq/which-streaming-platforms-do-you-support
+keywords:
+  - STEM livestreaming
+  - Science livestreaming
+  - Science Twitch
+  - Science YouTube
 ---
 <p>
-  At present, we support the following streaming platforms:
+  At present, we support the following live streaming platforms for our STEM educators:
 </p>
 
 {%- assign streaming_platforms = '' | split: '' -%}
