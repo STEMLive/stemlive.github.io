@@ -22,6 +22,7 @@ social_platforms:
   stackoverflow: https://stackoverflow.com/users/1313318/eddie-jaoude
   tiktok: https://www.tiktok.com/@eddiejaoude
   twitter: https://twitter.com/eddiejaoude
+  youtube: https://www.youtube.com/eddiejaoude
 display_on_site: true
 include_links: true
 layout: educator

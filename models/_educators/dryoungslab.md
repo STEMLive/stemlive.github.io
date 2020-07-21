@@ -10,7 +10,9 @@ sciences:
 streaming_platforms:
   twitch: https://www.twitch.tv/dryoungslab
 social_platforms:
+  instagram: https://www.instagram.com/jamieyoungjhu/
   twitch: https://www.twitch.tv/dryoungslab
+  twitter: https://twitter.com/jyoungJHU
 display_on_site: true
 include_links: true
 layout: educator

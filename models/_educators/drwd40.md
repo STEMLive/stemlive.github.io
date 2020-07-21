@@ -12,7 +12,9 @@ collectives:
 streaming_platforms:
   twitch: https://www.twitch.tv/drwd40
 social_platforms:
+  instagram: https://www.instagram.com/docwd40
   twitch: https://www.twitch.tv/drwd40
+  twitter: https://twitter.com/DrWd40
 display_on_site: true
 include_links: true
 layout: educator
