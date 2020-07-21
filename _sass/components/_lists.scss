@@ -76,15 +76,6 @@
                 vertical-align: super;
             }
 
-            &.link-google-scholar {
-                i {
-                    &:before {
-                        margin-left: 0;
-                        margin-right: 25px;
-                    }
-                }
-            }
-
             &.link-gitlab {
                 color: $cinnabar-orange;
             }

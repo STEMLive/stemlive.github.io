@@ -3,7 +3,6 @@
 .icon-discord:before { content: '\e801'; } /* '' */
 .icon-tiktok:before { content: '\e802'; } /* '' */
 .icon-udemy:before { content: '\e803'; } /* '' */
-.icon-google-scholar:before { content: '\e804'; } /* '' */
 .icon-stackoverflow:before { content: '\e805'; } /* '' */
 .icon-apple-podcasts:before { content: '\e806'; } /* '' */
 .icon-patreon:before { content: '\e80a'; } /* '' */
@@ -12,6 +11,7 @@
 .icon-itch:before { content: '\e80d'; } /* '' */
 .icon-github-pages:before { content: '\e80e'; } /* '' */
 .icon-skillshare:before { content: '\e814'; } /* '' */
+.icon-google-scholar:before { content: '\e816'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
