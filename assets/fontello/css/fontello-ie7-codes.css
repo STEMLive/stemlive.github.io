@@ -29,6 +29,7 @@
 .icon-twitch { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1e8;&nbsp;'); }
 .icon-paypal { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1ed;&nbsp;'); }
 .icon-medium { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf23a;&nbsp;'); }
+.icon-wikipedia-w { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf266;&nbsp;'); }
 .icon-vimeo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf27d;&nbsp;'); }
 .icon-gitlab { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf296;&nbsp;'); }
 .icon-snapchat-square { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2ad;&nbsp;'); }

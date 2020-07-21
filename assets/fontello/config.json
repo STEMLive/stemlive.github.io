@@ -309,6 +309,12 @@
       "search": [
         "google-scholar"
       ]
+    },
+    {
+      "uid": "0b5f5c9abb1b4f21e75ff572955aa1de",
+      "css": "wikipedia-w",
+      "code": 62054,
+      "src": "fontawesome"
     }
   ]
 }

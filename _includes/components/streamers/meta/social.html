@@ -10,17 +10,19 @@
 
     {%- case social_channel -%}
         {%- when 'researchgate' or 'website' -%}
-        {%- assign icon_class = 'globe' -%}
+            {%- assign icon_class = 'globe' -%}
         {%- when 'linkedin' -%}
-        {%- assign icon_class = icon_class | append: '-squared' -%}
+            {%- assign icon_class = icon_class | append: '-squared' -%}
         {%- when 'github' -%}
-        {%- assign icon_class = icon_class | append: '-circled' -%}
+            {%- assign icon_class = icon_class | append: '-circled' -%}
         {%- when 'youtube' -%}
-        {%- assign icon_class = icon_class | append: '-play' -%}
+            {%- assign icon_class = icon_class | append: '-play' -%}
         {%- when 'snapchat' -%}
-        {%- assign icon_class = icon_class | append: '-square' -%}
+            {%- assign icon_class = icon_class | append: '-square' -%}
         {%- when 'tumblr' or 'pinterest' -%}
-        {%- assign icon_class = icon_class '-squared' -%}
+            {%- assign icon_class = icon_class | append: '-squared' -%}
+        {%- when 'wikipedia' -%}
+            {%- assign icon_class = icon_class | append: '-w' -%}
         {%- else -%}
             {%- unless site.social_platforms.size > 0 and site.social_platforms contains social_channel -%}
                 {%- assign icon_class = 'globe' -%}
