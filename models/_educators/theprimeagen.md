@@ -16,6 +16,7 @@ social_platforms:
   instagram: https://www.instagram.com/theprimeagen
   npm: https://www.npmjs.com/~theprimeagen
   tiktok: https://www.tiktok.com/@theprimeagen
+  twitch: https://www.twitch.tv/theprimeagen
   twitter: https://twitter.com/theprimeagen
   youtube: https://www.youtube.com/c/theprimeagen
 display_on_site: true

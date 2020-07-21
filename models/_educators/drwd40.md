@@ -11,6 +11,8 @@ collectives:
   - brainbytes
 streaming_platforms:
   twitch: https://www.twitch.tv/drwd40
+social_platforms:
+  twitch: https://www.twitch.tv/drwd40
 display_on_site: true
 include_links: true
 layout: educator

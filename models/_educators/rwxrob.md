@@ -18,6 +18,7 @@ social_platforms:
   linkedin: https://www.linkedin.com/in/rwxrob
   medium: https://medium.com/@rwxrob
   paypal: https://www.paypal.me/rwxrob
+  twitch: https://www.twitch.tv/rwxrob
   twitter: https://twitter.com/rwxrob
   youtube: https://www.youtube.com/channel/UCs2Kaw3Soa63cJq3H0VA7og
 display_on_site: true

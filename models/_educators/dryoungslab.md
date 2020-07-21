@@ -9,6 +9,8 @@ sciences:
   - chemistry
 streaming_platforms:
   twitch: https://www.twitch.tv/dryoungslab
+social_platforms:
+  twitch: https://www.twitch.tv/dryoungslab
 display_on_site: true
 include_links: true
 layout: educator

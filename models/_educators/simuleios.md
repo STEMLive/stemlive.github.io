@@ -18,6 +18,7 @@ social_platforms:
   github: https://github.com/leios
   quora: https://www.quora.com/profile/James-Schloss
   researchgate: https://www.researchgate.net/scientific-contributions/2150730752_James_Schloss
+  twitch: https://www.twitch.tv/simuleios
   twitter: https://twitter.com/LeiosOS
   youtube: https://www.youtube.com/LeiosOS
 display_on_site: true

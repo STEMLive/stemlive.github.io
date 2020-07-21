@@ -15,6 +15,7 @@ streaming_platforms:
 social_platforms:
   facebook: https://www.facebook.com/FoxdogStudios/
   website: http://foxdogstudios.com/
+  twitch: https://www.twitch.tv/foxdogstudios
   twitter: https://twitter.com/foxdogstudios
   youtube: https://www.youtube.com/channel/UCiIGU1zH2ofmmBnrBSZ7yNg
 display_on_site: true

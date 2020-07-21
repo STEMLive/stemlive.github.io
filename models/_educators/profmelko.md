@@ -11,6 +11,8 @@ collectives:
   - theknowledgefellowship
 streaming_platforms:
   twitch: https://www.twitch.tv/profmelko
+social_platforms:
+  twitch: https://www.twitch.tv/profmelko
 display_on_site: true
 include_links: true
 layout: educator

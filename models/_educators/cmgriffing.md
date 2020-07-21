@@ -13,6 +13,7 @@ streaming_platforms:
   twitch: https://www.twitch.tv/cmgriffing
 social_platforms:
   website: http://chrisgriffing.com/
+  twitch: https://www.twitch.tv/cmgriffing
   twitter: https://twitter.com/cmgriffing
 display_on_site: true
 include_links: true
