@@ -16,22 +16,6 @@ body.category-educator {
             }
         }
     }
-
-    .banner {
-        .banner-inner {
-            h1 {
-                &.long-title {
-                    @media (max-width: 991px) {
-                        font-size: 2rem;
-                    }
-
-                    @media (max-width: 360px) {
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-        }
-    }
 }
 
 /*
