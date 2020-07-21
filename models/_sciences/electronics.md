@@ -3,6 +3,9 @@ tag: electronics
 title: Electronics
 short_description: >-
   Learn how to build and debug your circuits.
+keywords:
+  - Electronics livestreaming
+  - Electronics livestreaming Twitch
 parents:
   - physics
 layout: science

@@ -1,8 +1,10 @@
 {%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
+
 {%- if page.description and page.description != nil and page.description != '' -%}
-{%- assign description = page.description -%}
+    {%- assign description = page.description -%}
 {%- else -%}
-{%- capture description -%}{{- site.description -}}.{%- endcapture description -%}
+    {%- assign science = page.tag | replace: '-', ' ' -%}
+    {%- assign description = 'Who streams ' | append: science | append: ' on Twitch or YouTube?' -%}
 {%- endif -%}
 <!DOCTYPE HTML>
 <html lang="en">
