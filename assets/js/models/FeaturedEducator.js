@@ -2,6 +2,7 @@ class FeaturedEducator {
     constructor () {
         this.endpoint = '/data/streamers.json'
         this.featuredEducators = []
+        this.loadMoreButton = false
     }
 
     getEducatorData (offset = 0) {
@@ -14,21 +15,21 @@ class FeaturedEducator {
         .then(data => {
             let featuredEducators = data[0].streamers
 
-            if (offset === Object.keys(featuredEducators).length) {
-                let loadMoreButton = document.querySelector('.featured-educators').nextElementSibling;
-                
-                if (loadMoreButton.classList.contains('load-more-button')) {
-                    loadMoreButton.setAttribute('data-continue-loading', false);
-                    loadMoreButton.setAttribute('disabled', 'disabled');
+            if (offset > 0) {
+                let filteredEducators = featuredEducators.slice(offset)
+
+                if (parseInt(offset + Object.keys(filteredEducators).length) === Object.keys(featuredEducators).length) {
+                    let loadMoreButton = document.querySelector('.featured-educators').nextElementSibling;
+
+                    if (loadMoreButton.classList.contains('load-more-button')) {
+                        this.loadMoreButton = loadMoreButton
+                        this.loadMoreButton.setAttribute('data-continue-loading', false);
+                    }
                 }
 
-                return
+                featuredEducators = filteredEducators
             }
 
-            if (offset > 0) {
-                featuredEducators = featuredEducators.splice(offset)
-            }
-            
             this.lazyLoad(featuredEducators)
         })
     }
@@ -105,6 +106,10 @@ class FeaturedEducator {
         if (this.featuredEducators.length > 0 && typeof window.featuredEducatorsGrid != 'undefined') {
             let featuredEducators = this.featuredEducators;
             window.featuredEducatorsGrid.insert(featuredEducators);
+
+            if (this.loadMoreButton && this.loadMoreButton.dataset.continueLoading != true) {
+                this.loadMoreButton.setAttribute('disabled', 'disabled');
+            }
         }
     }
 }
