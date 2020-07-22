@@ -12,7 +12,7 @@ sciences:
 schedule:
   monday: 
   tuesday: Wolfram Physics Project
-  wednesday: 
+  wednesday: Live CEOing 
   thursday: Science & Technology Q&A
   friday: Science & Technology Q&A
   saturday: Wolfram Physics Project

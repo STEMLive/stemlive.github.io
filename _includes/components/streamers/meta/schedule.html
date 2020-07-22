@@ -1,5 +1,6 @@
-{%- assign schedule = page.schedule | compact -%}
-{%- if schedule.size > 0 -%}
+{%- assign schedule = page.schedule -%}
+{%- assign schedule_activities = page.schedule | where_exp: 'schedule', 'schedule != nil' -%}
+{%- if schedule_activities.size > 0 -%}
     <h3>
         On these days, {{ page.name | default: page.title }} will usually stream the following:
     </h3>
