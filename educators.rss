@@ -1,0 +1,64 @@
+---
+layout: null
+---
+{%- assign educators = site.educators | where: 'display_on_site', true -%}
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>{{ site.title }}</title>
+ <description>{{ site.description }}</description>
+ <link>{{ site.url }}</link>
+ <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+ <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+ <ttl>1800</ttl>
+  
+ {% for educator in educators %}
+  {%- if educator.name != nil and educator.name != '' and educator.name.size > 0 -%}
+   {% assign channel_name = educator.name | append: ' (' | append: educator.title | append: ')' %}
+  {%- else -%}
+   {% assign channel_name = educator.title %}
+  {%- endif -%}
+
+  {%- assign streamer = educator.name | default: educator.title -%}
+  {%- assign primary_science = educator.sciences | first | replace: '-', ' ' -%}
+  {%- assign streaming_platforms = '' | split: '' -%}
+
+  {%- if educator.streaming_platforms.size > 0 -%}
+   {%- for streaming_services in educator.streaming_platforms -%}
+    {%- assign streaming_platform = streaming_services[0] -%}
+    {%- assign streaming_platforms = streaming_platforms | push: streaming_platform -%}
+   {%- endfor -%}
+  {%- endif -%}
+
+  {%- if streaming_platforms.size > 0 -%}
+   {%- if streaming_platforms contains 'twitch' and streaming_platforms contains 'youtube' -%}
+    {%- if streamer contains 'and' -%}
+     {% assign channel_description = streamer | append: ' are Twitch and YouTube livestreamers specialising in ' | append: primary_science %} 
+    {%- else -%}
+     {% assign channel_description = streamer | append: ' is a Twitch and YouTube livestreamer specialising in ' | append: primary_science %}
+    {%- endif -%}
+   {%- elsif streaming_platforms contains 'twitch' -%}
+    {%- if streamer contains 'and' -%}
+     {% assign channel_description = streamer | append: ' are Twitch livestreamers specialising in ' | append: primary_science %} 
+    {%- else -%}
+     {% assign channel_description = streamer | append: ' is a Twitch livestreamer specialising in ' | append: primary_science %}
+    {%- endif -%}
+   {%- elsif streaming_platforms contains 'youtube' -%}
+    {%- if streamer contains 'and' -%}
+     {% assign channel_description = streamer | append: ' are YouTube livestreamers specialising in ' | append: primary_science %} 
+    {%- else -%}
+     {% assign channel_description = streamer | append: ' is a YouTube livestreamer specialising in ' | append: primary_science %}
+    {%- endif -%}
+   {%- endif -%}
+  {%- endif -%}
+ <item>
+  <title>{{ channel_name }}</title>
+  {% if channel_description != nil %}<description>{{ channel_description }}</description>{% endif %}
+  <link>{{ educator.url | relative_url }}</link>
+  <guid isPermaLink="true">{{ site.url }}{{ educator.url }}</guid>
+  <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+ </item>
+
+ {% endfor %}
+</channel>
+</rss>
