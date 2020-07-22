@@ -20,7 +20,7 @@ layout: null
   {%- endif -%}
 
   {%- assign streamer = educator.name | default: educator.title -%}
-  {%- assign primary_science = educator.sciences | first | replace: '-', ' ' -%}
+  {%- assign sciences = educator.sciences | join: ', ' | replace: '-', ' ' -%}
   {%- assign streaming_platforms = '' | split: '' -%}
 
   {%- if educator.streaming_platforms.size > 0 -%}
@@ -33,21 +33,21 @@ layout: null
   {%- if streaming_platforms.size > 0 -%}
    {%- if streaming_platforms contains 'twitch' and streaming_platforms contains 'youtube' -%}
     {%- if streamer contains 'and' -%}
-     {% assign channel_description = streamer | append: ' are Twitch and YouTube livestreamers specialising in ' | append: primary_science %} 
+     {% assign channel_description = streamer | append: ' are Twitch and YouTube livestreamers specialising in ' | append: sciences %} 
     {%- else -%}
-     {% assign channel_description = streamer | append: ' is a Twitch and YouTube livestreamer specialising in ' | append: primary_science %}
+     {% assign channel_description = streamer | append: ' is a Twitch and YouTube livestreamer specialising in ' | append: sciences %}
     {%- endif -%}
    {%- elsif streaming_platforms contains 'twitch' -%}
     {%- if streamer contains 'and' -%}
-     {% assign channel_description = streamer | append: ' are Twitch livestreamers specialising in ' | append: primary_science %} 
+     {% assign channel_description = streamer | append: ' are Twitch livestreamers specialising in ' | append: sciences %} 
     {%- else -%}
-     {% assign channel_description = streamer | append: ' is a Twitch livestreamer specialising in ' | append: primary_science %}
+     {% assign channel_description = streamer | append: ' is a Twitch livestreamer specialising in ' | append: sciences %}
     {%- endif -%}
    {%- elsif streaming_platforms contains 'youtube' -%}
     {%- if streamer contains 'and' -%}
-     {% assign channel_description = streamer | append: ' are YouTube livestreamers specialising in ' | append: primary_science %} 
+     {% assign channel_description = streamer | append: ' are YouTube livestreamers specialising in ' | append: sciences %} 
     {%- else -%}
-     {% assign channel_description = streamer | append: ' is a YouTube livestreamer specialising in ' | append: primary_science %}
+     {% assign channel_description = streamer | append: ' is a YouTube livestreamer specialising in ' | append: sciences %}
     {%- endif -%}
    {%- endif -%}
   {%- endif -%}
