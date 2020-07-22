@@ -315,6 +315,18 @@
       "css": "wikipedia-w",
       "code": 62054,
       "src": "fontawesome"
+    },
+    {
+      "uid": "649004fb1ed50395a33c3780236ba8aa",
+      "css": "flickr",
+      "code": 61806,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "727544621cb891115c99b4a4cfed01df",
+      "css": "steam-squared",
+      "code": 61879,
+      "src": "fontawesome"
     }
   ]
 }
