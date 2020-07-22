@@ -1,4 +1,4 @@
-{%- assign schedule = page.schedule -%}
+{%- assign schedule = page.schedule | compact -%}
 {%- assign schedule_activities = page.schedule | where_exp: 'schedule', 'schedule != nil' -%}
 {%- if schedule_activities.size > 0 -%}
     <h3>
