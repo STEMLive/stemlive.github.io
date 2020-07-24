@@ -48,15 +48,15 @@ class FeaturedEducator {
             ;
 
             if (typeof streamer.collectives != 'undefined' && streamer.collectives != null) {
-                var collectives = streamer.collectives.toString().replace(',', ' ');
+                var collectives = streamer.collectives.toString().replace(/,/g, ' ');
             }
             
             if (typeof streamer.sciences != 'undefined' && streamer.sciences != null) {
-                var sciences = streamer.sciences.toString().replace(',', ' ');
+                var sciences = streamer.sciences.toString().replace(/,/g, ' ');
             }
 
             if (typeof streamer.streaming_platforms != 'undefined' && streamer.streaming_platforms != null) {
-                var streamingPlatforms = Object.keys(streamer.streaming_platforms).toString().replace(',', ' ');
+                var streamingPlatforms = Object.keys(streamer.streaming_platforms).toString().replace(/,/g, ' ');
             }
 
             educatorGrid.classList.add('featured-educator');
