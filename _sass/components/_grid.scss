@@ -49,8 +49,7 @@ body.home {
 
 body.collective,
 body.contact,
-body[class*="faq"],
-body[class*="science"] {
+body[class*="faq"] {
     .content-box {
         .content-inner {
             @media (min-width: 1200px) {
