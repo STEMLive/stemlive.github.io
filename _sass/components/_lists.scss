@@ -51,6 +51,12 @@
             }
         }
 
+        &.item-wikipedia {
+            @media (max-width: 567px) {
+                font-size: 1.3rem;
+            }
+        }
+
         a {
             &.link-apple-podcasts {
                 background: linear-gradient(to bottom, $dark-orchid, $heliotrope-purple);
