@@ -10,4 +10,4 @@ layout: science
 ---
 ## What is physics?
 
-Physics is the science of matter and its motion—the science that deals with concepts such as force, energy, mass, and charge.
+Physics is the study of matter and its movement &minus; the science that deals with concepts such as force, energy, mass, and charge.

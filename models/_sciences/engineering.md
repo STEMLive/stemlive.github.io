@@ -10,4 +10,4 @@ layout: science
 ---
 ## What is engineering?
 
-Engineering is a discipline dedicated to problem solving. Our built environment and infrastructure, the devices we use to communicate, the processes that manufacture our medicines, have all been designed, assembled or managed by an engineer.
+Engineering is the application of scientific principles in designing and constructing machines and other structures, such as bridges and buildings.
