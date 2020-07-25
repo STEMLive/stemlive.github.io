@@ -3,32 +3,48 @@
 </h3>
 
 <ul class="list-default social-links">
+    {%- assign social_platforms = '' | split: '' -%}
     {%- for social_platform in page.social_platforms -%}
-    {%- assign social_channel = social_platform[0] -%}
-    {%- assign social_link = social_platform[1] -%}
-    {%- assign icon_class = social_channel -%}
+        {%- assign social_platforms = social_platforms | push: social_platform[0] -%}
+    {%- endfor -%}
 
-    {%- case social_channel -%}
-        {%- when 'researchgate' or 'website' -%}
-            {%- assign icon_class = 'globe' -%}
-        {%- when 'linkedin' -%}
-            {%- assign icon_class = icon_class | append: '-squared' -%}
-        {%- when 'github' -%}
-            {%- assign icon_class = icon_class | append: '-circled' -%}
-        {%- when 'youtube' -%}
-            {%- assign icon_class = icon_class | append: '-play' -%}
-        {%- when 'snapchat' -%}
-            {%- assign icon_class = icon_class | append: '-square' -%}
-        {%- when 'pinterest' or 'tumblr' or 'steam' -%}
-            {%- assign icon_class = icon_class | append: '-squared' -%}
-        {%- when 'wikipedia' -%}
-            {%- assign icon_class = icon_class | append: '-w' -%}
-        {%- else -%}
-            {%- unless site.social_platforms.size > 0 and site.social_platforms contains social_channel -%}
+    {%- for social_platform in page.social_platforms -%}
+        {%- assign social_channel = social_platform[0] -%}
+        {%- assign social_link = social_platform[1] -%}
+        {%- assign icon_class = social_channel -%}
+        {%- assign next_index = forloop.index0 | plus: 1 -%}
+        {%- assign next_item_channel = social_platforms[next_index] -%}
+        {%- assign item_additional_classes = '' -%}
+
+        {%- case social_channel -%}
+            {%- when 'researchgate' or 'website' -%}
                 {%- assign icon_class = 'globe' -%}
-            {%- endunless -%}
-    {%- endcase -%}
-    <li class="item-{{ social_channel }}">
+            {%- when 'linkedin' -%}
+                {%- assign icon_class = icon_class | append: '-squared' -%}
+            {%- when 'github' -%}
+                {%- assign icon_class = icon_class | append: '-circled' -%}
+            {%- when 'youtube' -%}
+                {%- assign icon_class = icon_class | append: '-play' -%}
+            {%- when 'snapchat' -%}
+                {%- assign icon_class = icon_class | append: '-square' -%}
+            {%- when 'pinterest' or 'tumblr' or 'steam' -%}
+                {%- assign icon_class = icon_class | append: '-squared' -%}
+            {%- when 'wikipedia' -%}
+                {%- assign icon_class = icon_class | append: '-w' -%}
+            {%- else -%}
+                {%- unless site.social_platforms.size > 0 and site.social_platforms contains social_channel -%}
+                    {%- assign icon_class = 'globe' -%}
+                {%- endunless -%}
+        {%- endcase -%}
+
+        {%- case next_item_channel -%}
+            {%- when 'udemy' -%}
+                {%- assign item_additional_classes = item_additional_classes | append: 'margin-right-5-xs-down' -%}
+            {%- when 'stackoverflow' -%}
+                {%- assign item_additional_classes = item_additional_classes | append: 'margin-right-10-xs-down' -%}
+        {%- endcase -%}
+
+        <li class="item-{{ social_channel }}{% if item_additional_classes.size > 0 %} {{ item_additional_classes }}{% endif %}">
         <a href="{{ social_link }}" class="link-{{ social_channel }}" target="_blank">
             <i class="icon-{{ icon_class }}"></i>
         </a>

@@ -12,6 +12,18 @@
 
 // Right
 
+@media (max-width: 567px) {
+    .margin-right-5-xs-down,
+    .social-links li:not(:last-child).margin-right-5-xs-down {
+        margin-right: 5px;
+    }
+
+    .margin-right-10-xs-down,
+    .social-links li:not(:last-child).margin-right-10-xs-down {
+        margin-right: 10px;
+    }
+}
+
 // Bottom
 
 // Left
