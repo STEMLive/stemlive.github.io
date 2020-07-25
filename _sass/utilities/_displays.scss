@@ -22,6 +22,12 @@
     }
 }
 
+@media (min-width: 992px) {
+    .display-block-lg-up {
+        display: block;
+    }
+}
+
 @media (min-width: 768px) {
     .display-none-md-up {
         display: none;
