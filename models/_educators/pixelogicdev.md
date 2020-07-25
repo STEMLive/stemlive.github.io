@@ -13,6 +13,7 @@ collectives:
 streaming_platforms:
   twitch: https://www.twitch.tv/pixelogicdev
 social_platforms:
+  discord: https://discord.gg/ubgX6T8
   github: https://github.com/PixelogicDev
   instagram: https://www.instagram.com/pixelogicdev/
   linkedin: https://www.linkedin.com/in/alecdilanchian

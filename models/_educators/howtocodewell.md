@@ -12,6 +12,7 @@ collectives:
 streaming_platforms:
   twitch: https://www.twitch.tv/howtocodewell
 social_platforms:
+  discord: https://howtocodewell.net/discord
   facebook: https://www.facebook.com/howtocodewell/
   github: https://github.com/pfwd
   skillshare: https://www.skillshare.com/user/howtocodewell

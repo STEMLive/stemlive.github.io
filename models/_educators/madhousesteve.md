@@ -12,6 +12,7 @@ streaming_platforms:
   twitch: https://www.twitch.tv/madhousesteve
   youtube: https://www.youtube.com/channel/UCpPJjNBGk3emY3PyesVkNfw
 social_platforms:
+  discord: https://discord.gg/QM5cnnf
   facebook: https://www.facebook.com/madhousesteve/
   website: https://www.madhouseminers.com/
   twitch: https://www.twitch.tv/madhousesteve

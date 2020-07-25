@@ -14,6 +14,7 @@ streaming_platforms:
 social_platforms:
   company: https://www.freistil.it/
   devto: https://dev.to/geewiz
+  discord: https://discord.gg/NSCHVub
   github: https://github.com/geewiz
   instagram: https://www.instagram.com/geewiz/
   linkedin: https://ie.linkedin.com/in/lillich

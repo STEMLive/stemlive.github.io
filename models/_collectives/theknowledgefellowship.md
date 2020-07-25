@@ -8,7 +8,7 @@ images:
     filename: "theknowledgefellowship.jpg"
 links:
   website: https://theknowledgefellowship.org/
-  discord: https://discordapp.com/invite/HSYKvSc
+  discord: https://discord.gg/skXb85R
   facebook: https://www.facebook.com/TheKnowledgeFellowship/
   twitch: https://www.twitch.tv/theknowledgefellowship
   twitter: https://twitter.com/TheKnowledgeFe1

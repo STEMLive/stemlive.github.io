@@ -10,6 +10,7 @@ streaming_platforms:
   twitch: https://www.twitch.tv/outfrost
 social_platforms:
   devto: https://dev.to/outfrost
+  discord: https://discord.gg/xTPJ5t4
   github: https://github.com/outfrost
   itch: https://outfrost.itch.io/
   twitch: https://www.twitch.tv/outfrost

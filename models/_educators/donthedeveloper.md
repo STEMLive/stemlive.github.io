@@ -11,6 +11,7 @@ streaming_platforms:
   twitch: https://www.twitch.tv/donthedeveloper
 social_platforms:
   apple-podcasts: https://podcasts.apple.com/us/podcast/coffee-chat-after-hours/id1505012831
+  discord: https://discord.gg/BfdCXZk
   github: https://github.com/donthedeveloper
   linkedin: https://www.linkedin.com/in/donthedeveloper
   podcast: http://podcast.donthedeveloper.tv/

@@ -12,6 +12,7 @@ streaming_platforms:
   twitch: https://www.twitch.tv/zorchenhimer
 social_platforms:
   deviantart: https://www.deviantart.com/zorchenhimer
+  discord: https://discord.gg/d5tpRSx
   github: https://github.com/zorchenhimer
   patreon: https://www.patreon.com/Zorchenhimer
   reddit: https://www.reddit.com/user/Zorchenhimer

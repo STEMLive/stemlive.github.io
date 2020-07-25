@@ -12,9 +12,10 @@ collectives:
 streaming_platforms:
   twitch: https://www.twitch.tv/cmgriffing
 social_platforms:
-  website: http://chrisgriffing.com/
+  discord: https://discord.gg/r62TYMg
   twitch: https://www.twitch.tv/cmgriffing
   twitter: https://twitter.com/cmgriffing
+  website: http://chrisgriffing.com/
 display_on_site: true
 include_links: true
 layout: educator
