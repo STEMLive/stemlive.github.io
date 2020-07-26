@@ -14,6 +14,7 @@ social_platforms:
   giphy: https://giphy.com/channel/OmatumStudios
   linkedin: https://www.linkedin.com/company/omatum/
   patreon: https://www.patreon.com/omatumstudios
+  reddit: https://www.reddit.com/user/throwawayvhs/
   twitch: https://www.twitch.tv/omatum_greg
   website: https://www.omatum.com/
   youtube: https://omatum.tv
