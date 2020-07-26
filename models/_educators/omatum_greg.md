@@ -11,6 +11,7 @@ streaming_platforms:
   twitch: https://www.twitch.tv/omatum_greg
 social_platforms:
   discord: https://omatum.chat
+  giphy: https://giphy.com/channel/OmatumStudios
   linkedin: https://www.linkedin.com/company/omatum/
   patreon: https://www.patreon.com/omatumstudios
   twitch: https://www.twitch.tv/omatum_greg

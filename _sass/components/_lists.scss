@@ -82,6 +82,17 @@
                 vertical-align: super;
             }
 
+            &.link-giphy {
+                background: -moz-linear-gradient(-135deg,#fff35c,#ff6666,#00ccff,#00ff99,#9933ff);
+                background: -webkit-linear-gradient(-135deg,#fff35c,#ff6666,#00ccff,#00ff99,#9933ff);
+                background: linear-gradient(-135deg,#fff35c,#ff6666,#00ccff,#00ff99,#9933ff);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+
             &.link-gitlab {
                 color: $cinnabar-orange;
             }
