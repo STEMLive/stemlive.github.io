@@ -10,9 +10,14 @@ sciences:
 streaming_platforms:
   twitch: https://www.twitch.tv/donthedeveloper
 social_platforms:
+  apple-podcasts: https://podcasts.apple.com/us/podcast/coffee-chat-after-hours/id1505012831
+  discord: https://discord.gg/BfdCXZk
   github: https://github.com/donthedeveloper
   linkedin: https://www.linkedin.com/in/donthedeveloper
   podcast: http://podcast.donthedeveloper.tv/
+  rss: https://feeds.buzzsprout.com/948958.rss
+  spotify: https://open.spotify.com/show/0Tdhav0QC7oDI1d46RSZxA
+  twitch: https://www.twitch.tv/donthedeveloper
   twitter: https://twitter.com/developerdontv/
   youtube: https://www.youtube.com/c/donthedeveloper
 display_on_site: true

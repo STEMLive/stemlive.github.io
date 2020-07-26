@@ -1,12 +1,12 @@
 <h3>
-    {{ page.name | default: page.title }} specialises in the following disciplines:
+    {{ page.name | default: page.title }} specialise{% unless page.name != nil and page.name contains 'and' %}s{% endunless %} in the following disciplines:
 </h3>
 
 <ul class="list-default">
     {%- for discipline in page.sciences -%}
     {%- assign science = site.sciences | where: 'tag', discipline | first -%}
     <li>
-        <a href="{{ science.url | relative_url }}" class="text-{{ science.tag }}">
+        <a href="{{ science.url | relative_url }}" class="text-{{ science.tag }} hover-underline">
             {{ science.title }}
         </a>
     </li>

@@ -1,9 +1,21 @@
-{%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
-{%- if page.description and page.description != nil and page.description != '' -%}
-{%- assign description = page.description -%}
+{%- unless page.name == nil or page.name == '' or page.name.size < 1 -%}
+    {%- assign channel_name = ' (' | append: page.title | downcase | append: ')' -%}
+    {%- assign title = page.name | append: channel_name | append: ' | ' | append: site.title -%}
 {%- else -%}
-{%- capture description -%}{{- site.description -}}.{%- endcapture description -%}
-{%- endif -%}
+    {%- assign title = page.title | append: ' | ' | append: site.title -%}
+{%- endunless -%}
+
+{%- unless page.description == nil or page.description == '' or page.description.size < 1 -%}
+    {%- assign description = page.description -%}
+{%- else -%}
+    {%- capture description -%}
+        {%- if page.name != nil and page.name contains 'and' -%}
+            {{ page.title }} are STEM livestreamers specialising in {% for science in page.sciences %}{% unless forloop.last or forloop.first %}, {% elsif forloop.index > 1 %} and {% endunless %}{{ science | replace: '-', ' ' }}{% endfor %}.
+        {%- else -%}
+            {{ page.name | default: page.title }} is a STEM livestreamer specialising in {% for science in page.sciences %}{% unless forloop.last or forloop.first %}, {% elsif forloop.index > 1 %} and {% endunless %}{{ science | replace: '-', ' ' }}{% endfor %}.
+        {%- endif -%}
+    {%- endcapture description -%}
+{%- endunless -%}
 <!DOCTYPE HTML>
 <html lang="en">
     <head>

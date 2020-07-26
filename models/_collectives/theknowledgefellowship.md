@@ -1,11 +1,15 @@
 ---
 title: The Knowledge Fellowship
 tag: theknowledgefellowship
+description: >-
+  Which Twitch streamers belong to The Knowledge Fellowship collective?
 images:
   thumbnail:
     filename: "theknowledgefellowship.jpg"
 links:
   website: https://theknowledgefellowship.org/
+  discord: https://discord.gg/skXb85R
+  facebook: https://www.facebook.com/TheKnowledgeFellowship/
   twitch: https://www.twitch.tv/theknowledgefellowship
   twitter: https://twitter.com/TheKnowledgeFe1
 layout: collective

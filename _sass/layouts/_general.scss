@@ -11,3 +11,9 @@ body {
 * {
     box-sizing: border-box;
 }
+
+.hover-underline {
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -22,7 +22,7 @@ title: STEMLive
 strapline: The &#35;1 content discovery platform for STEM educators on Twitch and YouTube.
 email: enquiries.stemlive@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  STEMLive is a dynamic content discovery service for tracking new STEM-focussed live streams on Twitch and YouTube.
+  STEMLive is the &#35;1 content discovery platform for STEM educators on Twitch and YouTube.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stemlive.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -39,6 +39,7 @@ analytics:
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
 
@@ -59,35 +60,60 @@ grid:
   initial_limit: 12
 
 social_platforms:
+  - apple-podcasts
   - behance
   - deviantart
   - devto
   - discord
   - dribbble
   - facebook
-  - google-scholar
+  - flickr
+  - giphy
   - github
+  - github-pages
   - gitlab
+  - google-scholar
   - instagram
   - itch
   - linkedin
   - medium
   - meetup
+  - npm
   - patreon
   - paypal
   - pinterest
   - quora
   - reddit
   - researchgate
+  - rss
+  - skillshare
   - snapchat
   - soundcloud
   - spotify
+  - stackoverflow
+  - steam
   - tiktok
   - tumblr
+  - twitch
   - twitter
   - udemy
   - vimeo
+  - wikipedia
   - youtube
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      description: >-
+        STEMLive is the &#35;1 content discovery platform for STEM educators on Twitch and YouTube.
+  -
+    scope:
+      path: "google*.html"
+    values:
+      description: ""
+      sitemap: false
 
 exclude:
   - .sass-cache/

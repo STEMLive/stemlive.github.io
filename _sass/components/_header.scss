@@ -12,7 +12,8 @@ header {
     padding-bottom: 10px;
 
     &.scrolled {
-        background-color: rgba($medium-slate-blue, .8);
+        background-color: rgba($medium-slate-blue, .3);
+        backdrop-filter: blur(3px);
     }
 
     .navigation-top {

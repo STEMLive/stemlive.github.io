@@ -16,6 +16,16 @@
     .display-none-lg-down {
         display: none;
     }
+
+    .display-inline-block-lg-down {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 992px) {
+    .display-block-lg-up {
+        display: block;
+    }
 }
 
 @media (min-width: 768px) {
@@ -27,5 +37,9 @@
 @media (min-width: 568px) {
     .display-none-sm-up {
         display: none;
+    }
+
+    .display-inline-block-sm-up {
+        display: inline-block;
     }
 }

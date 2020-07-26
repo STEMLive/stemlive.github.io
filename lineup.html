@@ -1,7 +1,16 @@
 ---
 layout: page
 title: Lineup
+description: >-
+  Take a look at the STEM technicians and instructors streaming on Twitch and YouTube.
+keywords:
+    - stem technicians twitch
+    - stem technicians youtube
+    - stem twitch
+    - stem youtube
 permalink: /lineup/
+redirect_from:
+  - /educators/
 show_in_nav: true
 order: 3
 ---
@@ -14,7 +23,7 @@ order: 3
 </p>
 
 <p>
-The disciplines of our on-screen STEM talents include, but are not limited to the following: {% for science in site.sciences %}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <a class="text-{{ science.tag }}" href="{{ science.url }}">{{ science.tag | replace: '-', ' ' }}</a>{% endfor %}.
+The disciplines of our on-screen STEM talents include, but are not limited to the following: {% for science in site.sciences %}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <a class="text-{{ science.tag }} hover-underline" href="{{ science.url }}">{{ science.tag | replace: '-', ' ' }}</a>{% endfor %}.
 </p>
     
 {% include components/streamers/all.html %}

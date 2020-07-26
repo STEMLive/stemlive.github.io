@@ -3,10 +3,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {%- if page.title | downcase == 'sciences' -%}
-    {%- assign sciences = site.sciences -%}
-    <meta name="keywords" content="{% for science in sciences %}{% unless forloop.first %}, {% endunless %}{{ science.tag | replace: '-', ' ' }}{% endfor %}" />
+        {%- assign sciences = site.sciences -%}
+        <meta name="keywords" content="{% for science in sciences %}{% unless forloop.first %}, {% endunless %}{{ science.tag | replace: '-', ' ' }}{% endfor %}" />
     {%- endif -%}
-    {%- assign today = 'now' | date: '%Y-%M-%d' -%}
+
+    <link rel="alternate" type="application/rss+xml" title="Subscribe to find out when a new STEM educator is added" href="{{ '/educators.rss' | relative_url }}" />
+
+    {%- assign today = 'now' | date: '%Y%M%d' -%}
     <link href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" rel="stylesheet" type="text/css" />
     {%- seo -%}
     {%- feed_meta -%}

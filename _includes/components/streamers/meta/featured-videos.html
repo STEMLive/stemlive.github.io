@@ -1,0 +1,16 @@
+<h3>
+    {{ page.name | default: page.title }}&rsquo;s featured videos:
+</h3>
+
+<div class="featured-videos grid grid-2">
+    {%- for featured_video in page.featured_videos -%}
+
+    {%- unless featured_video != nil and featured_video != '' and featured_video.size > 0 -%}
+        {%- continue -%}
+    {%- endunless -%}
+
+    <div class="featured-video">
+        <iframe src="{{ featured_video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    {%- endfor -%}
+</div>

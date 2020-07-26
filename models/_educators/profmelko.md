@@ -11,6 +11,13 @@ collectives:
   - theknowledgefellowship
 streaming_platforms:
   twitch: https://www.twitch.tv/profmelko
+social_platforms:
+  discord: https://discord.gg/skXb85R
+  instagram: https://www.instagram.com/profmelko
+  linkedin: https://www.linkedin.com/in/joshua-melko-2801b72a
+  twitch: https://www.twitch.tv/profmelko
+  twitter: https://twitter.com/joshmelko
+  youtube: https://www.youtube.com/profmelko
 display_on_site: true
 include_links: true
 layout: educator
