@@ -327,6 +327,20 @@
       "css": "steam-squared",
       "code": 61879,
       "src": "fontawesome"
+    },
+    {
+      "uid": "b2b18319815d1c36951e2572d685eaea",
+      "css": "giphy",
+      "code": 59396,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M0 0V88.9 111.1 888.9 911.1 1000H777.8V888.9 311.1 222.2H666.7V111.1H555.5V0H444.4ZM111.1 111.1H444.4V111.8 112 222.8 222.9 333.3H555.7 666.5 666.7V445.3 888.9H111.1Z",
+        "width": 778
+      },
+      "search": [
+        "giphy"
+      ]
     }
   ]
 }
