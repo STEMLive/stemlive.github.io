@@ -3,3 +3,5 @@
         googleAnalyticsId = {% if site.analytics.google.tracking_id != nil and site.analytics.google_tracking_id != '' and site.analytics.google.tracking_id.size > 0 %}'{{ site.analytics.google.tracking_id }}'{% else %}false{% endif %}
     ;
 </script>
+
+<script defer async src="{{ '/assets/js/components/GoalLink.js' | relative_url }}"></script>
