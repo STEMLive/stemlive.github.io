@@ -13,10 +13,12 @@ class ConsentBar {
             return false;
         }
 
+        this.consentBar.classList.toggle('display-block', !cookiesAlreadyAccepted);
+
         if (cookiesAlreadyAccepted) {
             AnalyticsModule.loadGoogleAnalytics();
             document.body.classList.add('terms-accepted');
-            this.consentBar.classList.add('display-none');
+            return;
         }
 
         let acceptCookiesBtn = this.consentBar.querySelector('.accept-cookies-btn');
@@ -36,18 +38,18 @@ class ConsentBar {
 
         let
             acceptCookiesBtn = e.target,
-            consentBar = acceptCookiesBtn.parentElement.parentElement
+            consentBar = acceptCookiesBtn.parentElement.parentElement,
+            cookiesAlreadyAccepted = this.cookiesAlreadyAccepted()
         ;
 
-        if (!consentBar.classList.contains('consent-bar')) {
+        if (!consentBar.classList.contains('consent-bar') || cookiesAlreadyAccepted) {
             return false;
         }
-
 
         localStorage.setItem('track-google', true);
         AnalyticsModule.loadGoogleAnalytics();
 
-        consentBar.classList.add('display-none');
+        consentBar.classList.remove('display-block');
         document.body.classList.add('terms-accepted');
     }
 }

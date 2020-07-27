@@ -1,16 +1,19 @@
 .consent-bar {
+    display: none;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: $lavender-blue;
+    z-index: 15;
 
     p {
         color: $black;
         font-weight: 900;
 
         @media (max-width: 567px) {
+            font-size: 12px;
             max-width: 65%;
             margin-left: auto;
             margin-right: auto;
