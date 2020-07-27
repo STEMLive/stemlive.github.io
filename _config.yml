@@ -27,6 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stemlive.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_repo: "https://github.com/stemlive/stemlive.github.io"
+repository: "stemlive/stemlive.github.io"
 github_organization: "https://github.com/stemlive"
 
 # Permalink settings

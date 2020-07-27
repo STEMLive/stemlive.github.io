@@ -1,6 +1,6 @@
 class AnalyticsModule {
     loadGoogleAnalytics () {
-        if (typeof googleAnalyticsId === 'undefined' || window.doNotTrack) {
+        if (typeof googleAnalyticsId === 'undefined' || window.doNotTrack || !isProduction) {
             return false;
         }
 

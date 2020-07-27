@@ -6,7 +6,7 @@ class GoalLink {
         
         this.goalLinks = document.querySelectorAll(goalLink);
 
-        if (typeof this.goalLinks === 'undefined' || !this.cookiesAlreadyAccepted()) {
+        if (typeof this.goalLinks === 'undefined' || !this.cookiesAlreadyAccepted() || !isProduction) {
             return false;
         }
 
