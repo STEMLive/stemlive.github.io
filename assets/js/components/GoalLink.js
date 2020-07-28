@@ -28,15 +28,13 @@ class GoalLink {
             goalLink = event.target
         ;
 
-        if (typeof ga != 'function' || !goalLink.dataset.eventCategory || !goalLink.dataset.eventAction || !goalLink.dataset.eventLabel) {
+        if (typeof gtag != 'function' || !goalLink.dataset.eventCategory || !goalLink.dataset.eventAction || !goalLink.dataset.eventLabel) {
             return;
         }
 
-        ga('send', {
-            hitType: 'event',
-            eventCategory: goalLink.dataset.eventCategory,
-            eventAction: goalLink.dataset.eventAction,
-            eventLabel: goalLink.dataset.eventLabel
+        gtag('event', goalLink.dataset.eventAction, {
+            'event_category': goalLink.dataset.eventCategory,
+            'event_label': goalLink.dataset.eventLabel
         });
 
         return;
