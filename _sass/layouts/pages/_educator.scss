@@ -214,14 +214,4 @@ body.home {
             }
         }
     }
-
-    &.computer-science {
-        .featured-educators {
-            .featured-educator {
-                @media (max-width: 991px) {
-                    min-height: 25rem;
-                }
-            }
-        }
-    }
 }
