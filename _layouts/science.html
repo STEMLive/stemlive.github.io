@@ -18,7 +18,7 @@
         {%- assign today = 'now' | date: '%Y%M%d' -%}
         <link rel="stylesheet" href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" type="text/css" />
     </head>
-    <body class="category-science">
+    <body class="category-science {{ page.tag }}">
         {%- include components/top/header/navigation.html -%}
         {%- include components/banners/featured-science.html -%}
         <main class="content-box">

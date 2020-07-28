@@ -207,13 +207,19 @@ body.home {
         }
 
         .featured-educator {
-            @media (max-width: 991px) {
-                min-height: 25rem;
-            }
-
             &:not(:last-of-type) {
                 @media (max-width: 991px) {
                     margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+
+    &.computer-science {
+        .featured-educators {
+            .featured-educator {
+                @media (max-width: 991px) {
+                    min-height: 25rem;
                 }
             }
         }
