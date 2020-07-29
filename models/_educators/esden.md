@@ -7,7 +7,6 @@ images:
     filename: "esden.jpg"
 sciences:
   - electronics
-  - physics
 streaming_platforms:
   twitch: https://www.twitch.tv/esden
 social_platforms:
