@@ -11,7 +11,7 @@ You must have both Ruby and Jekyll (and ideally Bundler) installed to set up loc
 
 ## Quickstart (for developers)
 
-1. Run `jekyll serve`
+1. Run `jekyll serve` - or `JEKYLL_ENV=production jekyll serve` (to run your local site in production mode)
 2. Browse to http://localhost:4000/ in a browser of your choice to view your local version of the site.
 3. Jekyll is set to autoregenerate by default, so any changes to files you make will trigger the compilation process - so you should be able to view the changes in-browser.
 
