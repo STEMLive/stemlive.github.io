@@ -6,13 +6,16 @@ images:
     filename: "oh_bother.jpg"
 sciences:
   - electronics
-  - physics
 collectives:
   - theknowledgefellowship
 streaming_platforms:
   twitch: https://www.twitch.tv/oh_bother
-display_on_site: false
-sitemap: false
-include_links: false
+social_platforms:
+  reddit: https://www.reddit.com/user/oh_bother/
+  twitch: https://www.twitch.tv/oh_bother
+  twitter: https://twitter.com/WorkVerbDesign
+  youtube: https://www.youtube.com/channel/UCgWO9z-lkaILtAYYciJ42Fg
+display_on_site: true
+include_links: true
 layout: educator
 ---
