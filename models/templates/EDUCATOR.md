@@ -55,6 +55,11 @@ social_platforms:
   #researchgate: https://www.researchgate.net/scientific-contributions/2150730752_John_Smith
   #twitter: https://twitter.com/johnsmith
   #youtube: https://www.youtube.com/johnsmith
+# You can add featured videos for your channel below.
+# Uncomment the below to enable.
+# For YouTube embeds, replace *ID* below with your video ID
+#featured_videos:
+  #- https://www.youtube.com/embed/*ID*
 # Change the below to false if you don't want to feature on the website
 display_on_site: true
 # Change the below to false if you don't want your streamer page to include links to your streaming platforms, collectives to which you belong, and any social platforms on which you have an account
