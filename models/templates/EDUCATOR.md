@@ -28,6 +28,16 @@ sciences:
   # We use the first item in this list to determine your fallback thumbnail.
   #- computer-science
   #- physics
+# Below you can include your schedule.
+# Your schedule will appear on your page if any of the days have a value.
+schedule:
+  monday:
+  tuesday:
+  wednesday:
+  thursday:
+  friday:
+  saturday:
+  sunday:
 collectives:
   # Add any streamer collectives to which you belong in bullet form, all lowercase.
   #- theknowledgefellowship
@@ -38,8 +48,7 @@ streaming_platforms:
 social_platforms:
   # Here are some examples of social links you can add
   # Other than website and researchgate, all the others have dedicated icons that will show on your front page
-  # You will find more examples of social platforms for which we have dedicated icons on the wiki
-  # We have a default icon in place for custom key names, so don't be deterred from using non standard social platforms
+  # You will find more examples of social platforms for which we have dedicated icons on [this wiki page](https://github.com/STEMLive/stemlive.github.io/wiki/Social-platforms-we-support-(provide-dedicated-icons-for)) - please note that, for any social platforms you want to include, take the name within the pair of brackets
   #website: https://johnsmith.com
   #github: https://github.com/johnsmith
   #quora: https://www.quora.com/profile/john-smith

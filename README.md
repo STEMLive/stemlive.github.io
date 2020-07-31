@@ -28,4 +28,8 @@ To add new Fontello icons, you must take the following steps:
 
 Please note: You can add custom Fontello icons by dragging and dropping them into the `Custom Icons` area from your file manager. Refer [here](https://github.com/fontello/fontello/wiki/How-to-use-custom-images) for more information.
 
+### How to add a new educator
+
+Please copy and paste [this template](https://raw.githubusercontent.com/STEMLive/stemlive.github.io/master/models/templates/EDUCATOR.md) into the text field on https://github.com/stemlive/stemlive.github.io/new/master/models/_educators, amending it as you see fit.
+
 All questions on this project are to be addressed to [enquiries.stemlive@gmail.com](mailto:enquiries.stemlive@gmail.com).
