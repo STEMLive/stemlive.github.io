@@ -36,6 +36,12 @@
 
         p {
             font-size: 1.5rem;
+
+            a {
+                @media (max-width: 1199px) {
+                    word-break: break-word;
+                }
+            }
         }
     }
 }

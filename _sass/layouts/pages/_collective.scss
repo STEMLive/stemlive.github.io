@@ -49,6 +49,12 @@
             h3 {
                 text-align: center;
 
+                @media (min-width: 992px) and (max-width: 1440px) {
+                    max-width: 85%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
                 @media (max-width: 991px) {
                     font-size: 2rem;
                 }
@@ -90,6 +96,10 @@ body.collective {
 
                 li {
                     font-size: 1.5rem;
+
+                    @media (max-width: 767px) {
+                        font-size: 1.2rem;
+                    }
 
                     &:not(:last-child) {
                         margin-bottom: 1rem;

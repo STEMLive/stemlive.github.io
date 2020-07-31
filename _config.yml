@@ -22,19 +22,27 @@ title: STEMLive
 strapline: The &#35;1 content discovery platform for STEM educators on Twitch and YouTube.
 email: enquiries.stemlive@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  STEMLive is a dynamic content discovery service for tracking new STEM-focussed live streams on Twitch and YouTube.
+  STEMLive is the &#35;1 content discovery platform for STEM educators on Twitch and YouTube.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stemlive.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_repo: "https://github.com/stemlive/stemlive.github.io"
+repository: "stemlive/stemlive.github.io"
 github_organization: "https://github.com/stemlive"
 
 # Permalink settings
 permalink: /:title/
 
+# Social settings
+analytics:
+  google:
+    tracking_id: UA-172420307-1
+
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 collections:
   educators:
@@ -53,29 +61,74 @@ grid:
   initial_limit: 12
 
 social_platforms:
+  - apple-podcasts
   - behance
+  - deviantart
+  - devto
   - discord
   - dribbble
   - facebook
-  - google-scholar
+  - flickr
+  - giphy
   - github
+  - github-pages
+  - gitlab
+  - google-scholar
   - instagram
+  - itch
   - linkedin
   - medium
   - meetup
+  - npm
   - patreon
+  - paypal
   - pinterest
   - quora
   - reddit
   - researchgate
+  - rss
+  - skillshare
   - snapchat
   - soundcloud
   - spotify
+  - stackoverflow
+  - steam
   - tiktok
   - tumblr
+  - twitch
   - twitter
+  - udemy
   - vimeo
+  - wikipedia
   - youtube
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      description: >-
+        STEMLive is the &#35;1 content discovery platform for STEM educators on Twitch and YouTube.
+  -
+    scope:
+      path: "google*.html"
+    values:
+      description: ""
+      sitemap: false
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - models/templates/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

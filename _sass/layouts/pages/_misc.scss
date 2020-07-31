@@ -47,7 +47,9 @@ body.contact {
                 }
 
                 > a {
-                    word-break: break-word;
+                    @media (max-width: 1564px) {
+                        word-break: break-all;
+                    }
                 }
             }
 
@@ -58,6 +60,18 @@ body.contact {
                     }
                 }
             }
+        }
+    }
+}
+
+/*
+    Add padding bottom to content when consent bar showing
+*/
+
+body {
+    &:not(.terms-accepted) {
+        .content-inner {
+            padding-bottom: 3.5rem;
         }
     }
 }
@@ -83,8 +97,9 @@ body.contact {
             a {
                 @media (max-width: 567px) {
                     display: block;
-                    font-size: 1.2rem;   
+                    font-size: 1rem;
                     margin-top: .5rem;
+                    word-break: break-all;
                 }
             }
         }
@@ -99,6 +114,32 @@ body.contact {
     h2, .h2 {
         @media (max-width: 567px) {
             font-size: 2rem;
+        }
+
+        &.featured-educator-title {
+            @media (max-width: 767px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+body.collective {
+    .content-box {
+        h1, .h1 {
+            @media (max-width: 767px) {
+                font-size: 2.8rem;
+            }
+
+            @media (max-width: 567px) {
+                font-size: 3rem;
+            }
+        }
+
+        h2, .h2 {
+            @media (max-width: 567px) {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -135,6 +176,10 @@ body.faq, body.faqs {
                 }
 
                 a {
+                    @media (max-width: 1199px) {
+                        word-break: break-all;
+                    }
+
                     @media (max-width: 567px) {
                         font-size: 1.2rem;
                     }

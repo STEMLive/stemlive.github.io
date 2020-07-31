@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?63919406');
-  src: url('../font/fontello.eot?63919406#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?63919406') format('woff2'),
-       url('../font/fontello.woff?63919406') format('woff'),
-       url('../font/fontello.ttf?63919406') format('truetype'),
-       url('../font/fontello.svg?63919406#fontello') format('svg');
+  src: url('../font/fontello.eot?7674536');
+  src: url('../font/fontello.eot?7674536#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?7674536') format('woff2'),
+       url('../font/fontello.woff?7674536') format('woff'),
+       url('../font/fontello.ttf?7674536') format('truetype'),
+       url('../font/fontello.svg?7674536#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?63919406#fontello') format('svg');
+    src: url('../font/fontello.svg?7674536#fontello') format('svg');
   }
 }
 */
@@ -56,20 +56,41 @@
 }
  
 .icon-globe:before { content: '\e800'; } /* '' */
-.icon-tinyletter:before { content: '\e801'; } /* '' */
-.icon-discord:before { content: '\e802'; } /* '' */
+.icon-discord:before { content: '\e801'; } /* '' */
+.icon-tiktok:before { content: '\e802'; } /* '' */
+.icon-udemy:before { content: '\e803'; } /* '' */
+.icon-giphy:before { content: '\e804'; } /* '' */
+.icon-stackoverflow:before { content: '\e805'; } /* '' */
+.icon-apple-podcasts:before { content: '\e806'; } /* '' */
+.icon-patreon:before { content: '\e80a'; } /* '' */
+.icon-npm:before { content: '\e80b'; } /* '' */
+.icon-devto:before { content: '\e80c'; } /* '' */
+.icon-itch:before { content: '\e80d'; } /* '' */
+.icon-github-pages:before { content: '\e80e'; } /* '' */
+.icon-skillshare:before { content: '\e814'; } /* '' */
+.icon-google-scholar:before { content: '\e816'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-rss:before { content: '\f09e'; } /* '' */
 .icon-pinterest-squared:before { content: '\f0d3'; } /* '' */
 .icon-youtube-play:before { content: '\f16a'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-flickr:before { content: '\f16e'; } /* '' */
 .icon-tumblr-squared:before { content: '\f174'; } /* '' */
 .icon-dribbble:before { content: '\f17d'; } /* '' */
 .icon-reddit:before { content: '\f1a1'; } /* '' */
+.icon-behance:before { content: '\f1b4'; } /* '' */
+.icon-steam-squared:before { content: '\f1b7'; } /* '' */
 .icon-spotify:before { content: '\f1bc'; } /* '' */
+.icon-deviantart:before { content: '\f1bd'; } /* '' */
+.icon-soundcloud:before { content: '\f1be'; } /* '' */
+.icon-twitch:before { content: '\f1e8'; } /* '' */
+.icon-paypal:before { content: '\f1ed'; } /* '' */
 .icon-medium:before { content: '\f23a'; } /* '' */
+.icon-wikipedia-w:before { content: '\f266'; } /* '' */
 .icon-vimeo:before { content: '\f27d'; } /* '' */
+.icon-gitlab:before { content: '\f296'; } /* '' */
 .icon-snapchat-square:before { content: '\f2ad'; } /* '' */
 .icon-quora:before { content: '\f2c4'; } /* '' */
 .icon-meetup:before { content: '\f2e0'; } /* '' */

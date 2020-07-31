@@ -1,8 +1,13 @@
 ---
 tag: biology
 title: Biology
+description: >-
+  Biology is the study of various forms of life, including human, animal and even micro-organisms.
 short_description: >-
   Want to know what makes your body tick?
+keywords:
+  - Biology livestreaming
+  - Biology livestreaming Twitch
 layout: science
 ---
 ## What is biology?

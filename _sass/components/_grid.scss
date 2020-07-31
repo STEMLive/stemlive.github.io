@@ -2,6 +2,14 @@
     display: grid;
 }
 
+.grid-2 {
+    grid-template-columns: 6fr 6fr;
+
+    @media (max-width: 567px) {
+        grid-template-columns: 12fr;
+    }
+}
+
 .grid-3 {
     grid-template-columns: 4fr 4fr 4fr;
 
@@ -25,10 +33,31 @@
     }
 }
 
+body.sciences {
+    .content-box {
+        .content-inner {
+            @media (max-width: 767px) {
+                padding-top: 5rem;
+            }
+        }
+    }
+}
+
+body.category-science,
+body.category-educator,
+body.home {
+    .content-box {
+        .content-inner {
+            @media (max-width: 767px) {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
 body.collective,
 body.contact,
-body[class*="faq"],
-body[class*="science"] {
+body[class*="faq"] {
     .content-box {
         .content-inner {
             @media (min-width: 1200px) {
@@ -40,20 +69,23 @@ body[class*="science"] {
 
 .about,
 .category-educator,
-.category-science,
+body[class*="science"],
 .collective,
 .collectives,
 .contact,
 .faqs,
 .home,
-.lineup {
+.lineup,
+.privacy-policy {
     .content-box {
         padding-top: 42px;
         padding-bottom: 2rem;
 
         .content-inner {
             h2 {
-                margin-top: 0;
+                &:not([class*="margin-top-"]) {
+                    margin-top: 0;
+                }
             }
 
             > p {

@@ -1,16 +1,22 @@
 ---
+name: Dr Michael Spiegel
 images:
   banner:
     filename: ""
   thumbnail:
-    filename: ""
+    filename: "midnightduck.jpg"
 sciences:
   - chemistry
 collectives:
   - theknowledgefellowship
 streaming_platforms:
   twitch: https://www.twitch.tv/midnightduck
-display_on_site: false
-include_links: false
+social_platforms:
+  reddit: https://www.reddit.com/user/XxocelotxX_/
+  twitch: https://www.twitch.tv/midnightduck
+  twitter: https://twitter.com/mallardmidnight
+display_on_site: true
+include_links: true
 layout: educator
 ---
+## About Dr Michael Spiegel

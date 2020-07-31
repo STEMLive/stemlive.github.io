@@ -22,6 +22,18 @@
 {%- assign streamers = site.educators | where: 'collectives', include.collective | where: 'display_on_site', true -%}
 {%- endif -%}
 
+{%- if include.random and streamers == nil -%}
+    {%- assign streamers = '' | split: '' -%}
+    {%- assign active_streamers = site.educators | where: 'display_on_site', true -%}
+
+    {%- assign min = -1 -%}
+    {%- assign max = active_streamers.size -%}
+    {%- assign diff = max | minus: min -%}
+    {%- assign random_number = 'now' | date: '%N' | modulo: diff | plus: min -%}
+
+    {%- assign streamers = streamers | push: active_streamers[random_number] -%}
+{%- endif -%}
+
 {%- if streamers.size > 0 -%}
     {%- if include.science and include.platform -%}
 <h2>
@@ -36,9 +48,9 @@
 <div class="featured-educators">
     {%- for streamer in streamers -%}
         {%- unless page.collection != nil -%}
-            {%- assign science = page.tag -%}
+            {%- assign science = page.tag | default: streamer.sciences[0] -%}
         {%- else -%}
-            {%- assign science = streamer.sciences | first -%}
+            {%- assign science = streamer.sciences[0] -%}
         {%- endunless -%}
 
         {%- assign defaultImg = science | append: '/default.jpg' -%}
@@ -71,7 +83,11 @@
             <h3 class="h4">
                 {%- if streamer.name and streamer.name != '' and streamer.name.size > 0 -%}
                 {{- streamer.name }}
-                <span class="display-name">({{- streamer.title | downcase - }})</span>
+                {%- assign streamer_name_sanitised = streamer.name | replace: ' ', '' | downcase -%}
+                {%- assign display_name = streamer.title | downcase -%}
+                {%- unless streamer_name_sanitised == display_name -%}
+                <span class="display-name">({{- display_name - }})</span>
+                {%- endunless -%}
                 {%- else -%}
                 {{- streamer.title -}}
                 {%- endif -%}

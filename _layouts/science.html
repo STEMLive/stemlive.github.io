@@ -1,8 +1,10 @@
 {%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
+
 {%- if page.description and page.description != nil and page.description != '' -%}
-{%- assign description = page.description -%}
+    {%- assign description = page.description -%}
 {%- else -%}
-{%- capture description -%}{{- site.description -}}.{%- endcapture description -%}
+    {%- assign science = page.tag | replace: '-', ' ' -%}
+    {%- assign description = 'Who streams ' | append: science | append: ' on Twitch or YouTube?' -%}
 {%- endif -%}
 <!DOCTYPE HTML>
 <html lang="en">
@@ -16,7 +18,7 @@
         {%- assign today = 'now' | date: '%Y%M%d' -%}
         <link rel="stylesheet" href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" type="text/css" />
     </head>
-    <body class="category-science">
+    <body class="category-science {{ page.tag }}">
         {%- include components/top/header/navigation.html -%}
         {%- include components/banners/featured-science.html -%}
         <main class="content-box">
@@ -26,6 +28,6 @@
                 {% include components/streamers/featured.html science=page.tag platform="youtube" %}
             </div>
         </main>
-        {%- include components/bottom/footer/navigation.html -%}
+        {%- include components/bottom/footer.html -%}
     </body>
 </html>

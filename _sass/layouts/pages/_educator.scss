@@ -9,6 +9,12 @@ body.category-educator {
         }
 
         .content-inner {
+            padding-top: 0;
+
+            > :first-child {
+                margin-top: 1rem;
+            }
+
             h3, .h3 {
                 @media (max-width: 767px) {
                     font-size: 1.5rem;
@@ -38,6 +44,12 @@ body.category-educator {
             padding-right: 20%;
             min-height: 20rem;
 
+            &:not(:last-child) {
+                @media (max-width: 767px) {
+                    margin-bottom: 2.3rem;
+                }
+            }
+
             @media (min-width: 1200px) {
                 padding-left: 15%;
                 padding-right: 15%;
@@ -58,15 +70,6 @@ body.category-educator {
                 position: absolute;
                 left: 0;
             }
-
-            .educator-minibio {
-                h3 {
-                    @media (min-width: 1200px) and (max-width: 1440px) {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-
         }
     }
 
@@ -105,14 +108,28 @@ body.category-educator {
             background-color: rgba($black, .5);
 
             @media (min-width: 992px) {
-                min-height: 7rem;
+                min-height: 8rem;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                min-height: 6rem;
             }
 
             h3 {
                 text-align: center;
 
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    max-width: 85%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @media (min-width: 992px) {
+                    font-size: 1.3rem;
+                }
+
                 @media (max-width: 991px) {
-                    font-size: 2rem;
+                    font-size: 1.2rem;
                 }
 
                 @media (max-width: 567px) {
@@ -124,6 +141,62 @@ body.category-educator {
                 display: block;
             }
         }
+
+        &:first-child:last-child {
+            .educator-minibio {
+                min-height: auto !important;
+            }
+        }
+    }
+}
+
+// Featured videos
+
+.featured-videos {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 991px) {
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+
+    .featured-video {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 56.25%;
+
+        @media (max-width: 767px) {
+            grid-column: 1 / 3;
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            padding-bottom: 62%;
+        }
+
+        @media (max-width: 567px) {
+            padding-bottom: 58%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+}
+
+body.home {
+    .featured-educator {
+        @media (min-width: 992px) {
+            grid-column-start: 2;
+        }
     }
 }
 
@@ -131,6 +204,14 @@ body.category-educator {
     .featured-educators {
         &:first-of-type, &:not(:last-of-type) {
             margin-bottom: 2rem;
+        }
+
+        .featured-educator {
+            &:not(:last-of-type) {
+                @media (max-width: 991px) {
+                    margin-bottom: 3rem;
+                }
+            }
         }
     }
 }

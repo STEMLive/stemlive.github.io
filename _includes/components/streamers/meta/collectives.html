@@ -1,5 +1,5 @@
 <h3>
-    {{ page.name | default: page.title }} is affiliated with the following collectives:
+    {{ page.name | default: page.title }} {% if page.name != nil and page.name contains 'and' %}are{% else %}is{% endif %} affiliated with the following collectives:
 </h3>
 
 <ul class="list-default">

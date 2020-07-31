@@ -45,7 +45,11 @@
             <h3 class="h4">
                 {%- if streamer.name and streamer.name != '' and streamer.name.size > 0 -%}
                 {{- streamer.name }}
-                <span class="display-name">({{- streamer.title | downcase - }})</span>
+                {%- assign streamer_name_sanitised = streamer.name | replace: ' ', '' | downcase -%}
+                {%- assign display_name = streamer.title | downcase -%}
+                {%- unless streamer_name_sanitised == display_name -%}
+                <span class="display-name">({{- display_name - }})</span>
+                {%- endunless -%}
                 {%- else -%}
                 {{- streamer.title -}}
                 {%- endif -%}
@@ -57,10 +61,11 @@
 </div>
 
 {%- if streamers.size > site.grid.initial_limit -%}
-<a href="#" class="cta bg-medium-slate-blue load-more-button" data-continue-loading="true" data-target-elem=".featured-educators">
+<a href="#" class="cta bg-medium-slate-blue load-more-button goal-link" data-event-category="Lineup" data-event-action="Load more" data-event-label="Streamers grid load more button" data-continue-loading="true" data-target-elem=".featured-educators">
     Load more
 </a>
 
-<script type="module" src="{{ '/assets/js/components/LoadMoreButton.js' | relative_url }}"></script>
+{%- assign today = 'now' | date: '%Y%M%d' -%}
+<script type="module" src="{{ '/assets/js/components/LoadMoreButton.js?ver=' | append: today | relative_url }}"></script>
 {%- endif -%}
 {%- endif -%}

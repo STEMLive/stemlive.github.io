@@ -12,12 +12,16 @@ class EqualiseHeights {
 
     equaliseHeights () {
         this.elems.forEach((elem) => {
-            if (typeof elem.dataset.targets === 'undefined' || (typeof parseInt(elem.dataset.minWidth) != 'number' || window.outerWidth < parseInt(elem.dataset.minWidth))) {
+            if (typeof elem.dataset.targets === 'undefined' || (typeof elem.dataset.minWidth != 'undefined' && typeof parseInt(elem.dataset.minWidth) != 'number') || (typeof elem.dataset.minWidth  != 'undefined' && window.outerWidth < parseInt(elem.dataset.minWidth))) {
                 return;
             }
 
-            var 
-                targets = elem.querySelectorAll(elem.dataset.targets),
+            let
+                tagName = elem.tagName.toLowerCase(),
+                elemClasses = new Array(elem.classList),
+                elemCssSelector = new String(tagName + '.' + elemClasses.join().replace(/\s/g, '.')),
+                targetsSelector = new String(elemCssSelector + ' ' + elem.dataset.targets),
+                targets = document.querySelectorAll(targetsSelector),
                 maxHeights = []
             ;
 

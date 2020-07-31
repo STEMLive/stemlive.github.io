@@ -17,24 +17,60 @@
         margin-bottom: unset;
         font-size: 2rem;
 
-        &:first-child {
-            i {
-                &:before {
-                    margin-left: 0;
-                }
-            }
-        }
-
         &:not(:last-child) {
             margin-right: 20px;
             margin-bottom: unset;
+        }
+
+        &:nth-child(n+6) {
+            @media (max-width: 567px) {
+                margin-top: 10px;
+            }
+        }
+
+        &:nth-child(n+10) {
+            @media (max-width: 767px) {
+                margin-top: 10px;
+            }
         }
 
         &:not(.item-facebook) {
             vertical-align: super;
         }
 
+        &.item-google-scholar {
+            font-size: 1rem;
+            vertical-align: top;
+        }
+
+        &.item-npm {
+            font-size: 1.3rem;
+
+            &:not(:last-child) {
+                margin-right: 60px;
+            }
+        }
+
+        &.item-wikipedia {
+            @media (max-width: 567px) {
+                font-size: 1.3rem;
+            }
+        }
+
         a {
+            &.link-apple-podcasts {
+                background: linear-gradient(to bottom, $dark-orchid, $heliotrope-purple);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &.link-deviantart {
+                color: $malachite-green;
+            }
+
             &.link-discord {
                 color: $jordy-blue;
             }
@@ -47,6 +83,21 @@
                 vertical-align: super;
             }
 
+            &.link-giphy {
+                background: -moz-linear-gradient(-135deg,#fff35c,#ff6666,#00ccff,#00ff99,#9933ff);
+                background: -webkit-linear-gradient(-135deg,#fff35c,#ff6666,#00ccff,#00ff99,#9933ff);
+                background: linear-gradient(-135deg,#fff35c,#ff6666,#00ccff,#00ff99,#9933ff);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &.link-gitlab {
+                color: $cinnabar-orange;
+            }
+
             &.link-instagram {
                 background: -moz-linear-gradient(-135deg,#1400c8,#b900b4,#f50000);  
                 background: -webkit-linear-gradient(-135deg,#1400c8,#b900b4,#f50000);  
@@ -54,6 +105,7 @@
                 -webkit-background-clip: text;
                 -moz-background-clip: text;
                 background-clip: text;
+                color: transparent;
                 -webkit-text-fill-color: transparent;
             }
 
@@ -61,16 +113,74 @@
                 color: $denim-blue;
             }
 
+            &.link-medium {
+                color: $jade-green;
+            }
+
+            &.link-meetup {
+                color: $crimson-red;
+            }
+
+            &.link-npm {
+                color: $mahogany-red;
+            }
+
+            &.link-patreon {
+                color: $patreon-orange;
+            }
+
+            &.link-paypal {
+                color: $bahama-blue;
+            }
+
+            &.link-pinterest {
+                color: $crimson-red;
+            }
+
             &.link-quora {
                 color: $quora-red;
+            }
+
+            &.link-reddit {
+                color: $reddit-red;
+            }
+
+            &.link-rss {
+                color: $rss-orange;
+            }
+
+            &.link-skillshare {
+                color: $light-sea-green;
+            }
+
+            &.link-spotify {
+                color: $spotify-green;
+            }
+
+            &.link-stackoverflow {
+                color: $safety-orange;
+            }
+
+            &.link-twitch {
+                color: $royal-purple;
             }
 
             &.link-twitter {
                 color: $dodger-blue;
             }
 
+            &.link-udemy {
+                color: $flamingo-red;
+            }
+
             &.link-youtube {
                 color: $youtube-red;
+            }
+
+            i {
+                &:before {
+                    margin-left: 0;
+                }
             }
         }
     }

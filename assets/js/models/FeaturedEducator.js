@@ -2,6 +2,7 @@ class FeaturedEducator {
     constructor () {
         this.endpoint = '/data/streamers.json'
         this.featuredEducators = []
+        this.loadMoreButton = false
     }
 
     getEducatorData (offset = 0) {
@@ -14,21 +15,21 @@ class FeaturedEducator {
         .then(data => {
             let featuredEducators = data[0].streamers
 
-            if (offset === Object.keys(featuredEducators).length) {
-                let loadMoreButton = document.querySelector('.featured-educators').nextElementSibling;
-                
-                if (loadMoreButton.classList.contains('load-more-button')) {
-                    loadMoreButton.setAttribute('data-continue-loading', false);
-                    loadMoreButton.setAttribute('disabled', 'disabled');
+            if (offset > 0) {
+                let filteredEducators = featuredEducators.slice(offset)
+
+                if (parseInt(offset + Object.keys(filteredEducators).length) === Object.keys(featuredEducators).length) {
+                    let loadMoreButton = document.querySelector('.featured-educators').nextElementSibling;
+
+                    if (loadMoreButton.classList.contains('load-more-button')) {
+                        this.loadMoreButton = loadMoreButton
+                        this.loadMoreButton.setAttribute('data-continue-loading', false);
+                    }
                 }
 
-                return
+                featuredEducators = filteredEducators
             }
 
-            if (offset > 0) {
-                featuredEducators = featuredEducators.splice(offset)
-            }
-            
             this.lazyLoad(featuredEducators)
         })
     }
@@ -38,47 +39,47 @@ class FeaturedEducator {
             return;
         }
 
-        for (var index in streamers) {
+        for (let index in streamers) {
             let
                 streamer = streamers[index],
-                educatorGrid = document.createElement('div'),
+                educatorGridItem = document.createElement('div'),
                 educatorLink = document.createElement('a'),
                 educatorBio = document.createElement('div')
             ;
 
-            if (typeof streamer.collectives != 'undefined') {
-                var collectives = streamer.collectives.toString().replace(',', ' ');
+            if (typeof streamer.collectives != 'undefined' && streamer.collectives != null) {
+                var collectives = streamer.collectives.toString().replace(/,/g, ' ');
             }
             
-            if (typeof streamer.sciences != 'undefined') {
-                var sciences = streamer.sciences.toString().replace(',', ' ');
+            if (typeof streamer.sciences != 'undefined' && streamer.sciences != null) {
+                var sciences = streamer.sciences.toString().replace(/,/g, ' ');
             }
 
-            if (typeof streamer.streaming_platforms != 'undefined') {
-                var streamingPlatforms = Object.keys(streamer.streaming_platforms).toString().replace(',', ' ');
+            if (typeof streamer.streaming_platforms != 'undefined' && streamer.streaming_platforms != null) {
+                var streamingPlatforms = Object.keys(streamer.streaming_platforms).toString().replace(/,/g, ' ');
             }
 
-            educatorGrid.classList.add('featured-educator');
-            educatorGrid.setAttribute('data-ajax-loaded', true);
-            educatorGrid.setAttribute('role', 'img');
-            educatorGrid.setAttribute('aria-label', typeof streamer.name != 'undefined' ? streamer.name : streamer.title);
+            educatorGridItem.classList.add('featured-educator');
+            educatorGridItem.setAttribute('data-ajax-loaded', true);
+            educatorGridItem.setAttribute('role', 'img');
+            educatorGridItem.setAttribute('aria-label', typeof streamer.name != 'undefined' ? streamer.name : streamer.title);
 
-            if (typeof sciences != 'undefined') {
-                educatorGrid.className += (' ' + sciences);
+            if (typeof streamer.sciences != 'undefined' && sciences != 'undefined') {
+                educatorGridItem.className += (' ' + sciences);
             }
 
-            if (typeof streamingPlatforms != 'undefined') {
-                educatorGrid.className += (' ' + streamingPlatforms);
+            if (typeof streamer.science_platforms != 'undefined' && streamingPlatforms != 'undefined') {
+                educatorGridItem.className += (' ' + streamingPlatforms);
             }
 
-            if (typeof collectives != 'undefined') {
-                educatorGrid.className += (' ' + collectives);
+            if (typeof streamer.collectives != 'undefined' && collectives != 'undefined') {
+                educatorGridItem.className += (' ' + collectives);
             }
 
-            if (typeof streamer.images.thumbnail.filename != 'undefined' && streamer.images.thumbnail.filename.length > 0) {
-                educatorGrid.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.images.thumbnail.filename + ');');
-            } else if (typeof streamer.sciences != 'undefined') {
-                educatorGrid.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.sciences[0] + '/default.jpg);'); 
+            if (typeof streamer.images.thumbnail.filename != 'undefined' && streamer.images.thumbnail.filename != null && streamer.images.thumbnail.filename.length > 0) {
+                educatorGridItem.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.images.thumbnail.filename + ');');
+            } else if (typeof streamer.sciences != 'undefined' && streamer.sciences != null) {
+                educatorGridItem.setAttribute('style', 'background-image: url(/assets/images/educators/thumbnails/' + streamer.sciences[0] + '/default.jpg);');
             }
 
             educatorLink.setAttribute('href', streamer.url);
@@ -95,16 +96,20 @@ class FeaturedEducator {
                 educatorBioTitle.innerHTML = streamer.title;
             }
 
-            educatorGrid.appendChild(educatorLink);
+            educatorGridItem.appendChild(educatorLink);
             educatorBio.appendChild(educatorBioTitle);
-            educatorGrid.appendChild(educatorLink);
-            educatorGrid.appendChild(educatorBio);
-            this.featuredEducators.push(educatorGrid);
+            educatorGridItem.appendChild(educatorLink);
+            educatorGridItem.appendChild(educatorBio);
+            this.featuredEducators.push(educatorGridItem);
         }
 
         if (this.featuredEducators.length > 0 && typeof window.featuredEducatorsGrid != 'undefined') {
             let featuredEducators = this.featuredEducators;
             window.featuredEducatorsGrid.insert(featuredEducators);
+
+            if (this.loadMoreButton && this.loadMoreButton.dataset.continueLoading != true) {
+                this.loadMoreButton.setAttribute('disabled', 'disabled');
+            }
         }
     }
 }

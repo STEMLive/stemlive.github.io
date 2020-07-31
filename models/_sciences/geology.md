@@ -3,6 +3,9 @@ tag: geology
 title: Geology
 short_description: >-
   Interested in learning about the formation of the earth and how it has changed over time?
+keywords:
+  - Geology livestreaming
+  - Geology livestreaming Twitch
 parents:
   - biology
   - chemistry

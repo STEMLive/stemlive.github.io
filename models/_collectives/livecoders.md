@@ -1,11 +1,14 @@
 ---
 title: Live Coders
 tag: livecoders
+description: >-
+  Which Twitch streamers belong to the Live Coders collective?
 images:
   thumbnail:
     filename: "livecoders.jpg"
 links:
   website: https://livecoders.dev/
+  facebook: https://www.facebook.com/thelivecoders/
   github: https://github.com/livecoders/
   twitch: https://www.twitch.tv/team/livecoders
   twitter: https://twitter.com/thelivecoders
