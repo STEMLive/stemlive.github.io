@@ -19,7 +19,7 @@ images:
     # Just include the filename (including the extension).
     # We aim for banner images to be around 1600x900, but essentially the banner image should be wider than it is tall, and should be a minimum of 100 to 200 pixels tall.
     # Images should be uploaded to https://github.com/STEMLive/stemlive.github.io/tree/master/assets/images/banners/educators
-    filename: "baldengineer-desk-image v3-1600x900.jpg"
+    filename: "baldengineer.jpg"
   thumbnail:
     # You can use a custom thumbnail that will display whenever you are featured in a grid. Otherwise we have default images in place.
     # Just include the filename (including the extension).
