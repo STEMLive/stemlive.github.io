@@ -3,6 +3,7 @@ tag: computer-science
 title: Computer Science
 short_description: >-
   Learn about the underlying data structures and algorithms that power millions of applications.
+show_in_carousel: true
 keywords:
   - Computer science livestreaming
   - Computer science livestreaming Twitch

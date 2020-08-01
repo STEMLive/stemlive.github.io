@@ -3,6 +3,7 @@ tag: engineering
 title: Engineering
 short_description: >-
   Interested in learning how to design some impressive structures?
+show_in_carousel: true
 keywords:
   - Engineering livestreaming
   - Engineering livestreaming Twitch

@@ -3,6 +3,7 @@ tag: maths
 title: Maths
 short_description: >-
   Equip yourself with the knowhow to assess and tackle challenging problems.
+show_in_carousel: true
 keywords:
   - Maths livestreaming
   - Maths livestreaming Twitch

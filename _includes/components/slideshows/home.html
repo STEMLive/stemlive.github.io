@@ -1,6 +1,7 @@
-{%- if site.sciences.size > 0 -%}
+{%- assign featured_sciences = site.sciences | where: 'show_in_carousel', true -%}
+{%- if featured_sciences.size > 0 -%}
 <div class="slideshow">
-    {%- for science in site.sciences -%}
+    {%- for science in featured_sciences -%}
     <div class="slideshow-item{% if forloop.index == 1 %} active{% endif %}" id="slide-{{ forloop.index }}" style="background-image: url({{ '/assets/images/banners/' | append: science.tag | append: '.jpg' | relative_url }});" role="img" aria-label="{{ science.title }}">
         <div class="slideshow-content">
             <h2>

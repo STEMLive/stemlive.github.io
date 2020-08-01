@@ -3,6 +3,7 @@ tag: physics
 title: Physics
 short_description: >-
     Do you know your three laws of motion from your Faraday&rsquo;s law of induction?
+show_in_carousel: true
 keywords:
   - Physics livestreaming
   - Physics livestreaming Twitch

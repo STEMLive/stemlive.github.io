@@ -3,6 +3,7 @@ tag: chemistry
 title: Chemistry
 short_description: >-
   Want to learn about the substances that make up our world?
+show_in_carousel: true
 keywords:
   - Chemistry livestreaming
   - Chemistry livestreaming Twitch
