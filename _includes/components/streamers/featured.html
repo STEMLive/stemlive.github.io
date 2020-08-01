@@ -75,8 +75,9 @@
 
         {%- if thumb_exists.size < 1 -%}
             {%- assign thumb = '/assets/images/educators/thumbnails/' | append: defaultImg -%}
+            {%- assign usingDefaultImage = 1 -%}
         {%- endif -%}
-    <div class="featured-educator {{ streamer.sciences | join: ' ' }} {{ streamer.collectives | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}">
+    <div class="featured-educator {{ streamer.sciences | join: ' ' }} {{ streamer.collectives | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}" data-using-default-image="{{ usingDefaultImage | default: 0 }}">
         <a href="{{ streamer.url }}"></a>
 
         <div class="educator-minibio">

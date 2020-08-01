@@ -22,7 +22,7 @@ images:
     # Just include the filename (including the extension).
     # Images should be a minimum of 300 pixels wide by 300 pixels tall
     # Images should be uploaded to https://github.com/STEMLive/stemlive.github.io/tree/master/assets/images/educators/thumbnails
-    filename: ""
+    filename: "stemcoding.jpg"
 sciences:
   # Add your sciences here in bullet form, all lowercase, using the dash symbol to represent any spaces.
   # We use the first item in this list to determine your fallback thumbnail.
