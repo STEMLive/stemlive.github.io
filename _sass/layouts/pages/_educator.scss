@@ -30,13 +30,6 @@ body.category-educator {
     .banner {
         box-shadow: 4px -3px 5px 5px $nobel-grey;
     }
-
-    &[data-educator="Chris Orban"] {
-        .banner {
-            background-size: contain;
-            background-position: center bottom -2.5rem;
-        }
-    }
 }
 
 /*
