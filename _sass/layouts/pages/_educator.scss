@@ -179,6 +179,10 @@ body.category-educator {
             padding-bottom: 58%;
         }
 
+        @media (max-width: 360px) {
+            padding-bottom: 75%;
+        }
+
         iframe {
             position: absolute;
             top: 0;
