@@ -2,7 +2,21 @@
 layout: home
 title: Home
 ---
-{%- assign popular_sciences = site.educators | group_by: 'sciences' -%}
+{%- assign grouped_sciences = site.educators | group_by: 'sciences' -%}
+{%- assign popular_sciences = '' | split: ' ' -%}
+{%- for grouped_science in grouped_sciences -%}
+    {%- if popular_sciences.size == 3 -%}
+        {%- break -%}
+    {%- endif -%}
+
+    {%- if grouped_science.name contains ',' -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    {%- assign popular_science = grouped_science.name | replace: '["', '' | replace: '"]', '' -%}
+    {%- assign popular_sciences = popular_sciences | push: popular_science -%}
+{%- endfor -%}
+
 <h2 class="text-center">
     Welcome to {{ site.title }}
 </h2>
@@ -20,7 +34,7 @@ title: Home
 </p>
 
 <p>
-    We offer you the chance to discover a wide range of STEM educators from countless disciplines, including {% for popular_science in popular_sciences limit:3 %}{%- assign science_name = popular_science.name | replace: '["', '' | replace: '"]', '' -%}{%- assign science = site.sciences | where: 'tag', science_name | first -%}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <a href="{{ science.url }}" class="text-{{ science.tag }}">{{ science.tag | replace: '-', ' ' }}</a>{% endfor %}.
+    We offer you the chance to discover a wide range of STEM educators from countless disciplines, including {% for popular_science in popular_sciences %}{%- assign science = site.sciences | where: 'tag', popular_science | first -%}{% if forloop.last %} and{% elsif forloop.index > 1 %},{% endif %} <a href="{{ science.url }}" class="text-{{ science.tag }}">{{ science.tag | replace: '-', ' ' }}</a>{% endfor %}.
 </p>
 
 <h2 class="margin-top-0-sm-down margin-top-3-point-5-rem featured-educator-title text-center">
