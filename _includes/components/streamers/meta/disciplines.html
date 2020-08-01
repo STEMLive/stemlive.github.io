@@ -5,10 +5,14 @@
 <ul class="list-default">
     {%- for discipline in page.sciences -%}
     {%- assign science = site.sciences | where: 'tag', discipline | first -%}
-    <li>
+    <li{% unless science != nil %} class="text-medium-slate-blue"{% endunless %}>
+        {%- if science != nil -%}
         <a href="{{ science.url | relative_url }}" class="text-{{ science.tag }} hover-underline">
             {{ science.title }}
         </a>
+        {%- else -%}
+        {{ discipline | capitalize }}
+        {%- endif -%}
     </li>
     {%- endfor -%}
 </ul>
