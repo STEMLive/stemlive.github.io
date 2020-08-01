@@ -61,7 +61,11 @@ header {
 
         ul.top-nav {
             padding-left: 0;
-            grid-column: 4 / -1;
+            grid-column: 4 / 9;
+
+            @media (max-width: 1199px) {
+                grid-column: 4 / 11;
+            }
 
             @media (min-width: 768px) and (max-width: 991px) {
                 margin-top: 10px;
@@ -77,6 +81,22 @@ header {
                 &:not(:last-child) {
                     margin-right: 15px;
                 }
+            }
+        }
+
+        div.top-links {
+            grid-column: 12;
+
+            @media (max-width: 1199px) {
+                grid-column: 11 / -1;
+            }
+
+            @media (max-width: 767px) {
+                display: none;
+            }
+
+            .social-links {
+                margin-top: .8rem;
             }
         }
     }
@@ -106,22 +126,41 @@ header {
     }
 
     ul {
-        list-style-type: none;
-        padding-left: 0;
-        grid-column: 5 / 12;
-        grid-row: 2;
-        margin-top: 25%;
+        &:not([class]) {
+            list-style-type: none;
+            padding-left: 0;
+            grid-column: 4 / 12;
+            grid-row: 2;
+            margin-top: 25%;
 
-        @media (max-width: 1199px) and (orientation: landscape) {
-            margin-top: 0;
+            @media (max-width: 1199px) and (orientation: landscape) {
+                margin-top: 0;
+            }
+
+            li {
+                font-size: 1.5rem;
+                max-width: 65%;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
         }
 
-        li {
-            font-size: 1.5rem;
-            max-width: 65%;
+        &.social-links {
+            list-style-type: none;
+            padding-left: 0;
+            grid-column: 4 / 12;
+            grid-row: 3;
+            margin-top: 0;
 
-            &:not(:last-child) {
-                margin-bottom: 15px;
+            li {
+                font-size: 1.5rem;
+                max-width: 65%;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
             }
         }
     }

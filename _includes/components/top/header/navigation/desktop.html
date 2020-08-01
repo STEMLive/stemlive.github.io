@@ -20,11 +20,33 @@
             {%- endfor -%}
 
             <li>
-                <a href="{{- site.github_repo | append: '/new/master/models/_educators' -}}" target="_blank">
+                <a href="https://github.com/{{- site.repository | append: '/new/master/models/_educators' -}}" target="_blank">
                     Add a new streamer
                 </a>
             </li>
         </ul>
+
+        {%- if site.twitter_username != nil or site.repository != nil -%}
+        <div class="top-links">
+            <ul class="list-default social-links">
+                {%- if site.twitter_username != nil -%}
+                <li class="item-twitter">
+                    <a href="https://twitter.com/{{ site.twitter_username }}" class="link-twitter" target="_blank">
+                        <i class="icon-twitter"></i>
+                    </a>
+                </li>
+                {%- endif -%}
+
+                {%- if site.repository != nil -%}
+                <li class="item-github">
+                    <a href="https://github.com/{{ site.repository }}" class="link-github" target="_blank">
+                        <i class="icon-github-circled"></i>
+                    </a>
+                </li>
+                {%- endif -%}
+            </ul>
+        </div>
+        {%- endif -%}
     </nav>
 </header>
 
