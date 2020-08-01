@@ -1,6 +1,6 @@
 ---
 # Uncomment if you want to display your real name on the site, and change the default name to yours
-name: "Chris Orban"
+name: "STEMcoding Project"
 # Uncomment if you want to have an SEO description for your educator page.
 #description: >-
   #This description must be indented by two spaces.
