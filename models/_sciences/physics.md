@@ -2,7 +2,7 @@
 tag: physics
 title: Physics
 short_description: >-
-    Do you know your three laws of motion from your Faraday&rsquo;s law of induction?
+  Do you know how those invisible forces work upon us and everday objects?
 show_in_carousel: true
 keywords:
   - Physics livestreaming
