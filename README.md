@@ -9,6 +9,12 @@ This site has been built using the following technologies:
 
 You must have both Ruby and Jekyll (and ideally Bundler) installed to set up locally.
 
+## How to add a new educator
+
+Please copy and paste [this template](https://raw.githubusercontent.com/STEMLive/stemlive.github.io/master/models/templates/EDUCATOR.md) into the text field on https://github.com/stemlive/stemlive.github.io/new/master/models/_educators, amending it as you see fit.
+
+All questions on this project are to be addressed to [enquiries.stemlive@gmail.com](mailto:enquiries.stemlive@gmail.com).
+
 ## Quickstart (for developers)
 
 1. Run `jekyll serve` - or `JEKYLL_ENV=production jekyll serve` (to run your local site in production mode)
@@ -27,9 +33,3 @@ To add new Fontello icons, you must take the following steps:
 6. Unzip, rename the decompressed folder `fontello`, and move into `assets`
 
 Please note: You can add custom Fontello icons by dragging and dropping them into the `Custom Icons` area from your file manager. Refer [here](https://github.com/fontello/fontello/wiki/How-to-use-custom-images) for more information.
-
-### How to add a new educator
-
-Please copy and paste [this template](https://raw.githubusercontent.com/STEMLive/stemlive.github.io/master/models/templates/EDUCATOR.md) into the text field on https://github.com/stemlive/stemlive.github.io/new/master/models/_educators, amending it as you see fit.
-
-All questions on this project are to be addressed to [enquiries.stemlive@gmail.com](mailto:enquiries.stemlive@gmail.com).
