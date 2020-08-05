@@ -13,9 +13,11 @@ social_platforms:
   discord: https://omatum.chat
   giphy: https://giphy.com/channel/OmatumStudios
   linkedin: https://www.linkedin.com/company/omatum/
+  medium: https://medium.com/@greg_dizzia
   patreon: https://www.patreon.com/omatumstudios
   reddit: https://www.reddit.com/user/throwawayvhs/
   twitch: https://www.twitch.tv/omatum_greg
+  twitter: https://twitter.com/gregdizzia
   website: https://www.omatum.com/
   youtube: https://omatum.tv
 featured_videos:
