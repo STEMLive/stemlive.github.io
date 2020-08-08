@@ -6,6 +6,12 @@
     {%- assign science = page.tag | replace: '-', ' ' -%}
     {%- assign description = 'Who streams ' | append: science | append: ' on Twitch or YouTube?' -%}
 {%- endif -%}
+
+{%- assign science_where_exp = 'educator.sciences contains "' | append: page.tag | append: '"' -%}
+{%- assign twitch_query = 'educator.streaming_platforms contains "twitch"' -%}
+{%- assign youtube_query = 'educator.streaming_platforms contains "youtube"' -%}
+{%- assign twitch_streamers = site.educators | where_exp: 'educator', science_where_exp | where_exp: 'educator', twitch_query | where: 'display_on_site', true -%}
+{%- assign youtube_streamers = site.educators | where_exp: 'educator', science_where_exp | where_exp: 'educator', youtube_query | where: 'display_on_site', true -%}
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
@@ -17,6 +23,7 @@
         {%- if page.keywords and page.keywords != nil and page.keywords.size > 0  -%}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{%- endif -%}
         {%- assign today = 'now' | date: '%Y%M%d' -%}
         <link rel="stylesheet" href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" type="text/css" />
+        {%- include components/head/science.html -%}
     </head>
     <body class="category-science {{ page.tag }}">
         {%- include components/top/header/navigation.html -%}

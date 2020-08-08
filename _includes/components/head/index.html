@@ -7,6 +7,10 @@
         <meta name="keywords" content="{% for science in sciences %}{% unless forloop.first %}, {% endunless %}{{ science.tag | replace: '-', ' ' }}{% endfor %}" />
     {%- endif -%}
 
+    {%- if page.title | downcase == 'lineup' -%}
+        {%- include components/head/lineup.html -%}
+    {%- endif -%}
+
     <link rel="alternate" type="application/rss+xml" title="Subscribe to find out when a new STEM educator is added" href="{{ '/educators.rss' | relative_url }}" />
 
     {%- assign today = 'now' | date: '%Y%M%d' -%}

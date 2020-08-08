@@ -4,6 +4,8 @@
 {%- else -%}
 {%- capture description -%}{{- site.description -}}.{%- endcapture description -%}
 {%- endif -%}
+
+{%- assign featured_sciences = site.sciences | where: 'show_in_carousel', true -%}
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
@@ -15,6 +17,13 @@
         {%- if page.keywords and page.keywords != nil and page.keywords.size > 0  -%}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{%- endif -%}
         {%- assign today = 'now' | date: '%Y%M%d' -%}
         <link rel="stylesheet" href="{{ '/assets/css/main.css?ver=' | append: today | relative_url }}" type="text/css" />
+
+        {%- if featured_sciences.size > 0 -%}
+            {%- for science in featured_sciences -%}
+                {%- assign banner_image_url = '/assets/images/banners/' | append: science.tag | append: '.jpg' -%}
+                <link rel="preload" as="image" href="{{ banner_image_url | relative_url }}" />
+            {%- endfor -%}
+        {%- endif -%}
     </head>
     <body class="home">
         {%- include components/top/header/navigation.html -%}

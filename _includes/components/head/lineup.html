@@ -1,0 +1,19 @@
+{%- assign streamers = site.educators | where: 'display_on_site', true -%}
+
+{%- if streamers.size > 0 -%}
+    {%- assign default_thumb_sciences = '' | split: '' -%}
+
+    {%- for streamer in streamers limit:site.grid.initial_limit -%}
+        {%- assign primaryScience = streamer.sciences | first -%}
+        {%- assign defaultImg = primaryScience | append: '/default.jpg' -%}
+        {%- assign thumb = '/assets/images/educators/thumbnails/' | append: streamer.images.thumbnail.filename -%}
+        {%- assign thumb_exists = site.static_files | where: 'path', thumb -%}
+
+        {%- unless thumb_exists.size > 0 or default_thumb_sciences contains primaryScience -%}
+            {%- assign default_thumb_sciences = default_thumb_sciences | push: primaryScience -%}
+            <link rel="preload" as="image" href="{{ defaultImg }}" />
+        {%- else -%}
+            <link rel="preload" as="image" href="{{ thumb }}" /> 
+        {%- endunless -%}
+    {%- endfor -%}
+{%- endif -%}
