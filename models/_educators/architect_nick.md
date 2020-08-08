@@ -5,6 +5,7 @@ images:
   thumbnail:
     filename: "architect_nick.jpg"
 sciences:
+  - architecture
   - engineering
   - maths
 streaming_platforms:
