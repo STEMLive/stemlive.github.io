@@ -5,8 +5,8 @@
 <ul class="list-default">
     {%- for streamer_collective in page.collectives -%}
     {%- assign collective = site.collectives | where: 'tag', streamer_collective | first -%}
-    <li{% unless collective.size > 0 %} class="text-medium-slate-blue"{% endunless %}>
-        {%- if collective.size > 0 -%}
+    <li{% unless collective != nil %} class="text-medium-slate-blue"{% endunless %}>
+        {%- if collective != nil -%}
         <a href="{{ collective.url | relative_url }}" class="hover-underline">
             {{ collective.title }}
         </a>
