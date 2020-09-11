@@ -68,7 +68,7 @@ class FeaturedEducator {
                 educatorGridItem.className += (' ' + sciences);
             }
 
-            if (typeof streamer.science_platforms != 'undefined' && streamingPlatforms != 'undefined') {
+            if (typeof streamer.streaming_platforms != 'undefined' && streamingPlatforms != 'undefined') {
                 educatorGridItem.className += (' ' + streamingPlatforms);
             }
 

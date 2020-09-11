@@ -34,10 +34,10 @@
     {%- endif -%}
 
     {%- if streamer.streaming_platforms.size > 0 -%}
-    {%- for streaming_services in streamer.streaming_platforms -%}
-    {%- assign streaming_platform = streaming_services[0] -%}
-    {%- assign streaming_platforms = streaming_platforms | push: streaming_platform -%}
-    {%- endfor -%}
+        {%- for streaming_services in streamer.streaming_platforms -%}
+            {%- assign streaming_platform = streaming_services[0] -%}
+            {%- assign streaming_platforms = streaming_platforms | push: streaming_platform -%}
+        {%- endfor -%}
     {%- endif -%}
     <div class="featured-educator {{ streamer.sciences | join: ' ' }} {{ streaming_platforms | join: ' ' }} {{ streamer.collectives | join: ' ' }}" style="background-image: url({{- thumb | relative_url -}});" role="img" aria-label="{% if thumb_exists.size < 1 and defaultImgDescription != nil %}{{ defaultImgDescription }}{% else %}{{ streamer.name | default: streamer.title }}{% endif %}" data-using-default-image="{{ usingDefaultImage | default: 0 }}">
         <a href="{{ streamer.url }}"></a>
