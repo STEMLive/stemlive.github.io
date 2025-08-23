@@ -7,7 +7,7 @@ This site has been built using the following technologies:
 - JavaScript (ES6)
 - Fontello (for CSS icons)
 
-You must have both Ruby and Jekyll (and ideally Bundler) installed to set up locally.
+You must have both Ruby (3.4.5) and Jekyll (and ideally Bundler) installed to set up locally.
 
 ## How to add a new educator
 
